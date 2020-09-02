@@ -1,4 +1,4 @@
-import static org.gradle.api.JavaVersion.VERSION_1_8
+import static org.gradle.api.JavaVersion.VERSION_11
 
 /*
  * Gradle script plugin: Configure a module such that Java and Kotlin
@@ -11,12 +11,12 @@ tasks.withType(AbstractCompile).configureEach {
     // as it does the built-in JavaCompile task.
     if (it.class.name.startsWith('org.jetbrains.kotlin.gradle.tasks.KotlinCompile')) {
         kotlinOptions {
-            jvmTarget = VERSION_1_8
+            jvmTarget = VERSION_11
         }
     }
 }
 
 tasks.withType(JavaCompile).configureEach {
-    sourceCompatibility = VERSION_1_8
-    targetCompatibility = VERSION_1_8
+    sourceCompatibility = VERSION_11
+    targetCompatibility = VERSION_11
 }

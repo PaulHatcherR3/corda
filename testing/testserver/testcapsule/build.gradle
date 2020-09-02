@@ -45,8 +45,7 @@ task buildWebserverJar(type: FatCapsule, dependsOn: project(':node').tasks.jar) 
         applicationVersion = corda_release_version
         javaAgents = quasar_classifier ? ["quasar-core-${quasar_version}-${quasar_classifier}.jar"] : ["quasar-core-${quasar_version}.jar"]
         systemProperties['visualvm.display.name'] = 'Corda Webserver'
-        minJavaVersion = '1.8.0'
-        minUpdateVersion['1.8'] = java8_minUpdateVersion
+        minJavaVersion = '11'
         caplets = ['CordaWebserverCaplet']
 
         // JVM configuration:

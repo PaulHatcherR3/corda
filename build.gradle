@@ -2,7 +2,7 @@ import com.r3.testing.DistributeTestsBy
 import com.r3.testing.PodLogLevel
 
 import static org.gradle.api.JavaVersion.VERSION_11
-import static org.gradle.api.JavaVersion.VERSION_1_8
+import static org.gradle.api.JavaVersion.VERSION_11
 
 buildscript {
     // For sharing constants between builds
@@ -135,14 +135,6 @@ buildscript {
         ext.fontawesomefx_commons_version = '11.0'
         ext.fontawesomefx_fontawesome_version = '4.7.0-11'
     }
-
-    // Name of the IntelliJ SDK created for the deterministic Java rt.jar.
-    // ext.deterministic_idea_sdk = '1.8 (Deterministic)'
-
-    // Update 121 is required for ObjectInputFilter.
-    // Updates [131, 161] also have zip compression bugs on MacOS (High Sierra).
-    // when the java version in NodeStartup.hasMinimumJavaVersion() changes, so must this check
-    ext.java8_minUpdateVersion = constants.getProperty('java8MinUpdateVersion')
     ext.corda_revision = {
         try {
             "git rev-parse HEAD".execute().text.trim()
@@ -257,10 +249,11 @@ if (ext.versionSuffix != ""){
 apply plugin: 'java'
 
 logger.lifecycle("Java version: {}", JavaVersion.current())
-sourceCompatibility = VERSION_1_8
+sourceCompatibility = VERSION_11
 targetCompatibility = JavaVersion.current().isJava8() ? VERSION_1_8 : VERSION_11
 logger.lifecycle("Java source compatibility: {}", sourceCompatibility)
 logger.lifecycle("Java target compatibility: {}", targetCompatibility)
+logger.lifecycle("Kotlin version: {}", kotlin_version)
 logger.lifecycle("Quasar version: {}", quasar_version)
 logger.lifecycle("Quasar classifier: {}", quasar_classifier.toString())
 logger.lifecycle("Building Corda version: {}", corda_release_version)
@@ -294,7 +287,7 @@ allprojects {
             nugetconfEnabled = false
         }
     }
-    sourceCompatibility = VERSION_1_8
+    sourceCompatibility = VERSION_11
     targetCompatibility = JavaVersion.current().isJava8() ? VERSION_1_8 : VERSION_11
 
     jacoco {
@@ -316,9 +309,9 @@ allprojects {
 
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
         kotlinOptions {
-            languageVersion = "1.2"
-            apiVersion = "1.2"
-            jvmTarget = VERSION_1_8
+            languageVersion = "1.3"
+            apiVersion = "1.3"
+            jvmTarget = VERSION_11
             javaParameters = true   // Useful for reflection.
             freeCompilerArgs = ['-Xjvm-default=compatibility']
             allWarningsAsErrors = warnings_as_errors
@@ -481,13 +474,14 @@ sonarqube {
     }
 }
 
-// Check that we are running on a Java 8 JDK. The source/targetCompatibility values above aren't sufficient to
+// Check that we are running on a Java 11 JDK. The source/targetCompatibility values above aren't sufficient to
 // guarantee this because those are properties checked by the Java plugin, but we're using Kotlin.
 //
+// TODO : Check this for java 11 removed minor version for now.
 // We recommend a specific minor version (unfortunately, not checkable directly) because JavaFX adds APIs in
-// minor releases, so we can't work with just any Java 8, it has to be a recent one.
-if (!JavaVersion.current().java8Compatible)
-    throw new GradleException("Corda requires Java 8, please upgrade to at least 1.8.0_$java8_minUpdateVersion")
+// minor releases, so we can't work with just any Java 11, it has to be a recent one.
+if (!JavaVersion.current().java11Compatible)
+    throw new GradleException("Corda requires Java 11, please upgrade")
 
 configurations {
     detekt

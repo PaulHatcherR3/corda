@@ -60,6 +60,7 @@ class GenerateData {
             jar.putNextEntry(directory("txverify"))
             jar.putNextEntry(compressed("txverify/tx-success.bin"))
             TransactionGenerator.writeSuccess(jar)
+            /*
             jar.putNextEntry(compressed("txverify/tx-failure.bin"))
             TransactionGenerator.writeFailure(jar)
 
@@ -67,6 +68,8 @@ class GenerateData {
             jar.putNextEntry(directory("keystore"))
             jar.putNextEntry(compressed("keystore/txsignature.pfx"))
             KeyStoreGenerator.writeKeyStore(jar, KEYSTORE_ALIAS, KEYSTORE_PASSWORD)
+
+            */
         }
         testSerialization.reset()
     }
