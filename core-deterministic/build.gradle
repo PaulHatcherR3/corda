@@ -180,19 +180,23 @@ def metafix = tasks.register('metafix', MetaFixerTask) {
 
 // DOCSTART 01
 checkDeterminism.configure {
-    dependsOn jdkTask
+    // TODO PH removed jdkTask for deterministic rt.jar.
+    // TODO Need to decide what to do here for V5.
+    //dependsOn jdkTask
     injars metafix
 
-    libraryjars deterministic_rt_jar
+    //libraryjars deterministic_rt_jar
 
-    configurations.deterministicLibraries.forEach {
-        libraryjars it, filter: '!META-INF/versions/**'
-    }
+    //configurations.deterministicLibraries.forEach {
+    //    libraryjars it, filter: '!META-INF/versions/**'
+    //}
 
     keepattributes '*'
     dontpreverify
     dontobfuscate
     dontoptimize
+    // TODO Remove dontwarn if this config stays
+    dontwarn
     verbose
 
     keep 'class *'
