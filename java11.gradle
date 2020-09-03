@@ -2,7 +2,7 @@ import static org.gradle.api.JavaVersion.VERSION_11
 
 /*
  * Gradle script plugin: Configure a module such that Java and Kotlin
- * are always compiled for Java 8.
+ * are always compiled for Java 11.
  */
 apply plugin: 'kotlin'
 
