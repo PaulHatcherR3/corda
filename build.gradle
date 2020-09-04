@@ -248,6 +248,7 @@ if (ext.versionSuffix != ""){
 // the resulting import. This fixes it.
 apply plugin: 'java'
 
+logger.lifecycle("Gradle version: {}", gradle.gradleVersion)
 logger.lifecycle("Java version: {}", JavaVersion.current())
 sourceCompatibility = VERSION_11
 targetCompatibility = JavaVersion.current().isJava8() ? VERSION_1_8 : VERSION_11
