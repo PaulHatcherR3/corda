@@ -953,4 +953,22 @@ class CryptoUtilsTest {
         val secureRandomRegisteredFirstCordaProvider = SecureRandom()
         assertEquals(PlatformSecureRandomService.algorithm, secureRandomRegisteredFirstCordaProvider.algorithm)
     }
+
+    @Test
+    fun `get security provider algorithm services`() {
+        val keyFactoryType = "KeyFactory"
+        val signatureType = "Signature"
+        val cordaSecurityProvider = CordaSecurityProvider()
+
+        val keyFactoryService = cordaSecurityProvider.getService(keyFactoryType, CompositeKey.KEY_ALGORITHM)
+        val signatureService = cordaSecurityProvider.getService(signatureType, CompositeSignature.SIGNATURE_ALGORITHM)
+
+        assertEquals(keyFactoryType, keyFactoryService!!.type)
+        assertEquals(CompositeKey.KEY_ALGORITHM, keyFactoryService.algorithm)
+        assertEquals(CompositeKeyFactory::class.java.name, keyFactoryService.className)
+
+        assertEquals(signatureType, signatureService!!.type)
+        assertEquals(CompositeSignature.SIGNATURE_ALGORITHM, signatureService.algorithm)
+        assertEquals(CompositeSignature::class.java.name, signatureService.className)
+    }
 }

@@ -18,12 +18,10 @@ class CordaSecurityProvider : Provider(PROVIDER_NAME, 0.1, "$PROVIDER_NAME secur
     }
 
     init {
-        put("KeyFactory.${CompositeKey.KEY_ALGORITHM}", CompositeKeyFactory::class.java.name)
-        put("Alg.Alias.KeyFactory.$COMPOSITE_KEY", CompositeKey.KEY_ALGORITHM)
-        put("Alg.Alias.KeyFactory.OID.$COMPOSITE_KEY", CompositeKey.KEY_ALGORITHM)
-        put("Signature.${CompositeSignature.SIGNATURE_ALGORITHM}", CompositeSignature::class.java.name)
-        put("Alg.Alias.Signature.$COMPOSITE_SIGNATURE", CompositeSignature.SIGNATURE_ALGORITHM)
-        put("Alg.Alias.Signature.OID.$COMPOSITE_SIGNATURE", CompositeSignature.SIGNATURE_ALGORITHM)
+        putService(createService("KeyFactory", CompositeKey.KEY_ALGORITHM, CompositeKeyFactory::class.java.name,
+                listOf(COMPOSITE_KEY.toString(), "OID.$COMPOSITE_KEY")))
+        putService(createService("Signature", CompositeSignature.SIGNATURE_ALGORITHM, CompositeSignature::class.java.name,
+                listOf(COMPOSITE_SIGNATURE.toString(), "OID.$COMPOSITE_SIGNATURE")))
         putPlatformSecureRandomService()
     }
 
@@ -64,6 +62,10 @@ class CordaSecurityProvider : Provider(PROVIDER_NAME, 0.1, "$PROVIDER_NAME secur
                 return superGetService(type, algorithm)
             }
         }
+    }
+
+    private fun createService(type: String, algorithm: String, className: String, aliases: List<String>? = null): Service {
+        return Service(this, type, algorithm, className, aliases, null)
     }
 }
 
