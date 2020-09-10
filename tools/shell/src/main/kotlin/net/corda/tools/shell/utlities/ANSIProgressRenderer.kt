@@ -139,7 +139,7 @@ abstract class ANSIProgressRenderer {
         }.map {
             newTree.indexOf(it)
         }.toMutableSet()
-        treeIndex = newIndices.max() ?: 0
+        treeIndex = newIndices.maxOrNull() ?: 0
         treeIndexProcessed = if (newIndices.isNotEmpty()) newIndices else mutableSetOf(0)
     }
 

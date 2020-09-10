@@ -22,9 +22,9 @@ import java.util.*
 @KeepForDJVM
 data class PropertyDescriptor(val field: Field?, val setter: Method?, val getter: Method?) {
     override fun toString() = StringBuilder("").apply {
-        appendln("Property - ${field?.name ?: "null field"}\n")
-        appendln("  getter - ${getter?.name ?: "no getter"}")
-        appendln("  setter - ${setter?.name ?: "no setter"}")
+        appendLine("Property - ${field?.name ?: "null field"}\n")
+        appendLine("  getter - ${getter?.name ?: "no getter"}")
+        appendLine("  setter - ${setter?.name ?: "no setter"}")
     }.toString()
 
     /**

@@ -277,7 +277,7 @@ class FlowHospitalTest {
 
         @Suspendable
         override fun call() {
-            val throwable = hospitalizeFlowExceptionClass.newInstance()
+            val throwable = hospitalizeFlowExceptionClass.getDeclaredConstructor().newInstance()
             (throwable as? Throwable)?.let {
                 throw it
             }

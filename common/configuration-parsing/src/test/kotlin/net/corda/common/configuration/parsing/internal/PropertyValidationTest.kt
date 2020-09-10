@@ -90,7 +90,7 @@ class PropertyValidationTest {
         val value = listOf(1L, 2L, 3L)
         val configuration = configObject(key to value).toConfig()
 
-        fun parseMax(list: List<Long>): Valid<Long?> = valid(list.max())
+        fun parseMax(list: List<Long>): Valid<Long?> = valid(list.maxOrNull())
 
         val property = Configuration.Property.Definition.long(key).list().mapValid(::parseMax)
 
@@ -109,7 +109,7 @@ class PropertyValidationTest {
             if (list.any { value -> value <= 1L }) {
                 return invalid(Configuration.Validation.Error.BadValue.of("All values must be greater than 1"))
             }
-            return valid(list.max())
+            return valid(list.maxOrNull())
         }
 
         val property = Configuration.Property.Definition.long(key).list().mapValid(::parseMax)

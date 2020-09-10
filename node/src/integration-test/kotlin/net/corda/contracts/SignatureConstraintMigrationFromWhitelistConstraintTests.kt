@@ -68,7 +68,7 @@ open class SignatureConstraintMigrationFromWhitelistConstraintTests  : Signature
             result
         }
         assertNotNull(stateAndRef)
-        assertEquals(transformedMessage, stateAndRef!!.state.data.message)
+        assertEquals(transformedMessage, stateAndRef.state.data.message)
     }
 
     @Test(timeout=300_000)

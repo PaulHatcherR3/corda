@@ -406,7 +406,7 @@ open class InternalMockNetwork(cordappPackages: List<String> = emptyList(),
             counter = counter.add(BigInteger.ONE)
             // The StartedMockNode specifically uses EdDSA keys as they are fixed and stored in json files for some tests (e.g IRSSimulation).
             val keyPair = Crypto.deriveKeyPairFromEntropy(Crypto.EDDSA_ED25519_SHA512, counter)
-            (cryptoService as BCCryptoService).importKey(alias, keyPair)
+            cryptoService.importKey(alias, keyPair)
             return keyPair.public
         }
 
