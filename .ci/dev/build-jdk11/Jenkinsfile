@@ -29,12 +29,7 @@ pipeline {
     }
     post {
         always {
-            sh "pwd"
-            sh "ls core"
-            sh "ls core/build"
-            sh "ls core/build/test-results"
-            sh "ls core/build/test-results/test"
-            junit 'core/build/test-results/**/*.xml'
+            junit '*/build/test-results/**/*.xml'
         }
     }
 }
