@@ -29,7 +29,8 @@ pipeline {
     }
     post {
         always {
-            junit 'core/build/reports/**/*.xml'
+            sh "pwd"
+            junit 'build/reports/**/*.xml'
         }
     }
 }
