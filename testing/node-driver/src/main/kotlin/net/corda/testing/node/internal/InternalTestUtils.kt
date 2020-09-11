@@ -162,7 +162,7 @@ fun addressMustBeBound(executorService: ScheduledExecutorService, hostAndPort: N
     addressMustBeBoundFuture(executorService, hostAndPort, listenProcess).getOrThrow()
 }
 
-fun addressMustBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort, listenProcess: Process? = null): CordaFuture<Unit> {
+fun addressMustBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort, listenProcess: Process? = null): CordaFuture<Unit?> {
     return poll(executorService, "address $hostAndPort to bind") {
         if (listenProcess != null && !listenProcess.isAlive) {
             throw ListenProcessDeathException(hostAndPort, listenProcess)
@@ -181,7 +181,7 @@ fun nodeMustBeStartedFuture(
         logFile: Path,
         listenProcess: Process,
         exception: () -> NodeListenProcessDeathException
-): CordaFuture<Unit> {
+): CordaFuture<Unit?> {
     val stopPolling = Instant.now().plusSeconds(SECONDS_TO_WAIT_FOR_P2P)
     return poll(executorService, "process $listenProcess is running") {
         if (!listenProcess.isAlive) {
@@ -212,7 +212,7 @@ fun addressMustNotBeBound(executorService: ScheduledExecutorService, hostAndPort
     addressMustNotBeBoundFuture(executorService, hostAndPort).getOrThrow(timeout)
 }
 
-fun addressMustNotBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort): CordaFuture<Unit> {
+fun addressMustNotBeBoundFuture(executorService: ScheduledExecutorService, hostAndPort: NetworkHostAndPort): CordaFuture<Unit?> {
     return poll(executorService, "address $hostAndPort to unbind") {
         try {
             Socket(hostAndPort.host, hostAndPort.port).close()
