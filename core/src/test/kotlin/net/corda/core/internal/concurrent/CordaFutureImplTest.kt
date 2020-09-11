@@ -15,13 +15,14 @@ import kotlin.test.assertTrue
 
 class CordaFutureTest {
     @Test(timeout=300_000)
+    @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
 	fun `fork works`() {
         val e = Executors.newSingleThreadExecutor()
         try {
             assertEquals(100, e.fork { 100 }.getOrThrow())
             val x = Exception()
             val f = e.fork { throw x }
-            Assertions.assertThatThrownBy { f.getOrThrow<Nothing>() }.isSameAs(x)
+            Assertions.assertThatThrownBy { f.getOrThrow() }.isSameAs(x)
         } finally {
             e.shutdown()
         }
@@ -42,6 +43,7 @@ class CordaFutureTest {
     }
 
     @Test(timeout=300_000)
+    @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
 	fun `map works`() {
         run {
             val f = CordaFutureImpl<Int>()
@@ -54,7 +56,7 @@ class CordaFutureTest {
             val x = Exception()
             val g = f.map { throw x }
             f.set(100)
-            Assertions.assertThatThrownBy { g.getOrThrow<Nothing>() }.isSameAs(x)
+            Assertions.assertThatThrownBy { g.getOrThrow() }.isSameAs(x)
         }
         run {
             val block = mock<(Any?) -> Any?>()

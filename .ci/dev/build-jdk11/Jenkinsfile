@@ -22,14 +22,14 @@ pipeline {
         stage("Core Tests") {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew clean core:test"
+                    sh "./gradlew core:test"
                 }
             }
         }
         stage("Node Tests") {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew clean node:test"
+                    sh "./gradlew node:test"
                 }
             }
         }

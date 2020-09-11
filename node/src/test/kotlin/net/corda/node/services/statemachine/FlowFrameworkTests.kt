@@ -155,7 +155,7 @@ class FlowFrameworkTests {
 	fun `flow can lazily use the serviceHub in its constructor`() {
         val flow = LazyServiceHubAccessFlow()
         aliceNode.services.startFlow(flow)
-        assertThat(flow.lazyTime).isNotNull()
+        assertThat(flow.lazyTime).isNotNull
     }
 
     class SuspendThrowingActionExecutor(private val exception: Exception, private val delegate: ActionExecutor) : ActionExecutor {
@@ -764,13 +764,14 @@ class FlowFrameworkTests {
     }
 
     @Test(timeout=300_000)
+    @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
     fun `Checkpoint is updated in DB with HOSPITALIZED status and the error when flow is kept for overnight observation` () {
         var flowId: StateMachineRunId? = null
 
         assertFailsWith<TimeoutException> {
             val fiber = aliceNode.services.startFlow(ExceptionFlow { HospitalizeFlowException("Overnight observation") })
             flowId = fiber.id
-            fiber.resultFuture.getOrThrow<Nothing>(10.seconds)
+            fiber.resultFuture.getOrThrow(10.seconds)
         }
 
         aliceNode.database.transaction {
