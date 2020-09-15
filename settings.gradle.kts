@@ -1,0 +1,32 @@
+rootProject.name = "corda-project"
+
+include("client:jackson")
+include("client:rpc")
+include("confidential-identities")
+include("core")
+include("core-deterministic")
+include("core-test-utils")
+include("common:validation")
+include("common:configuration-parsing")
+include("common:logging")
+include("node")
+include("node-api")
+include("node:djvm")
+include("serialization")
+include("serialization-deterministic")
+include("serialization-djvm")
+include("serialization-djvm:deserializers")
+include("test-common")
+include("test-utils")
+include("tools:cliutils")
+//include("test-cli")
+//include("test-db")
+//include("smoke-test-utils")
+//include("node-driver")
+arrayOf("test-common", "core-test-utils", "test-utils"/*, "test-cli", "test-db", "smoke-test-utils", "node-driver"*/).forEach {
+    print(File("$settingsDir/testing/$it"))
+    project(":$it").projectDir = File("$settingsDir/testing/$it")
+}
+
+include("tools:cliutils")
+include("tools:shell")

@@ -52,7 +52,7 @@ import kotlin.concurrent.thread
 class PersistentUniquenessProvider(val clock: Clock, val database: CordaPersistence, cacheFactory: NamedCacheFactory, val signTransaction : SigningFunction) : UniquenessProvider, SingletonSerializeAsToken() {
 
     @MappedSuperclass
-    class BaseComittedState(
+    open class BaseComittedState(
             @EmbeddedId
             val id: PersistentStateRef,
 

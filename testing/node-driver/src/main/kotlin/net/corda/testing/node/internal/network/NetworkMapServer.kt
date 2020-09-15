@@ -157,7 +157,7 @@ class NetworkMapServer(private val pollInterval: Duration,
         @GET
         @Produces(MediaType.APPLICATION_OCTET_STREAM)
         fun getGlobalNetworkMap(): Response {
-            val nodeInfoHashes = networkMaps[null]?.toList() ?: emptyList()
+            val nodeInfoHashes:mutableMapOf<UUID?, MutableSet<SecureHash>>() = networkMaps[null]?.toList() ?: emptyList()
             return networkMapResponse(nodeInfoHashes)
         }
 
