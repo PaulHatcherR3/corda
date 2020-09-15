@@ -43,7 +43,7 @@ public class SharedMemoryIncremental extends PortAllocation {
         this.endPort = endPort;
         try {
             mb = backingFile.getChannel().map(FileChannel.MapMode.READ_WRITE, 0, 16);
-            startingAddress = ((DirectBuffer) mb).address();
+            startingAddress = 0L;//((DirectBuffer) mb).address();
         } catch (IOException e) {
             e.printStackTrace();
         }
