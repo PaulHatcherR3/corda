@@ -259,7 +259,7 @@ class FlowMetadataRecordingTest {
                     it.initialParameters.deserialize(context = SerializationDefaults.STORAGE_CONTEXT)
                 )
                 assertThat(it.launchingCordapp).contains("custom-cordapp")
-                assertEquals(8, it.platformVersion)
+                assertEquals(11, it.platformVersion)
                 assertEquals(nodeAHandle.nodeInfo.singleIdentity().name.toString(), it.startedBy)
                 assertEquals(context!!.trace.invocationId.timestamp, it.invocationInstant)
                 assertTrue(it.startInstant >= it.invocationInstant)
