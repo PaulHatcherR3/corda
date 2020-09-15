@@ -21,7 +21,7 @@ object CommonSchemaV1 : MappedSchema(schemaFamily = CommonSchema.javaClass, vers
     override val migrationResource = "common.changelog-master"
 
     @MappedSuperclass
-    class LinearState(
+    open class LinearState(
             /** [ContractState] attributes */
 
             /** X500Name of participant parties **/
@@ -46,7 +46,7 @@ object CommonSchemaV1 : MappedSchema(schemaFamily = CommonSchema.javaClass, vers
     }
 
     @MappedSuperclass
-    class FungibleState(
+    open class FungibleState(
             /** [ContractState] attributes */
 
             /** X500Name of participant parties **/
