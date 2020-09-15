@@ -1,5 +1,7 @@
 package net.corda.testing.driver;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import sun.misc.Unsafe;
 import sun.nio.ch.DirectBuffer;
 
@@ -18,6 +20,7 @@ import java.nio.channels.FileChannel;
  * import sun.nio.ch.DirectBuffer;
  */
 public class SharedMemoryIncremental extends PortAllocation {
+    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     static private final int DEFAULT_START_PORT = 10_000;
     static private final int FIRST_EPHEMERAL_PORT = 30_000;
@@ -32,6 +35,8 @@ public class SharedMemoryIncremental extends PortAllocation {
     private RandomAccessFile backingFile;
     {
         try {
+            LOGGER.info("System.getProperty(\"user.home\") is: " + System.getProperty("user.home"));
+            LOGGER.info("Port allocator file was created: " + file.exists());
             backingFile = new RandomAccessFile(file, "rw");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
