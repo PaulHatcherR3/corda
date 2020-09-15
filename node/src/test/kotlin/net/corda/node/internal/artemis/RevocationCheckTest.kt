@@ -4,7 +4,6 @@ import net.corda.core.crypto.Crypto
 import net.corda.core.utilities.days
 import net.corda.node.internal.artemis.CertificateChainCheckPolicy.RevocationCheck
 import net.corda.nodeapi.internal.crypto.CertificateType
-import net.corda.nodeapi.internal.crypto.X509CertificateFactory
 import net.corda.nodeapi.internal.crypto.X509Utilities
 import net.corda.nodeapi.internal.protonwrapper.netty.RevocationConfig
 import org.bouncycastle.asn1.x500.X500Name
@@ -63,7 +62,7 @@ class RevocationCheckTest(private val revocationMode: RevocationConfig.Mode) {
 
     private val chain
         get() = listOf(tlsCert, nodeCACert, doormanCert, rootCert).map {
-            X509CertificateFactory().generateCertificate(it.encoded.inputStream())
+            javax.security.cert.X509Certificate.getInstance(it.encoded)
         }.toTypedArray()
 
     @Before
