@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.4.0"
 
     // TODO: 1.13.0 was published today!. once jcentral get synch we should change the version
     //       and set   warningsAsErrors: false in the config
