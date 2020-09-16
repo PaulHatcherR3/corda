@@ -49,7 +49,7 @@ fun <T> rigorousMock(clazz: Class<out T>) = Mockito.mock(clazz, RigorousMockDefa
 fun <T> participant(clazz: Class<out T>) = Mockito.mock(clazz, ParticipantDefaultAnswer)!!
 
 private abstract class DefaultAnswer : Answer<Any?> {
-    internal abstract fun answerImpl(invocation: InvocationOnMock): Any?
+    abstract fun answerImpl(invocation: InvocationOnMock): Any?
     override fun answer(invocation: InvocationOnMock): Any? {
         val method = invocation.method
         if (method.name == "toString" && method.parameterCount == 0) {
@@ -71,7 +71,7 @@ private class SpectatorDefaultAnswer : DefaultAnswer() {
         private val type = run {
             val method = invocation.method
             fun resolveType(context: Type, type: Type): Type {
-                context as? ParameterizedType ?: return type
+                if (context !is ParameterizedType) return type
                 val clazz = context.rawType as Class<*>
                 return context.actualTypeArguments[clazz.typeParameters.indexOf(resolveType(clazz.genericSuperclass, type))]
             }
@@ -87,7 +87,7 @@ private class SpectatorDefaultAnswer : DefaultAnswer() {
             null // A few types can't be mocked e.g. String.
         }
 
-        internal fun spectator(invocation: InvocationOnMock) = spectators?.computeIfAbsent(invocation, ::newSpectator)
+        fun spectator(invocation: InvocationOnMock) = spectators?.computeIfAbsent(invocation, ::newSpectator)
     }
 
     private val methods by lazy { ConcurrentHashMap<Method, MethodInfo>() }
