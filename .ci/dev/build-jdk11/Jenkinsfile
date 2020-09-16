@@ -8,7 +8,7 @@ pipeline {
     agent {
         dockerfile {
             label 'docker'
-            additionalBuildArgs "--build-arg USER=buildUser"
+            additionalBuildArgs "--build-arg USER=\$(id -un) --build-arg UID=\$(id -u) --build-arg GID=\$(id -g)"
             dir '.ci/dev/build-jdk11'
         }
     }
