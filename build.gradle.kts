@@ -50,8 +50,17 @@ detekt {
 }
 
 subprojects {
-    // TODO: dynamic version
-    version = "5.0"
+    // Our version: bump this on release.
+    val baseVersion = properties["cordaVersion"]
+    val versionSuffix = properties["versionSuffix"]
+    val releaseVersion = if(versionSuffix != null) {
+        "$baseVersion-$versionSuffix"
+    } else {
+        "$baseVersion"
+    }
+    val revision = "123"//TODO: Read git hash
+
+    version = releaseVersion
 
     apply(plugin = "kotlin")
 
@@ -72,14 +81,6 @@ subprojects {
 
     tasks.withType<Jar>().forEach { task ->
         task.manifest {
-            val baseVersion = properties["cordaVersion"]
-            val versionSuffix = properties["versionSuffix"]
-            val releaseVersion = if(versionSuffix != null) {
-                "$baseVersion-$versionSuffix"
-            } else {
-                "$baseVersion"
-            }
-            val revision = "123"//TODO: Read git hash
 
 
             attributes("Corda-Release-Version" to releaseVersion)
