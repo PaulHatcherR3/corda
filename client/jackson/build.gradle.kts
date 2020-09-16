@@ -11,4 +11,19 @@ dependencies {
 
     implementation(project(":core"))
     implementation(project(":serialization"))
+
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+    testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
+    testImplementation("junit:junit:${properties["junit_version"]}")
+    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
+
+    testImplementation("org.junit.vintage:junit-vintage-engine:${properties["junit_vintage_version"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:${properties["junit_vintage_version"]}")
+
+    testImplementation(project(":finance:workflows"))
+    testImplementation(project(":node-api"))
+    testImplementation(project(":core-test-utils"))
+    testImplementation(project(":test-common"))
+    testImplementation(project(":test-utils"))
 }
+

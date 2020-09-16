@@ -6,6 +6,7 @@ dependencies {
     implementation("org.hibernate:hibernate-core:${properties["hibernate_version"]}")
     implementation("io.dropwizard.metrics:metrics-jmx:${properties["metrics_version"]}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
+    implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("javax.persistence:javax.persistence-api:${properties["persistence-api_version"]}")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl:${properties["log4j_version"]}")
@@ -59,4 +60,15 @@ dependencies {
 
     // Sandbox for deterministic contract verification
     implementation("net.corda.djvm:corda-djvm:${properties["djvm_version"]}")
+
+    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
+    testImplementation("com.google.jimfs:jimfs:${properties["jimfs_version"]}")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+    testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
+    testImplementation("junit:junit:${properties["junit_version"]}")
+
+    testImplementation(project(":core-test-utils"))
+    testImplementation(project(":finance:contracts"))
+    testImplementation(project(":finance:workflows"))
+    testImplementation(project(":test-utils"))
 }

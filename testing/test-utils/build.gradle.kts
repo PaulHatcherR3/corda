@@ -25,4 +25,9 @@ dependencies {
     implementation(project(":node-api"))
     implementation(project(":test-common"))
     implementation(project(":serialization"))
+
+    testImplementation("org.apache.commons:commons-lang3:${properties["commons_lang_version"]}")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+    testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
+    testImplementation("junit:junit:${properties["junit_version"]}")
 }
