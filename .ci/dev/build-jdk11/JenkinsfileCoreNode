@@ -1,0 +1,42 @@
+@Library('corda-shared-build-pipeline-steps')
+import static com.r3.build.BuildControl.killAllExistingBuildsForJob
+
+killAllExistingBuildsForJob(env.JOB_NAME, env.BUILD_NUMBER.toInteger())
+
+pipeline {
+
+    agent {
+        dockerfile {
+            label 'docker'
+            additionalBuildArgs "--build-arg USER=\$(id -un) --build-arg UID=\$(id -u) --build-arg GID=\$(id -g)"
+            dir '.ci/dev/build-jdk11'
+        }
+    }
+
+    stages {
+        stage("Print specific JDK information") {
+            steps {
+                sh "java -version"
+            }
+        }
+        stage("Core Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew core:test"
+                }
+            }
+        }
+        stage("Node Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew node:test"
+                }
+            }
+        }
+    }
+    post {
+        always {
+            junit '*/build/test-results/**/*.xml'
+        }
+    }
+}

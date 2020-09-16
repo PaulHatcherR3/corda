@@ -23,6 +23,50 @@ pipeline {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew core:test"
+                    sh "./gradlew core-deterministic:test"
+                    sh "./gradlew core-deterministic:testing:test"
+                    sh "./gradlew core-tests:test"
+                }
+            }
+        }
+        stage("Client Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew client:jackson:test"
+                    sh "./gradlew client:jfx:test"
+                    sh "./gradlew client:mock:test"
+                    sh "./gradlew client:rpc:test"
+                }
+            }
+        }
+        stage("Common Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew common-configuration-parsing:test"
+                    sh "./gradlew common-logging:test"
+                    sh "./gradlew common-validation:test"
+                }
+            }
+        }
+        stage("Confidential Identities Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew confidential-identities:test"
+                }
+            }
+        }
+        stage("Detekt Plugins Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew detekt-plugins:test"
+                }
+            }
+        }
+        stage("Finance Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew finance:contracts:test"
+                    sh "./gradlew finance:workflows:test"
                 }
             }
         }
@@ -30,6 +74,25 @@ pipeline {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew node:test"
+                    sh "./gradlew node:capsule:test"
+                    sh "./gradlew node:djvm:test"
+                }
+            }
+        }
+        stage("Node API Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew node-api:test"
+                    sh "./gradlew node-api-tests:test"
+                }
+            }
+        }
+        stage("Serialization Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew serialization:test"
+                    sh "./gradlew serialization-djvm:test"
+                    sh "./gradlew serialization-tests:test"
                 }
             }
         }
