@@ -6,6 +6,13 @@ plugins {
     // TODO: 1.13.0 was published today!. once jcentral get synch we should change the version
     //       and set   warningsAsErrors: false in the config
     id("io.gitlab.arturbosch.detekt") version "1.12.0"
+    id("org.ajoberstar.grgit") version "4.0.2"
+
+    id("com.jfrog.artifactory") version "4.17.2"
+
+    `maven-publish`
+
+    `java-library`
 }
 
 dependencies {
@@ -33,6 +40,12 @@ allprojects {
                 }
             }
             maven(url = "${properties["artifactory_contextUrl"]}/corda-dev")
+            maven(url = "${properties["artifactory_contextUrl"]}/testing-ci-uploads-dev-local") {
+                credentials {
+                    username = System.getenv("CORDA_ARTIFACTORY_USERNAME")
+                    password = System.getenv("CORDA_ARTIFACTORY_PASSWORD")
+                }
+            }
             mavenCentral()
             jcenter()
             maven(url = "https://kotlin.bintray.com/kotlinx")
@@ -50,17 +63,6 @@ detekt {
 }
 
 subprojects {
-    // Our version: bump this on release.
-    val baseVersion = properties["cordaVersion"]
-    val versionSuffix = properties["versionSuffix"]
-    val releaseVersion = if(versionSuffix != null) {
-        "$baseVersion-$versionSuffix"
-    } else {
-        "$baseVersion"
-    }
-    val revision = "123"//TODO: Read git hash
-
-    version = releaseVersion
 
     apply(plugin = "kotlin")
 
@@ -68,7 +70,24 @@ subprojects {
         implementation(kotlin("stdlib"))
     }
 
-    tasks.withType<KotlinCompile>().forEach { compileKotlin ->
+    val branchName = grgit.branch.current().name
+    val revision = grgit.head().id
+    val tagName = grgit.tag.list().firstOrNull {
+        it.commit.id == revision
+    }?.name
+
+    val baseVersion = properties["cordaVersion"]
+    if (tagName != null && tagName.startsWith("release-os-")){
+        version = tagName.substringAfter("release-os-")
+    } else if(branchName.startsWith("release/os/")) {
+        version = branchName.substringAfter("release/os/") + "-SNAPSHOT"
+    } else {
+        val ticketRegex = Regex("[a-z0-9_]+/(.+)/.+")
+        val ticket = ticketRegex.matchEntire(branchName)
+        version = (ticket?.groupValues?.get(1)?.toUpperCase() ?: "$baseVersion-$revision") + "-SNAPSHOT"
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
         compileKotlin.kotlinOptions.allWarningsAsErrors = true
         compileKotlin.kotlinOptions.verbose = true
         compileKotlin.kotlinOptions.jvmTarget = "11"
@@ -81,9 +100,7 @@ subprojects {
 
     tasks.withType<Jar>().forEach { task ->
         task.manifest {
-
-
-            attributes("Corda-Release-Version" to releaseVersion)
+            attributes("Corda-Release-Version" to version)
             attributes("Corda-Platform-Version" to properties["platformVersion"])
             attributes("Corda-Revision" to revision)
             attributes("Corda-Vendor" to "Corda Open Source")
@@ -91,4 +108,10 @@ subprojects {
             attributes("Corda-Docs-Link" to "https://docs.corda.net/docs/corda-os/$baseVersion")
         }
     }
+
+    val javaTestCompiler = tasks.getByName("compileTestJava") as JavaCompile
+    javaTestCompiler.options.compilerArgs.addAll(listOf("--add-exports",
+            "java.base/sun.security.x509=ALL-UNNAMED",
+            "--add-exports",
+            "java.base/sun.security.util=ALL-UNNAMED"))
 }
