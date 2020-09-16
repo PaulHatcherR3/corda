@@ -49,7 +49,10 @@ dependencies {
     testImplementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
     testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
     testImplementation("junit:junit:${properties["junit_version"]}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${properties["junit_jupiter_version"]}")
 
     testImplementation(project(":core-test-utils"))
+    testImplementation(project(":test-common"))
+    testImplementation(project(":test-utils"))
 
 }

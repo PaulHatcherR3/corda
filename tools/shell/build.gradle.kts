@@ -14,9 +14,7 @@ dependencies {
     implementation("org.apache.activemq:artemis-amqp-protocol:${properties["artemis_version"]}")
     implementation("io.reactivex:rxjava:${properties["rxjava_version"]}")
     implementation("javax.persistence:javax.persistence-api:${properties["persistence-api_version"]}")
-
     implementation("org.fusesource.jansi:jansi:${properties["jansi_version"]}")
-
     implementation("org.crashub:crash.shell:${properties["crash_version"]}")
     implementation("org.crashub:crash.connectors.ssh:${properties["crash_version"]}")
 
@@ -24,4 +22,14 @@ dependencies {
     implementation(project(":client:rpc"))
     implementation(project(":core"))
     implementation(project(":node-api"))
+
+    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
+    testImplementation("junit:junit:${properties["junit_version"]}")
+    testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
+
+    testImplementation(project(":core-test-utils"))
+    testImplementation(project(":node"))
+    testImplementation(project(":test-common"))
+    testImplementation(project(":test-utils"))
 }

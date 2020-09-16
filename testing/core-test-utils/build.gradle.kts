@@ -1,13 +1,11 @@
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
 //    implementation("io.dropwizard.metrics:metrics-jmx:${properties["metrics_version"]}")
     implementation("junit:junit:${properties["junit_version"]}")
     implementation("io.reactivex:rxjava:${properties["rxjava_version"]}")
-    implementation("org.junit.jupiter:junit-jupiter-api:${properties["junit_jupiter_version"]}")
     implementation("org.junit.jupiter:junit-jupiter-api:${properties["junit_jupiter_version"]}")
     implementation("org.apache.activemq:artemis-core-client:${properties["artemis_version"]}")
     implementation("org.apache.activemq:artemis-server:${properties["artemis_version"]}")
@@ -19,8 +17,10 @@ dependencies {
     implementation("org.bouncycastle:bcprov-jdk15on:${properties["bouncycastleVersion"]}")
     implementation("org.bouncycastle:bcpkix-jdk15on:${properties["bouncycastleVersion"]}")
 
-    compile(project(":core"))
-    compile(project(":node-api"))
-    compile(project(":test-common"))
-    compile(project(":serialization"))
+    implementation(project(":core"))
+    implementation(project(":node-api"))
+    implementation(project(":test-common"))
+    implementation(project(":serialization"))
+
+    testImplementation("org.assertj:assertj-core:${properties["assertj_version"]}")
 }
