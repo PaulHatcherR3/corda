@@ -131,7 +131,6 @@ pipeline {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew node:test"
                     sh "./gradlew node:capsule:test"
-                    sh "./gradlew node:djvm:test"
                 }
             }
         }
@@ -147,7 +146,6 @@ pipeline {
             steps {
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew serialization:test"
-                    sh "./gradlew serialization-djvm:test"
                     sh "./gradlew serialization-tests:test"
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
