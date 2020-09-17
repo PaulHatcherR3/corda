@@ -9,6 +9,7 @@ import net.corda.core.flows.StartableByRPC
 import net.corda.core.identity.Party
 import net.corda.core.internal.concurrent.transpose
 import net.corda.core.messaging.startFlow
+import net.corda.core.utilities.contextLogger
 import net.corda.core.utilities.getOrThrow
 import net.corda.core.utilities.minutes
 import net.corda.core.utilities.seconds
@@ -19,11 +20,14 @@ import net.corda.testing.core.singleIdentity
 import net.corda.testing.driver.DriverParameters
 import net.corda.testing.driver.driver
 import org.junit.Test
+import org.slf4j.Logger
 import java.time.Duration
 import java.time.Instant
 import kotlin.test.assertTrue
 
 class FlowSleepTest {
+
+    val LOGGER: Logger = contextLogger()
 
     @Test(timeout = 300_000)
     fun `flow can sleep`() {
@@ -31,6 +35,7 @@ class FlowSleepTest {
             val alice = startNode(providedName = ALICE_NAME).getOrThrow()
             val (start, finish) = alice.rpc.startFlow(::SleepyFlow).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
+            LOGGER.info("Start: $start, Finish: $finish, Difference: $difference")
             assertTrue(difference >= 5.seconds)
             assertTrue(difference < 7.seconds)
         }
@@ -43,6 +48,8 @@ class FlowSleepTest {
             val (start, middle, finish) = alice.rpc.startFlow(::AnotherSleepyFlow).returnValue.getOrThrow(1.minutes)
             val differenceBetweenStartAndMiddle = Duration.between(start, middle)
             val differenceBetweenMiddleAndFinish = Duration.between(middle, finish)
+            LOGGER.info("Start: $start, Middle: $middle, Finish: $finish, DifferenceBetweenStartAndMiddle: $differenceBetweenStartAndMiddle," +
+                    "differenceBetweenMiddleAndFinish: $differenceBetweenMiddleAndFinish")
             assertTrue(differenceBetweenStartAndMiddle >= 5.seconds)
             assertTrue(differenceBetweenStartAndMiddle < 7.seconds)
             assertTrue(differenceBetweenMiddleAndFinish >= 10.seconds)
@@ -63,6 +70,7 @@ class FlowSleepTest {
                 bob.nodeInfo.singleIdentity()
             ).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
+            LOGGER.info("Start: $start, Finish: $finish, Difference: $difference")
             assertTrue(difference >= 5.seconds)
             assertTrue(difference < 7.seconds)
         }
