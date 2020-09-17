@@ -40,8 +40,10 @@ class FlowSleepTest {
             logger.info("Duration 2: ${7.seconds}")
             logger.info("Assert 1: ${difference >= 5.seconds}")
             logger.info("Assert 2: ${difference < 7.seconds}")
-            assertTrue(difference >= 5.seconds)
-            assertTrue(difference < 7.seconds)
+
+            val isInRange = inRange(difference, 5.seconds, 7.seconds)
+            logger.info("Assert 1: $isInRange")
+            assertTrue(isInRange)
         }
     }
 
@@ -59,14 +61,10 @@ class FlowSleepTest {
             logger.info("Duration 2: ${7.seconds}")
             logger.info("Duration 3: ${10.seconds}")
             logger.info("Duration 4: ${12.seconds}")
-            logger.info("Assert 1: ${differenceBetweenStartAndMiddle >= 5.seconds}")
-            logger.info("Assert 2: ${differenceBetweenStartAndMiddle < 7.seconds}")
-            logger.info("Assert 3: ${differenceBetweenMiddleAndFinish >= 10.seconds}")
-            logger.info("Assert 4: ${differenceBetweenMiddleAndFinish < 12.seconds}")
-            assertTrue(differenceBetweenStartAndMiddle >= 5.seconds)
-            assertTrue(differenceBetweenStartAndMiddle < 7.seconds)
-            assertTrue(differenceBetweenMiddleAndFinish >= 10.seconds)
-            assertTrue(differenceBetweenMiddleAndFinish < 12.seconds)
+            val isInRange = inRange(differenceBetweenStartAndMiddle, 5.seconds, 7.seconds) &&
+                    inRange(differenceBetweenMiddleAndFinish, 10.seconds, 12.seconds)
+            logger.info("Assert 1: $isInRange")
+            assertTrue(isInRange)
         }
     }
 
@@ -87,11 +85,14 @@ class FlowSleepTest {
             logger.info("Start: $start, Finish: $finish, Difference: $difference")
             logger.info("Duration 1: ${5.seconds}")
             logger.info("Duration 2: ${7.seconds}")
-            logger.info("Assert 1: ${difference >= 5.seconds}")
-            logger.info("Assert 2: ${difference < 7.seconds}")
-            assertTrue(difference >= 5.seconds)
-            assertTrue(difference < 7.seconds)
+            val isInRange = inRange(difference, 5.seconds, 7.seconds)
+            logger.info("Assert 1: $isInRange")
+            assertTrue(isInRange)
         }
+    }
+
+    val inRange = { duration: Duration, lower: Duration, upper: Duration ->
+        duration >= lower && duration < upper
     }
 
     @StartableByRPC
