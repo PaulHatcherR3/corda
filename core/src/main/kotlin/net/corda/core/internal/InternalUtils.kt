@@ -349,7 +349,7 @@ val <T : Any> Class<T>.kotlinObjectInstance: T? get() {
         field?.let {
             if (it.type == this && it.isPublic && it.isStatic && it.isFinal) {
                 it.isAccessible = true
-                uncheckedCast(it.get(null)) as T
+                return uncheckedCast(it.get(null))
             } else {
                 null
             }
