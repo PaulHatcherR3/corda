@@ -21,13 +21,14 @@ import net.corda.testing.driver.DriverParameters
 import net.corda.testing.driver.driver
 import org.junit.Test
 import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import java.time.Duration
 import java.time.Instant
 import kotlin.test.assertTrue
 
 class FlowSleepTest {
 
-    val LOGGER: Logger = contextLogger()
+    private val LOGGER: Logger = LoggerFactory.getLogger(this::class.java)
 
     @Test(timeout = 300_000)
     fun `flow can sleep`() {
