@@ -9,6 +9,7 @@ import net.corda.core.identity.CordaX500Name
 import net.corda.core.internal.div
 import net.corda.core.utilities.NetworkHostAndPort
 import org.assertj.core.api.Assertions.*
+import org.junit.Ignore
 import org.junit.Test
 import java.net.URL
 import java.nio.file.Path
@@ -105,18 +106,19 @@ class ConfigParsingTest {
     }
 
     // TODO: Test not working
-//    @Test(timeout=300_000)
-//	fun CordaX500Name() {
-//        val name1 = CordaX500Name(organisation = "Mock Party", locality = "London", country = "GB")
-//        testPropertyType<CordaX500NameData, CordaX500NameListData, CordaX500Name>(
-//                name1,
-//                CordaX500Name(organisation = "Mock Party 2", locality = "London", country = "GB"),
-//                valuesToString = true)
-//
-//        // Test with config object.
-//        val config = config("value" to mapOf("organisation" to "Mock Party", "locality" to "London", "country" to "GB"))
-//        assertThat(config.parseAs<CordaX500NameData>().value).isEqualTo(name1)
-//    }
+    @Ignore
+    @Test(timeout=300_000)
+	fun CordaX500Name() {
+        val name1 = CordaX500Name(organisation = "Mock Party", locality = "London", country = "GB")
+        testPropertyType<CordaX500NameData, CordaX500NameListData, CordaX500Name>(
+                name1,
+                CordaX500Name(organisation = "Mock Party 2", locality = "London", country = "GB"),
+                valuesToString = true)
+
+        // Test with config object.
+        val config = config("value" to mapOf("organisation" to "Mock Party", "locality" to "London", "country" to "GB"))
+        assertThat(config.parseAs<CordaX500NameData>().value).isEqualTo(name1)
+    }
 
     @Test(timeout=300_000)
 	fun `flat Properties`() {

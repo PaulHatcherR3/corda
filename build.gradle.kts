@@ -1,11 +1,11 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+val libGroupId = "net.corda"
 
 plugins {
     kotlin("jvm") version "1.4.0"
 
     // TODO: 1.13.0 was published today!. once jcentral get synch we should change the version
     //       and set   warningsAsErrors: false in the config
-    id("io.gitlab.arturbosch.detekt") version "1.12.0"
+    id("io.gitlab.arturbosch.detekt") version "1.13.0"
     id("org.ajoberstar.grgit") version "4.0.2"
 
     id("com.jfrog.artifactory") version "4.17.2"
@@ -70,22 +70,9 @@ subprojects {
         implementation(kotlin("stdlib"))
     }
 
-    val branchName = grgit.branch.current().name
-    val revision = grgit.head().id
-    val tagName = grgit.tag.list().firstOrNull {
-        it.commit.id == revision
-    }?.name
-
     val baseVersion = properties["cordaVersion"]
-    if (tagName != null && tagName.startsWith("release-os-")){
-        version = tagName.substringAfter("release-os-")
-    } else if(branchName.startsWith("release/os/")) {
-        version = branchName.substringAfter("release/os/") + "-SNAPSHOT"
-    } else {
-        val ticketRegex = Regex("[a-z0-9_]+/(.+)/.+")
-        val ticket = ticketRegex.matchEntire(branchName)
-        version = (ticket?.groupValues?.get(1)?.toUpperCase() ?: "$baseVersion-$revision") + "-SNAPSHOT"
-    }
+
+    version = "${baseVersion}-${properties["versionSuffix"]}"
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
         compileKotlin.kotlinOptions.allWarningsAsErrors = true
@@ -102,7 +89,7 @@ subprojects {
         task.manifest {
             attributes("Corda-Release-Version" to version)
             attributes("Corda-Platform-Version" to properties["platformVersion"])
-            attributes("Corda-Revision" to revision)
+            // attributes("Corda-Revision" to revision)
             attributes("Corda-Vendor" to "Corda Open Source")
             attributes("Automatic-Module-Name" to "net.corda.${task.project.name.replace('-', '.')}")
             attributes("Corda-Docs-Link" to "https://docs.corda.net/docs/corda-os/$baseVersion")

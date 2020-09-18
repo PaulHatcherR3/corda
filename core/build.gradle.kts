@@ -21,5 +21,4 @@ dependencies {
     testImplementation("com.nhaarman:mockito-kotlin:${properties["mockito_kotlin_version"]}")
 }
 
-val libGroupId = "net.corda"
 val libArtifactId = "core"

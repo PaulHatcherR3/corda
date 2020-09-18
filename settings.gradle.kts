@@ -21,11 +21,7 @@ include("serialization-djvm:deserializers")
 include("test-common")
 include("test-utils")
 include("tools:cliutils")
-//include("test-cli")
-//include("test-db")
-//include("smoke-test-utils")
-//include("node-driver")
-arrayOf("test-common", "core-test-utils", "test-utils"/*, "test-cli", "test-db", "smoke-test-utils", "node-driver"*/).forEach {
+arrayOf("test-common", "core-test-utils", "test-utils").forEach {
     print(File("$settingsDir/testing/$it"))
     project(":$it").projectDir = File("$settingsDir/testing/$it")
 }

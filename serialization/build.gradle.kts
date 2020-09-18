@@ -19,5 +19,4 @@ dependencies {
     testImplementation("com.fasterxml.jackson.core:jackson-databind:${properties["jackson_version"]}")
 }
 
-val libGroupId = "net.corda"
 val libArtifactId = "serialisation"

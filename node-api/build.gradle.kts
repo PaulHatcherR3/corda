@@ -23,7 +23,7 @@ dependencies {
     }
 
     // JDK11: required by Quasar at run-time
-    runtimeOnly("com.mattbertolini:liquibase-slf4j:2.0.0")
+    runtimeOnly("com.mattbertolini:liquibase-slf4j:${properties["runtime_liquibase_version"]}")
     runtimeOnly("com.esotericsoftware:kryo:${properties["kryo_version"]}")
 
 
