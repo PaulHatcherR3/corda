@@ -19,14 +19,11 @@ import net.corda.testing.core.singleIdentity
 import net.corda.testing.driver.DriverParameters
 import net.corda.testing.driver.driver
 import org.junit.Test
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import java.time.Duration
 import java.time.Instant
 import kotlin.test.assertTrue
 
 class FlowSleepTest {
-
 
     @Test(timeout = 300_000)
     fun `flow can sleep`() {
@@ -34,15 +31,8 @@ class FlowSleepTest {
             val alice = startNode(providedName = ALICE_NAME).getOrThrow()
             val (start, finish) = alice.rpc.startFlow(::SleepyFlow).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
-            println("[Test 1] Start: $start, Finish: $finish, Difference: $difference")
-            println("[Test 1] Duration 1: ${4.seconds}")
-            println("[Test 1] Duration 2: ${8.seconds}")
-            println("[Test 1] Assert 1: ${difference >= 4.seconds}")
-            println("[Test 1] Assert 2: ${difference < 8.seconds}")
-
-            val isInRange = inRange(difference, 4.seconds, 8.seconds)
-            println("[Test 1] Assert 3: $isInRange")
-            assertTrue(isInRange)
+            assertTrue(difference >= 4.seconds)
+            assertTrue(difference < 8.seconds)
         }
     }
 
@@ -53,17 +43,10 @@ class FlowSleepTest {
             val (start, middle, finish) = alice.rpc.startFlow(::AnotherSleepyFlow).returnValue.getOrThrow(1.minutes)
             val differenceBetweenStartAndMiddle = Duration.between(start, middle)
             val differenceBetweenMiddleAndFinish = Duration.between(middle, finish)
-
-            println("[Test 2] Start: $start, Middle: $middle, Finish: $finish, DifferenceBetweenStartAndMiddle: $differenceBetweenStartAndMiddle," +
-                    "differenceBetweenMiddleAndFinish: $differenceBetweenMiddleAndFinish")
-            println("[Test 2] Duration 1: ${4.seconds}")
-            println("[Test 2] Duration 2: ${8.seconds}")
-            println("[Test 2] Duration 3: ${9.seconds}")
-            println("[Test 2] Duration 4: ${13.seconds}")
-            val isInRange = inRange(differenceBetweenStartAndMiddle, 4.seconds, 8.seconds) &&
-                    inRange(differenceBetweenMiddleAndFinish, 9.seconds, 13.seconds)
-            println("[Test 2] Assert: $isInRange")
-            assertTrue(isInRange)
+            assertTrue(differenceBetweenStartAndMiddle >= 4.seconds)
+            assertTrue(differenceBetweenStartAndMiddle < 8.seconds)
+            assertTrue(differenceBetweenMiddleAndFinish >= 9.seconds)
+            assertTrue(differenceBetweenMiddleAndFinish < 13.seconds)
         }
     }
 
@@ -80,17 +63,9 @@ class FlowSleepTest {
                 bob.nodeInfo.singleIdentity()
             ).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
-            println("[Test 3] Start: $start, Finish: $finish, Difference: $difference")
-            println("[Test 3] Duration 1: ${4.seconds}")
-            println("[Test 3] Duration 2: ${8.seconds}")
-            val isInRange = inRange(difference, 4.seconds, 8.seconds)
-            println("[Test 3] Assert: $isInRange")
-            assertTrue(isInRange)
+            assertTrue(difference >= 4.seconds)
+            assertTrue(difference < 8.seconds)
         }
-    }
-
-    val inRange = { duration: Duration, lower: Duration, upper: Duration ->
-        duration >= lower && duration < upper
     }
 
     @StartableByRPC
