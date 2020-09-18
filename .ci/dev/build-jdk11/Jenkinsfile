@@ -25,14 +25,14 @@ pipeline {
                     sh "./gradlew core:test"
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew core-deterministic:test"
+                    sh "./gradlew core-deterministic:testing:test"
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                     sh "./gradlew core-deterministic:testing:test"
-                 }
-                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                     sh "./gradlew core-tests:test"
-                 }
+                    sh "./gradlew core-deterministic:testing:test"
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh "./gradlew core-tests:test"
+                }
             }
         }
         stage("Client Tests") {
@@ -42,9 +42,6 @@ pipeline {
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew client:jfx:test"
-                }
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew client:mock:test"
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew client:rpc:test"
@@ -58,9 +55,6 @@ pipeline {
                 }
                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
                     sh "./gradlew common-logging:test"
-                }
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew common-validation:test"
                 }
             }
         }
