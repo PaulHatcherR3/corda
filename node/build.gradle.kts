@@ -40,6 +40,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:${properties["okhttp_version"]}")
     implementation("com.github.bft-smart:library:${properties["bft_smart_version"]}")
     implementation("io.atomix.catalyst:catalyst-netty:${properties["catalyst_version"]}")
+    implementation("com.lmax:disruptor:${properties["disruptor_version"]}")
 
     implementation(project(":client:jackson"))
     implementation(project(":client:rpc"))
