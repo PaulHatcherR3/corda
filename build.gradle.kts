@@ -23,13 +23,13 @@ allprojects {
     repositories {
         val cordaUseCache = System.getenv("CORDA_USE_CACHE")
         if(cordaUseCache != null) {
-            maven(url = "${properties["artifactory_contextUrl"]}/$cordaUseCache") {
+            maven(url = "${properties["artifactoryContextUrl"]}/$cordaUseCache") {
                 name = "R3 Maven remote repositories"
             }
         } else {
-            maven(url = "${properties["artifactory_contextUrl"]}/corda-dependencies-dev")
-            maven(url = "${properties["artifactory_contextUrl"]}/corda-releases")
-            maven(url = "${properties["artifactory_contextUrl"]}/corda-dependencies") {
+            maven(url = "${properties["artifactoryContextUrl"]}/corda-dependencies-dev")
+            maven(url = "${properties["artifactoryContextUrl"]}/corda-releases")
+            maven(url = "${properties["artifactoryContextUrl"]}/corda-dependencies") {
                 metadataSources {
                     mavenPom()
                     // TODO: Because Gradle 6.1 will not look for the jar if there is no pom file (https://docs.gradle.org/current/userguide/declaring_dependencies.html#sec:dependency-types)
@@ -39,8 +39,8 @@ allprojects {
                     artifact()
                 }
             }
-            maven(url = "${properties["artifactory_contextUrl"]}/corda-dev")
-            maven(url = "${properties["artifactory_contextUrl"]}/testing-ci-uploads-dev-local") {
+            maven(url = "${properties["artifactoryContextUrl"]}/corda-dev")
+            maven(url = "${properties["artifactoryContextUrl"]}/testing-ci-uploads-dev-local") {
                 credentials {
                     username = System.getenv("CORDA_ARTIFACTORY_USERNAME")
                     password = System.getenv("CORDA_ARTIFACTORY_PASSWORD")
