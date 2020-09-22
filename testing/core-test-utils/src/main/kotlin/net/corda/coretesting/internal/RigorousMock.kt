@@ -76,10 +76,10 @@ private class SpectatorDefaultAnswer : DefaultAnswer() {
                 return context.actualTypeArguments[clazz.typeParameters.indexOf(resolveType(clazz.genericSuperclass, type))]
             }
             resolveType(invocation.mock.javaClass.genericSuperclass, method.genericReturnType) as? Class<*>
-                    ?: method.returnType!!
+                    ?: method.returnType
         }
 
-        private fun newSpectator(invocation: InvocationOnMock) = spectator(type)!!.also { log.info("New spectator {} for: {}", it, invocation.arguments) }
+        private fun newSpectator(invocation: InvocationOnMock) = spectator(type).also { log.info("New spectator {} for: {}", it, invocation.arguments) }
         private val spectators = try {
             val first = newSpectator(invocation)
             ConcurrentHashMap<InvocationOnMock, Any>().apply { put(invocation, first) }

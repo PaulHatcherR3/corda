@@ -1,3 +1,5 @@
+import static org.gradle.api.JavaVersion.VERSION_11
+
 plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
@@ -26,4 +28,13 @@ dependencies {
 // This module has no artifact and only contains tests.
 tasks.named('jar', Jar) {
     enabled = false
+}
+
+compileTestJava {
+    doFirst {
+        if (JavaVersion.current() == VERSION_11)
+            options.compilerArgs = [
+                    '--add-exports', 'java.base/sun.security.provider=ALL-UNNAMED'
+            ]
+    }
 }

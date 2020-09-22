@@ -108,7 +108,7 @@ open class InternalUtilsTest {
 
     @Test(timeout=300_000)
 	fun `bufferUntilSubscribed delays emission until the first subscription`() {
-        val sourceSubject: PublishSubject<Int> = PublishSubject.create<Int>()
+        val sourceSubject: PublishSubject<Int> = PublishSubject.create()
         val bufferedObservable: rx.Observable<Int> = uncheckedCast(sourceSubject.bufferUntilSubscribed())
 
         sourceSubject.onNext(1)
@@ -132,7 +132,7 @@ open class InternalUtilsTest {
 
     @Test(timeout=300_000)
 	fun `warnOnce works, but the backing cache grows only to a maximum size`() {
-        val MAX_SIZE = 100
+        val maxSize = 100
 
         val logger = mock<Logger>()
         logger.warnOnce("a")
@@ -140,7 +140,7 @@ open class InternalUtilsTest {
         logger.warnOnce("b")
 
         // This should cause the eviction of "a".
-        (1..MAX_SIZE).forEach { logger.warnOnce("$it") }
+        (1..maxSize).forEach { logger.warnOnce("$it") }
         logger.warnOnce("a")
 
         // "a" should be logged twice because it was evicted.

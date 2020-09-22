@@ -135,7 +135,7 @@ fun <A, B> ObservableList<out A>.foldObservable(initial: B, folderFunction: (B, 
             current = folderFunction(current, it)
         }
         current
-    }, arrayOf(this))
+    }, this)
 }
 
 /**
@@ -292,7 +292,7 @@ fun <A> ObservableList<A>.last(): ObservableValue<A?> {
         } else {
             null
         }
-    }, arrayOf(this))
+    }, this)
 }
 
 fun <T : Any> ObservableList<T>.unique(): ObservableList<T> {
@@ -304,7 +304,7 @@ fun <T : Any, K : Any> ObservableList<T>.distinctBy(toKey: (T) -> K): Observable
 }
 
 fun ObservableValue<*>.isNotNull(): BooleanBinding {
-    return Bindings.createBooleanBinding({ this.value != null }, arrayOf(this))
+    return Bindings.createBooleanBinding({ this.value != null }, this)
 }
 
 /**
@@ -312,7 +312,7 @@ fun ObservableValue<*>.isNotNull(): BooleanBinding {
  * Return provided default value if the list is empty.
  */
 fun <A> ObservableList<A>.firstOrDefault(default: ObservableValue<A?>, predicate: (A) -> Boolean): ObservableValue<A?> {
-    return Bindings.createObjectBinding({ this.firstOrNull(predicate) ?: default.value }, arrayOf(this, default))
+    return Bindings.createObjectBinding({ this.firstOrNull(predicate) ?: default.value }, this, default)
 }
 
 /**
@@ -320,7 +320,7 @@ fun <A> ObservableList<A>.firstOrDefault(default: ObservableValue<A?>, predicate
  * Return ObservableValue(null) if the list is empty.
  */
 fun <A> ObservableList<A>.firstOrNullObservable(predicate: (A) -> Boolean): ObservableValue<A?> {
-    return Bindings.createObjectBinding({ this.firstOrNull(predicate) }, arrayOf(this))
+    return Bindings.createObjectBinding({ this.firstOrNull(predicate) }, this)
 }
 
 /**

@@ -578,12 +578,10 @@ class SerializationOutputTests(private val compression: CordaSerializationEncodi
 
     private fun assertSerializedThrowableEquivalent(t: Throwable, desThrowable: Throwable) {
         assertTrue(desThrowable is CordaRuntimeException) // Since we don't handle the other case(s) yet
-        if (desThrowable is CordaRuntimeException) {
-            assertEquals("${t.javaClass.name}: ${t.message}", desThrowable.message)
-            assertTrue(Objects.deepEquals(t.stackTrace.toStackTraceBasic, desThrowable.stackTrace.toStackTraceBasic))
-            assertEquals(t.suppressed.size, desThrowable.suppressed.size)
-            t.suppressed.zip(desThrowable.suppressed).forEach { (before, after) -> assertSerializedThrowableEquivalent(before, after) }
-        }
+        assertEquals("${t.javaClass.name}: ${t.message}", desThrowable.message)
+        assertTrue(Objects.deepEquals(t.stackTrace.toStackTraceBasic, desThrowable.stackTrace.toStackTraceBasic))
+        assertEquals(t.suppressed.size, desThrowable.suppressed.size)
+        t.suppressed.zip(desThrowable.suppressed).forEach { (before, after) -> assertSerializedThrowableEquivalent(before, after) }
     }
 
     @Test(timeout=300_000)

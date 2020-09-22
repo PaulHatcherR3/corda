@@ -139,7 +139,7 @@ open class VaultQueryTestRule : ExternalResource(), VaultQueryParties {
                 cordappPackages,
                 makeTestIdentityService(MEGA_CORP_IDENTITY, MINI_CORP_IDENTITY, dummyCashIssuer.identity, dummyNotary.identity),
                 megaCorp,
-                moreKeys = *arrayOf(DUMMY_NOTARY_KEY))
+                moreKeys = arrayOf(DUMMY_NOTARY_KEY))
         database = databaseAndServices.first
         services = databaseAndServices.second
         vaultFiller = VaultFiller(services, dummyNotary)

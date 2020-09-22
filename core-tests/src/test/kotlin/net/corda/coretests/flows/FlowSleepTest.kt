@@ -31,8 +31,8 @@ class FlowSleepTest {
             val alice = startNode(providedName = ALICE_NAME).getOrThrow()
             val (start, finish) = alice.rpc.startFlow(::SleepyFlow).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
-            assertTrue(difference >= 5.seconds)
-            assertTrue(difference < 7.seconds)
+            assertTrue(difference >= 4.seconds)
+            assertTrue(difference < 8.seconds)
         }
     }
 
@@ -43,10 +43,10 @@ class FlowSleepTest {
             val (start, middle, finish) = alice.rpc.startFlow(::AnotherSleepyFlow).returnValue.getOrThrow(1.minutes)
             val differenceBetweenStartAndMiddle = Duration.between(start, middle)
             val differenceBetweenMiddleAndFinish = Duration.between(middle, finish)
-            assertTrue(differenceBetweenStartAndMiddle >= 5.seconds)
-            assertTrue(differenceBetweenStartAndMiddle < 7.seconds)
-            assertTrue(differenceBetweenMiddleAndFinish >= 10.seconds)
-            assertTrue(differenceBetweenMiddleAndFinish < 12.seconds)
+            assertTrue(differenceBetweenStartAndMiddle >= 4.seconds)
+            assertTrue(differenceBetweenStartAndMiddle < 8.seconds)
+            assertTrue(differenceBetweenMiddleAndFinish >= 9.seconds)
+            assertTrue(differenceBetweenMiddleAndFinish < 13.seconds)
         }
     }
 
@@ -63,8 +63,8 @@ class FlowSleepTest {
                 bob.nodeInfo.singleIdentity()
             ).returnValue.getOrThrow(1.minutes)
             val difference = Duration.between(start, finish)
-            assertTrue(difference >= 5.seconds)
-            assertTrue(difference < 7.seconds)
+            assertTrue(difference >= 4.seconds)
+            assertTrue(difference < 8.seconds)
         }
     }
 

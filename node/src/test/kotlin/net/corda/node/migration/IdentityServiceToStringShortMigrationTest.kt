@@ -121,7 +121,7 @@ class IdentityServiceToStringShortMigrationTest {
 
         listOfNamesWithoutPkHash.forEach {
             //the only time an identity name does not have a PK_HASH is if there are multiple identities associated with that name
-            Assert.assertThat(groupedByNameIdentities[it]?.size, `is`(greaterThan(1)))
+            Assert.assertThat(groupedByNameIdentities[it]?.size, `is`(greaterThan(1) as Matcher<Int>))
         }
     }
 }

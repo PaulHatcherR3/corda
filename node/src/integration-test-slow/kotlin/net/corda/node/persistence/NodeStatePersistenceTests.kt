@@ -59,7 +59,7 @@ class NodeStatePersistenceTests {
             result
         }
         assertNotNull(stateAndRef)
-        val retrievedMessage = stateAndRef!!.state.data.message
+        val retrievedMessage = stateAndRef.state.data.message
         assertEquals(message, retrievedMessage)
     }
 
@@ -95,7 +95,7 @@ class NodeStatePersistenceTests {
             result
         }
         assertNotNull(stateAndRef)
-        val retrievedMessage = stateAndRef!!.state.data.message
+        val retrievedMessage = stateAndRef.state.data.message
         assertEquals(message, retrievedMessage)
     }
 }

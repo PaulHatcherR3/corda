@@ -21,7 +21,7 @@ class CommandBuilder : Function<Array<Any?>, List<CommandWithParties<CommandData
                 "Invalid Transaction. Fewer Signers (${signers.size}) than CommandData (${commandsData.size}) objects"
             }
             if (partialMerkleLeafIndices.isNotEmpty()) {
-                check(partialMerkleLeafIndices.max()!! < signers.size) {
+                check(partialMerkleLeafIndices.maxOrNull()!! < signers.size) {
                     "Invalid Transaction. A command with no corresponding signer detected"
                 }
             }

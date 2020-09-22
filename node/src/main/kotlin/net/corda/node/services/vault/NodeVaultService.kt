@@ -208,7 +208,7 @@ class NodeVaultService(
     }
 
     override val rawUpdates: Observable<Vault.Update<ContractState>>
-        get() = mutex.locked {
+        get() = mutex.locked<Observable<Vault.Update<ContractState>>> {
             FlowStateMachineImpl.currentStateMachine()?.let {
                 // we are inside a flow; we cannot allow flows to subscribe Rx Observers,
                 // because the Observer could reference flow's properties, essentially fiber's properties then,
