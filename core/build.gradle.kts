@@ -23,4 +23,22 @@ dependencies {
     testImplementation("org.ow2.asm:asm:${properties["asmVersion"]}")
 }
 
+// Added to facilitate core-tests
+val testConfig = configurations.create("testArtifacts") {
+    extendsFrom(configurations["testCompile"])
+}
+
+// Added to facilitate core-tests
+tasks.register<Jar>("testJar") {
+    dependsOn("testClasses")
+    archiveBaseName.set("${project.name}-test")
+    from(sourceSets["test"].output.classesDirs)
+}
+
+// Added to facilitate core-tests
+// Exposes test classes for other modules
+artifacts {
+    add("testArtifacts", tasks.named<Jar>("testJar") )
+}
+
 val libArtifactId = "core"
