@@ -379,7 +379,7 @@ class NodeRegistrationConfiguration(
                 require(it.serviceLegalName != config.myLegalName) {
                     "The notary service legal name must be different from the node legal name"
                 }
-                NotaryServiceConfig(X509Utilities.DISTRIBUTED_NOTARY_KEY_ALIAS, it.serviceLegalName!!)
+                NotaryServiceConfig(X509Utilities.DISTRIBUTED_NOTARY_KEY_ALIAS, it.serviceLegalName)
             }
     )
 }

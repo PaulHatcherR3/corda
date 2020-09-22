@@ -57,7 +57,7 @@ class SpecificationTest {
 
         val spec = object : Configuration.Specification<AtomicLong>("AtomicLong") {
 
-            private val maxElement by long("elements").list().map { elements -> elements.max() }
+            private val maxElement by long("elements").list().map { elements -> elements.maxOrNull() }
 
             override fun parseValid(configuration: Config, options: Configuration.Options): Valid<AtomicLong> {
                 val config = configuration.withOptions(options)
@@ -70,8 +70,8 @@ class SpecificationTest {
 
         val result = spec.parse(configuration)
 
-        assertThat(result.isValid).isTrue()
-        assertThat(result.value().get()).isEqualTo(elements.max())
+        assertThat(result.isValid).isTrue
+        assertThat(result.value().get()).isEqualTo(elements.maxOrNull())
     }
 
     @Test(timeout=300_000)
@@ -103,7 +103,7 @@ class SpecificationTest {
             if (elements.any { element -> element <= 1  }) {
                 return invalid(Configuration.Validation.Error.BadValue.of("elements cannot be less than or equal to 1"))
             }
-            return valid(elements.max()!!)
+            return valid(elements.maxOrNull()!!)
         }
 
         val spec = object : Configuration.Specification<AtomicLong>("AtomicLong") {

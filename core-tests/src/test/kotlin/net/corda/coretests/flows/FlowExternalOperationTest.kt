@@ -252,6 +252,7 @@ class FlowExternalOperationTest : AbstractFlowExternalOperationTest() {
         FlowWithExternalProcess(party) {
 
         @Suspendable
+        @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
         override fun testCode() {
             val e = createException()
             await(ExternalOperation(serviceHub) { _, _ -> throw e })
@@ -269,6 +270,7 @@ class FlowExternalOperationTest : AbstractFlowExternalOperationTest() {
         FlowWithExternalProcess(party) {
 
         @Suspendable
+        @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
         override fun testCode(): Any = try {
             await(ExternalOperation(serviceHub) { _, _ ->
                 throw IllegalStateException("threw exception in background process")
@@ -283,6 +285,7 @@ class FlowExternalOperationTest : AbstractFlowExternalOperationTest() {
     class FlowWithExternalOperationThatPassesInServiceHubCanRetry(party: Party) : FlowWithExternalProcess(party) {
 
         @Suspendable
+        @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
         override fun testCode(): Any =
             await(ExternalOperation(serviceHub) { serviceHub, _ ->
                 serviceHub.cordaService(FutureService::class.java).throwHospitalHandledException()
@@ -292,7 +295,7 @@ class FlowExternalOperationTest : AbstractFlowExternalOperationTest() {
     @StartableByRPC
     class FlowWithExternalOperationThatDirectlyAccessesServiceHubFailsRetry(party: Party) : FlowWithExternalProcess(party) {
 
-        @Suppress("TooGenericExceptionCaught")
+        @Suppress("TooGenericExceptionCaught", "IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
         @Suspendable
         override fun testCode(): Any {
             try {

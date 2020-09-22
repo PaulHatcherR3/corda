@@ -668,7 +668,7 @@ class DriverDSLImpl(
      * Start the node with the given flag which is expected to start the node for some function, which once complete will
      * terminate the node.
      */
-    private fun startOutOfProcessMiniNode(config: NodeConfig, extraCmdLineFlag: Array<String> = emptyArray()): CordaFuture<Unit> {
+    private fun startOutOfProcessMiniNode(config: NodeConfig, extraCmdLineFlag: Array<String> = emptyArray()): CordaFuture<Unit?> {
         val debugPort = if (isDebug) debugPortAllocation.nextPort() else null
         val process = startOutOfProcessNode(
                 config,
@@ -1238,7 +1238,7 @@ interface InternalDriverDSL : DriverDSL {
      * Polls the given function until it returns true.
      * @see pollUntilNonNull
      */
-    fun pollUntilTrue(pollName: String, pollInterval: Duration = DEFAULT_POLL_INTERVAL, warnCount: Int = DEFAULT_WARN_COUNT, check: () -> Boolean): CordaFuture<Unit> {
+    fun pollUntilTrue(pollName: String, pollInterval: Duration = DEFAULT_POLL_INTERVAL, warnCount: Int = DEFAULT_WARN_COUNT, check: () -> Boolean): CordaFuture<Unit?> {
         return pollUntilNonNull(pollName, pollInterval, warnCount) { if (check()) Unit else null }
     }
 

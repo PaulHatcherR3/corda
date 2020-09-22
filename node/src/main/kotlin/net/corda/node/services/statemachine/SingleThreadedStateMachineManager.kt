@@ -863,7 +863,7 @@ internal class SingleThreadedStateMachineManager(
         }
         totalStartedFlows.inc()
         addAndStartFlow(flowId, flow)
-        return startedFuture.map { flow.fiber as FlowStateMachine<A> }
+        return startedFuture.map { flow.fiber }
     }
 
     override fun scheduleFlowTimeout(flowId: StateMachineRunId) {

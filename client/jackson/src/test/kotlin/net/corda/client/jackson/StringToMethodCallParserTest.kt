@@ -51,8 +51,6 @@ class StringToMethodCallParserTest {
         val result = parser.parse(Target(), "complexNestedObject pairs: { first: 101, second: [ A, B, C ] }").invoke()
 
         assertTrue(result is Pair<*,*>)
-        result as Pair<*,*>
-
         assertEquals(101, result.first)
 
         assertTrue(result.second is Deque<*>)

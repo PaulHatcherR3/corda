@@ -15,6 +15,7 @@ import kotlin.test.assertTrue
 
 class CordaFutureTest {
     @Test(timeout=300_000)
+    @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
 	fun `fork works`() {
         val e = Executors.newSingleThreadExecutor()
         try {
@@ -42,6 +43,7 @@ class CordaFutureTest {
     }
 
     @Test(timeout=300_000)
+    @Suppress("IMPLICIT_NOTHING_TYPE_ARGUMENT_IN_RETURN_POSITION")
 	fun `map works`() {
         run {
             val f = CordaFutureImpl<Int>()

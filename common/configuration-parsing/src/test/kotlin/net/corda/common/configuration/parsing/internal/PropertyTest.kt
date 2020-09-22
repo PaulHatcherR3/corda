@@ -64,13 +64,13 @@ class PropertyTest {
         val value = listOf(1L, 3L, 2L)
         val configuration = configObject(key to value).toConfig()
 
-        val property = Configuration.Property.Definition.long(key).list().map { list -> list.max() }
+        val property = Configuration.Property.Definition.long(key).list().map { list -> list.maxOrNull() }
         println(property)
 
         assertThat(property.key).isEqualTo(key)
-        assertThat(property.isMandatory).isTrue()
-        assertThat(property.isSpecifiedBy(configuration)).isTrue()
-        assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(value.max())
+        assertThat(property.isMandatory).isTrue
+        assertThat(property.isSpecifiedBy(configuration)).isTrue
+        assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(value.maxOrNull())
     }
 
     @Test(timeout=300_000)
@@ -79,12 +79,12 @@ class PropertyTest {
         val key = "a.b.c"
         val configuration = configObject().toConfig()
 
-        val property = Configuration.Property.Definition.long(key).list().map { list -> list.max() }.optional()
+        val property = Configuration.Property.Definition.long(key).list().map { list -> list.maxOrNull() }.optional()
         println(property)
 
         assertThat(property.key).isEqualTo(key)
-        assertThat(property.isMandatory).isFalse()
-        assertThat(property.isSpecifiedBy(configuration)).isFalse()
+        assertThat(property.isMandatory).isFalse
+        assertThat(property.isSpecifiedBy(configuration)).isFalse
         assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(null)
     }
 
@@ -95,13 +95,14 @@ class PropertyTest {
         val value = listOf(1L, 3L, 2L)
         val configuration = configObject(key to value).toConfig()
 
-        val property = Configuration.Property.Definition.long(key).map(::AtomicLong).list().map { list -> list.map(AtomicLong::get).max() }
+        val property = Configuration.Property.Definition.long(key).map(::AtomicLong).list().map { list -> list.map(AtomicLong::get)
+                .maxOrNull() }
         println(property)
 
         assertThat(property.key).isEqualTo(key)
-        assertThat(property.isMandatory).isTrue()
-        assertThat(property.isSpecifiedBy(configuration)).isTrue()
-        assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(value.max())
+        assertThat(property.isMandatory).isTrue
+        assertThat(property.isSpecifiedBy(configuration)).isTrue
+        assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(value.maxOrNull())
     }
 
     @Test(timeout=300_000)
@@ -110,12 +111,13 @@ class PropertyTest {
         val key = "a.b.c"
         val configuration = configObject().toConfig()
 
-        val property = Configuration.Property.Definition.long(key).map(::AtomicLong).list().map { list -> list.map(AtomicLong::get).max() }.optional()
+        val property = Configuration.Property.Definition.long(key).map(::AtomicLong).list().map { list -> list.map(AtomicLong::get)
+                .maxOrNull() }.optional()
         println(property)
 
         assertThat(property.key).isEqualTo(key)
-        assertThat(property.isMandatory).isFalse()
-        assertThat(property.isSpecifiedBy(configuration)).isFalse()
+        assertThat(property.isMandatory).isFalse
+        assertThat(property.isSpecifiedBy(configuration)).isFalse
         assertThat(property.valueIn(configuration, Configuration.Options.defaults)).isEqualTo(null)
     }
 
