@@ -112,6 +112,34 @@ pipeline {
                 }
             }
         }
+        stage("Tools Tests") {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:blobinspector:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:bootstrapper:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:demobench:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:error-tool:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:explorer:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:shell:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:shell-cli:test'
+                }
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh './gradlew tools:worldmap:test'
+                }
+            }
+        }
     }
     post {
         always {
