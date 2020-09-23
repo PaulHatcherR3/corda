@@ -19,20 +19,6 @@ class ZonedDateTimeSerializer(
                 ZonedDateTimeProxy::class.java,
                 factory
 ) {
-    // Java deserialization of `ZonedDateTime` uses a private method.  We will resolve this somewhat statically
-    // so that any change to internals of `ZonedDateTime` is detected early.
-    companion object {
-        val ofLenient: Method = ZonedDateTime::class.java.getDeclaredMethod(
-                "ofLenient",
-                LocalDateTime::class.java,
-                ZoneOffset::class.java,
-                ZoneId::class.java
-        )
-
-        init {
-            ofLenient.isAccessible = true
-        }
-    }
 
     override val additionalSerializers: Iterable<CustomSerializer<out Any>> = listOf(
             LocalDateTimeSerializer(factory),
@@ -41,12 +27,11 @@ class ZonedDateTimeSerializer(
 
     override fun toProxy(obj: ZonedDateTime): ZonedDateTimeProxy = ZonedDateTimeProxy(obj.toLocalDateTime(), obj.offset, obj.zone)
 
-    override fun fromProxy(proxy: ZonedDateTimeProxy): ZonedDateTime = ofLenient.invoke(
-            null,
+    override fun fromProxy(proxy: ZonedDateTimeProxy): ZonedDateTime = ZonedDateTime.ofInstant(
             proxy.dateTime,
             proxy.offset,
             proxy.zone
-    ) as ZonedDateTime
+    )
 
     @KeepForDJVM
     data class ZonedDateTimeProxy(val dateTime: LocalDateTime, val offset: ZoneOffset, val zone: ZoneId)
