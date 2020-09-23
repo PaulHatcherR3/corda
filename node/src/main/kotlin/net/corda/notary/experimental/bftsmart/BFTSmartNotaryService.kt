@@ -1,5 +1,6 @@
 package net.corda.notary.experimental.bftsmart
 
+import bftsmart.tom.MessageContext
 import co.paralleluniverse.fibers.Suspendable
 import com.google.common.util.concurrent.SettableFuture
 import net.corda.core.contracts.StateRef
@@ -10,6 +11,7 @@ import net.corda.core.identity.Party
 import net.corda.core.internal.notary.NotaryInternalException
 import net.corda.core.internal.notary.NotaryService
 import net.corda.core.internal.notary.verifySignature
+import net.corda.core.internal.toTypedArray
 import net.corda.core.schemas.PersistentStateRef
 import net.corda.core.serialization.deserialize
 import net.corda.core.serialization.serialize
@@ -24,6 +26,7 @@ import net.corda.node.services.transactions.PersistentUniquenessProvider
 import net.corda.node.utilities.AppendOnlyPersistentMap
 import net.corda.nodeapi.internal.persistence.NODE_DATABASE_PREFIX
 import java.security.PublicKey
+import java.util.*
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
@@ -169,6 +172,9 @@ class BFTSmartNotaryService(
                           createMap: () -> AppendOnlyPersistentMap<StateRef, SecureHash, CommittedState, PersistentStateRef>,
                           services: ServiceHubInternal,
                           notaryIdentityKey: PublicKey) : BFTSmart.Replica(config, replicaId, createMap, services, notaryIdentityKey) {
+        override fun appExecuteBatch(command: Array<out ByteArray>?, p1: Array<out MessageContext>?, p2: Boolean): Array<ByteArray> {
+            return Arrays.stream(command).map(this::executeCommand).toTypedArray()
+        }
 
         override fun executeCommand(command: ByteArray): ByteArray {
             val commitRequest = command.deserialize<BFTSmart.CommitRequest>()

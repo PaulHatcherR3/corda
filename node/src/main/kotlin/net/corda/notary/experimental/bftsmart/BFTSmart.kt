@@ -85,7 +85,7 @@ object BFTSmart {
         }
 
         /** A proxy for communicating with the BFT cluster */
-        private val proxy = ServiceProxy(clientId, config.path.toString(), buildResponseComparator(), buildExtractor())
+        private val proxy = ServiceProxy(clientId, config.path.toString(), buildResponseComparator(), buildExtractor(), null)
         private val sessionTable = (proxy.communicationSystem as NettyClientServerCommunicationSystemClientSide).declaredField<Map<Int, NettyClientServerSession>>("sessionTable").value
 
         fun dispose() {
@@ -149,13 +149,29 @@ object BFTSmart {
                 val messageContent = aggregateResponse.serialize().bytes
                 // TODO: is it safe use the last message for sender/session/sequence info
                 val reply = replies[lastReceived]
-                TOMMessage(reply.sender, reply.session, reply.sequence, messageContent, reply.viewID)
+                return@Extractor TOMMessage(
+                    reply.sender,
+                    reply.session,
+                    reply.sequence,
+                    reply.operationId,
+                    messageContent,
+                    reply.viewID,
+                    reply.reqType
+                )
             }
         }
     }
 
     /** ServiceReplica doesn't have any kind of shutdown method, so we add one in this subclass. */
-    private class CordaServiceReplica(replicaId: Int, configHome: Path, owner: DefaultRecoverable) : ServiceReplica(replicaId, configHome.toString(), owner, owner, null, DefaultReplier()) {
+    private class CordaServiceReplica(replicaId: Int, configHome: Path, owner: DefaultRecoverable) : ServiceReplica(
+            replicaId,
+            configHome.toString(),
+            owner,
+            owner,
+            null,
+            DefaultReplier(),
+            null
+    ) {
         private val tomLayerField = declaredField<TOMLayer>(ServiceReplica::class, "tomLayer")
         private val csField = declaredField<ServerCommunicationSystem>(ServiceReplica::class, "cs")
         fun dispose() {
@@ -214,7 +230,7 @@ object BFTSmart {
             throw NotImplementedError("No unordered operations supported")
         }
 
-        override fun appExecuteBatch(command: Array<ByteArray>, mcs: Array<MessageContext>): Array<ByteArray?> {
+        fun appExecuteBatch(command: Array<ByteArray>): Array<ByteArray?> {
             return Arrays.stream(command).map(this::executeCommand).toTypedArray()
         }
 
