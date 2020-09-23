@@ -1,7 +1,7 @@
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion11"]}")
+    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion"]}")
     implementation("org.slf4j:slf4j-api:${properties["slf4jVersion"]}")
 
     implementation(project(":core"))

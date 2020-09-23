@@ -2,7 +2,7 @@ dependencies {
     testImplementation("com.google.guava:guava:${properties["guavaVersion"]}")
     testImplementation("com.google.guava:guava-testlib:${properties["guavaVersion"]}")
     testImplementation("com.google.jimfs:jimfs:${properties["jimfsVersion"]}")
-    testImplementation("co.paralleluniverse:quasar-core:${properties["quasarVersion11"]}")
+    testImplementation("co.paralleluniverse:quasar-core:${properties["quasarVersion"]}")
     testImplementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     testImplementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")

@@ -4,37 +4,6 @@
 
 <a href="https://ci-master.corda.r3cev.com/viewType.html?buildTypeId=Corda_Build_ActiveReleaseBranches_BuildOsRelease45&tab=buildTypeStatusDiv&guest=1"><img src="https://ci.corda.r3cev.com/app/rest/builds/buildType:Corda_Build_ActiveReleaseBranches_BuildOsRelease45/statusIcon"/></a> [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# Packages not building
-
-```
-client:jfx
-client:mock
-detekt-plugins
-docker
-docs
-experimental:*
-isolated
-jdk8u-deterministic
-node-driver
-samples:*
-smoke-test-utils
-test-cli
-test-db
-testing:cordapps:dbfailure:*
-tools:explorer
-tools:explorer:capsule
-tools:demobench
-tools:loadtest
-tools:graphs
-tools:bootstrapper
-tools:blobinspector
-tools:shell-cli
-tools:network-builder
-tools:worldmap
-tools:checkpoint-agent
-tools:error-tool
-```
-
 # Corda
 
 Corda is an open source blockchain project, designed for business from the start. Only Corda allows you to build interoperable blockchain networks that transact in strict privacy. Corda's smart contract technology allows businesses to transact directly, with value.

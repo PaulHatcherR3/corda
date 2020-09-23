@@ -13,7 +13,7 @@ dependencies {
     implementation("org.apache.activemq:artemis-server:${properties["artemisVersion"]}")
     implementation("org.apache.activemq:artemis-amqp-protocol:${properties["artemisVersion"]}")
     implementation("io.reactivex:rxjava:${properties["rxjavaVersion"]}")
-    implementation("javax.persistence:javax.persistence-api:${properties["persistence-apiVersion"]}")
+    implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.fusesource.jansi:jansi:${properties["jansiVersion"]}")
     implementation("org.crashub:crash.shell:${properties["crashVersion"]}")
     implementation("org.crashub:crash.connectors.ssh:${properties["crashVersion"]}")

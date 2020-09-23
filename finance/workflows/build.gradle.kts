@@ -1,8 +1,8 @@
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
-    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion11"]}")
-    implementation("javax.persistence:javax.persistence-api:${properties["persistence-apiVersion"]}")
+    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion"]}")
+    implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.hibernate:hibernate-core:${properties["hibernateVersion"]}")
     implementation("org.slf4j:slf4j-api:${properties["slf4jVersion"]}")
 

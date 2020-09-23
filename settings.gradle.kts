@@ -1,5 +1,42 @@
 rootProject.name = "corda-project"
 
+// Projects that have been left out of the build
+
+//  Moving to a different repo
+//  - client:jfx
+//  - client:mock
+//  - samples:*
+
+//  Only required for integration tests
+//  - node-driver
+//  - smoke-test-utils
+//  - test-cli
+//  - test-db
+//  - testing:cordapps:dbfailure:*
+
+//  Not relevant to the main build
+//  - detekt-plugins
+//  - docker
+//  - docs
+//  - isolated
+//  - tools:explorer
+//  - tools:explorer:capsule
+//  - tools:demobench
+//  - tools:loadtest
+//  - tools:graphs
+//  - tools:bootstrapper
+//  - tools:blobinspector
+//  - tools:shell-cli
+//  - tools:network-builder
+//  - tools:worldmap
+//  - tools:checkpoint-agent
+//  - tools:error-tool
+
+//  Not relevant to Corda5
+//  - experimental:*
+//  - jdk8u-deterministic
+
+
 include("client:jackson")
 include("client:rpc")
 include("confidential-identities")
@@ -21,7 +58,6 @@ include("serialization-djvm")
 include("serialization-djvm:deserializers")
 include("test-common")
 include("test-utils")
-include("tools:cliutils")
 arrayOf("test-common", "core-test-utils", "test-utils").forEach {
     print(File("$settingsDir/testing/$it"))
     project(":$it").projectDir = File("$settingsDir/testing/$it")

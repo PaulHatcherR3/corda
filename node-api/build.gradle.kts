@@ -24,7 +24,7 @@ dependencies {
     }
 
     // JDK11: required by Quasar at run-time
-    runtimeOnly("com.mattbertolini:liquibase-slf4j:${properties["runtimeLiquibaseVersion"]}")
+    runtimeOnly("com.mattbertolini:liquibase-slf4j:${properties["liquibaseRuntimeVersion"]}")
     runtimeOnly("com.esotericsoftware:kryo:${properties["kryoVersion"]}")
 
 
@@ -32,10 +32,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
-    implementation("javax.persistence:javax.persistence-api:${properties["persistence-apiVersion"]}")
+    implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.hibernate:hibernate-core:${properties["hibernateVersion"]}")
     implementation("io.reactivex:rxjava:${properties["rxjavaVersion"]}")
-    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion11"]}")
+    implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion"]}")
     implementation("org.bouncycastle:bcprov-jdk15on:${properties["bouncycastleVersion"]}")
     implementation("org.bouncycastle:bcpkix-jdk15on:${properties["bouncycastleVersion"]}")
     implementation("net.i2p.crypto:eddsa:${properties["eddsaVersion"]}")
