@@ -71,7 +71,11 @@ subprojects {
     dependencies {
         implementation(kotlin("stdlib"))
 
-        testImplementation("org.junit.jupiter:junit-jupiter")
+        // TODO: move all test dependencies in one place so we are consistent about the test libraries?
+        testImplementation("org.junit.jupiter:junit-jupiter:${properties["junitJupiterVersion"]}")
+        testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
+        testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
     }
 
     val baseVersion = properties["cordaVersion"]
