@@ -9,6 +9,7 @@
 ```
 client:jfx
 client:mock
+detekt-plugins
 docker
 docs
 experimental:*
