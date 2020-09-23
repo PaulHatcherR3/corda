@@ -18,7 +18,7 @@ dependencies {
     testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
 
     testImplementation("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:${properties["junitVintageVersion"]}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
 
     testImplementation(project(":finance:workflows"))
     testImplementation(project(":node-api"))

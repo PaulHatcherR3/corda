@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 val libGroupId = "net.corda"
 
 plugins {
@@ -68,6 +70,8 @@ subprojects {
 
     dependencies {
         implementation(kotlin("stdlib"))
+
+        testImplementation("org.junit.jupiter:junit-jupiter")
     }
 
     val baseVersion = properties["cordaVersion"]
@@ -83,6 +87,13 @@ subprojects {
     }
     tasks.withType<JavaCompile>().forEach { compileJava ->
         compileJava.options.compilerArgs.add("-parameters")
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+        testLogging {
+            info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+        }
     }
 
     tasks.withType<Jar>().forEach { task ->
