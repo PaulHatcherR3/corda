@@ -1,6 +1,4 @@
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("co.paralleluniverse:quasar-core:${properties["quasarVersion"]}")
     implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.hibernate:hibernate-core:${properties["hibernateVersion"]}")
@@ -10,7 +8,6 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":finance:contracts"))
 
-    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     testImplementation("junit:junit:${properties["junitVersion"]}")
     testImplementation("org.apache.qpid:proton-j:${properties["protonjVersion"]}")
 

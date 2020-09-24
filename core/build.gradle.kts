@@ -13,13 +13,9 @@ dependencies {
     implementation("io.netty:netty-common:${properties["nettyVersion"]}")
     implementation("org.apache.commons:commons-lang3:${properties["commonsLangVersion"]}")
     implementation("io.github.classgraph:classgraph:${properties["classgraphVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
 
     testImplementation("junit:junit:${properties["junitVersion"]}")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     testImplementation("org.assertj:assertj-core:${properties["assertjVersion"]}")
-    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
     testImplementation("org.ow2.asm:asm:${properties["asmVersion"]}")
 }
 

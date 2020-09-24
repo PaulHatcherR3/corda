@@ -70,7 +70,12 @@ subprojects {
 
     dependencies {
         implementation(kotlin("stdlib"))
+        implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
 
+        testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+        testImplementation("org.mockito:mockito-core:${properties["mockitoVersion"]}")
+        testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
         // TODO: move all test dependencies in one place so we are consistent about the test libraries?
         testImplementation("org.junit.jupiter:junit-jupiter:${properties["junitJupiterVersion"]}")
         testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
