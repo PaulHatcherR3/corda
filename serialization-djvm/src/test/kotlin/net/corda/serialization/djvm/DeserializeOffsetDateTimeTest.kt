@@ -4,12 +4,14 @@ import net.corda.core.serialization.internal._contextSerializationEnv
 import net.corda.core.serialization.serialize
 import net.corda.serialization.djvm.SandboxType.KOTLIN
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.fail
 import java.time.OffsetDateTime
 import java.util.function.Function
 
+@Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeOffsetDateTimeTest : TestBase(KOTLIN) {
     @Test

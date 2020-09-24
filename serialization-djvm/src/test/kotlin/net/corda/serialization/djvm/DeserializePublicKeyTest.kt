@@ -10,6 +10,7 @@ import net.corda.core.serialization.serialize
 import net.corda.serialization.djvm.SandboxType.KOTLIN
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.extension.ExtensionContext
@@ -22,6 +23,7 @@ import java.security.PublicKey
 import java.util.function.Function
 import java.util.stream.Stream
 
+@Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializePublicKeyTest : TestBase(KOTLIN) {
     class SignatureSchemeProvider : ArgumentsProvider {

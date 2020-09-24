@@ -219,13 +219,6 @@ pipeline {
                 }
             }
         }
-        stage("Node Tests") {
-            steps {
-                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                    sh "./gradlew clean node:test"
-                }
-            }
-        }
     }
     post {
         always {

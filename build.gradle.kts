@@ -94,10 +94,6 @@ subprojects {
     }
 
     tasks.withType<Test>{
-        // Disable broken djvm tests
-        if(project.name.contains("djvm")) {
-            enabled = false
-        }
         useJUnitPlatform()
         testLogging {
             info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
