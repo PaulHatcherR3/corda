@@ -45,38 +45,49 @@ complexity:
 
 empty-blocks:
   active: true
-  excludes: "**/buildSrc/**"
   EmptyCatchBlock:
     active: true
     allowedExceptionNameRegex: "^(_|(ignore|expected).*)"
+    excludes: "**/buildSrc/**"
   EmptyClassBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyDefaultConstructor:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyDoWhileBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyElseBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyFinallyBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyForBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyIfBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyInitBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyKtFile:
     active: true
+    excludes: "**/buildSrc/**"
   EmptySecondaryConstructor:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyWhenBlock:
     active: true
+    excludes: "**/buildSrc/**"
   EmptyWhileBlock:
     active: true
+    excludes: "**/buildSrc/**"
 
 exceptions:
   active: true
-  excludes: "**/buildSrc/**"
   TooGenericExceptionCaught:
     active: true
     exceptionNames:
@@ -88,6 +99,7 @@ exceptions:
       - IndexOutOfBoundsException
       - RuntimeException
       - Throwable
+    excludes: "**/buildSrc/**"
   TooGenericExceptionThrown:
     active: true
     exceptionNames:
@@ -95,38 +107,46 @@ exceptions:
       - Exception
       - Throwable
       - RuntimeException
+    excludes: "**/buildSrc/**"
 
 naming:
   active: true
-  excludes: "**/buildSrc/**"
   ClassNaming:
     active: true
     classPattern: '[A-Z$][a-zA-Z0-9$]*'
+    excludes: "**/buildSrc/**"
   EnumNaming:
     active: true
     enumEntryPattern: '^[A-Z][_a-zA-Z0-9]*'
+    excludes: "**/buildSrc/**"
   FunctionNaming:
     active: true
     functionPattern: '^([a-z$][a-zA-Z$0-9]*)|(`.*`)$'
     excludeClassPattern: '$^'
+    excludes: "**/buildSrc/**"
     ignoreOverridden: true
   MatchingDeclarationName:
     active: true
+    excludes: "**/buildSrc/**"
   ObjectPropertyNaming:
     active: true
     constantPattern: '[A-Za-z][_A-Za-z0-9]*'
+    excludes: "**/buildSrc/**"
     propertyPattern: '[A-Za-z][_A-Za-z0-9]*'
     privatePropertyPattern: '(_)?[A-Za-z][_A-Za-z0-9]*'
   PackageNaming:
     active: true
+    excludes: "**/buildSrc/**"
     packagePattern: '^[a-z]+(\.[a-z][A-Za-z0-9]*)*$'
   TopLevelPropertyNaming:
     active: true
     constantPattern: '[A-Z][_A-Z0-9]*'
+    excludes: "**/buildSrc/**"
     propertyPattern: '[A-Za-z][_A-Za-z0-9]*'
     privatePropertyPattern: '_?[A-Za-z][_A-Za-z0-9]*'
   VariableNaming:
     active: true
+    excludes: "**/buildSrc/**"
     variablePattern: '[a-z][A-Za-z0-9]*'
     privateVariablePattern: '(_)?[A-Za-z][_A-Za-z0-9]*'
     excludeClassPattern: '$^'
@@ -134,25 +154,30 @@ naming:
 
 performance:
   active: true
-  excludes: "**/buildSrc/**"
   ForEachOnRange:
     active: true
+    excludes: "**/buildSrc/**"
   SpreadOperator:
     active: true
+    excludes: "**/buildSrc/**"
   UnnecessaryTemporaryInstantiation:
     active: true
+    excludes: "**/buildSrc/**"
 
 potential-bugs:
   active: true
-  excludes: "**/buildSrc/**"
   DuplicateCaseInWhenExpression:
     active: true
+    excludes: "**/buildSrc/**"
   EqualsWithHashCodeExist:
     active: true
+    excludes: "**/buildSrc/**"
   ExplicitGarbageCollectionCall:
     active: true
+    excludes: "**/buildSrc/**"
   UnreachableCode:
     active: true
+    excludes: "**/buildSrc/**"
 
 style:
   active: true
