@@ -9,8 +9,51 @@
     <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$GENERATING_IDENTITY : Step</ID>
     <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$SIGNING_IDENTITY : Step</ID>
     <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$VERIFYING_IDENTITY : Step</ID>
+    <ID>FinalNewline:net.corda.confidential.SwapIdentitiesFlow.kt:1</ID>
     <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Can this be triggered automatically from [SendTransactionFlow]?</ID>
     <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Consider if this too restrictive - we perhaps should be checking the name on the signing certificate in the certificate path instead</ID>
+    <ID>MaximumLineLength:net.corda.confidential.IdentitySyncFlow.kt:41</ID>
+    <ID>MaximumLineLength:net.corda.confidential.IdentitySyncFlow.kt:42</ID>
+    <ID>MaximumLineLength:net.corda.confidential.IdentitySyncFlow.kt:50</ID>
+    <ID>MaximumLineLength:net.corda.confidential.IdentitySyncFlow.kt:99</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:109</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:111</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:121</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:131</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:42</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:44</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:46</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:48</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:59</ID>
+    <ID>MaximumLineLength:net.corda.confidential.SwapIdentitiesFlow.kt:96</ID>
+    <ID>MultiLineIfElse:net.corda.confidential.IdentitySyncFlow.kt:48</ID>
+    <ID>MultiLineIfElse:net.corda.confidential.IdentitySyncFlow.kt:50</ID>
     <ID>NewLineAtEndOfFile:SwapIdentitiesFlow.kt$net.corda.confidential.SwapIdentitiesFlow.kt</ID>
+    <ID>NoWildcardImports:net.corda.confidential.SwapIdentitiesFlow.kt:26</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.IdentitySyncFlow.kt:24</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.IdentitySyncFlow.kt:25</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.IdentitySyncFlow.kt:26</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.IdentitySyncFlow.kt:41</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.IdentitySyncFlow.kt:50</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:111</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:121</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:131</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:37</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:38</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:39</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:42</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:44</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:45</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:46</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:48</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:49</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:59</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:75</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:76</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:77</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:78</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:96</ID>
+    <ID>ParameterListWrapping:net.corda.confidential.SwapIdentitiesFlow.kt:97</ID>
+    <ID>SpacingAroundKeyword:net.corda.confidential.IdentitySyncFlow.kt:61</ID>
   </CurrentIssues>
 </SmellBaseline>

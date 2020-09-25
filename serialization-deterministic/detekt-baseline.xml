@@ -2,7 +2,16 @@
 <SmellBaseline>
   <ManuallySuppressedIssues></ManuallySuppressedIssues>
   <CurrentIssues>
+    <ID>FinalNewline:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:1</ID>
+    <ID>FinalNewline:net.corda.serialization.internal.model.DefaultCacheProvider.kt:1</ID>
+    <ID>MaximumLineLength:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:19</ID>
     <ID>NewLineAtEndOfFile:AMQPSerializerFactories.kt$net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt</ID>
     <ID>NewLineAtEndOfFile:DefaultCacheProvider.kt$net.corda.serialization.internal.model.DefaultCacheProvider.kt</ID>
+    <ID>NoLineBreakBeforeAssignment:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:33</ID>
+    <ID>ParameterListWrapping:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:19</ID>
+    <ID>ParameterListWrapping:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:24</ID>
+    <ID>ParameterListWrapping:net.corda.serialization.internal.amqp.AMQPSerializerFactories.kt:25</ID>
+    <ID>ParameterListWrapping:net.corda.serialization.internal.amqp.AMQPStreams.kt:19</ID>
+    <ID>ParameterListWrapping:net.corda.serialization.internal.amqp.AMQPStreams.kt:22</ID>
   </CurrentIssues>
 </SmellBaseline>

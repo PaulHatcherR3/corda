@@ -2,6 +2,8 @@
 <SmellBaseline>
   <ManuallySuppressedIssues></ManuallySuppressedIssues>
   <CurrentIssues>
+    <ID>FinalNewline:net.corda.serialization.djvm.deserializers.MergeWhitelists.kt:1</ID>
+    <ID>MaximumLineLength:net.corda.serialization.djvm.deserializers.CorDappCustomDeserializer.kt:6</ID>
     <ID>MemberNameEqualsClassName:CreateCollection.kt$CreateCollection$private fun createCollection(values: Array&lt;out Any?&gt;): Collection&lt;Any?&gt;</ID>
     <ID>MemberNameEqualsClassName:CreateMap.kt$CreateMap$private fun createMap(values: Array&lt;Array&lt;out Any&gt;&gt;): Map&lt;Any?, Any?&gt;</ID>
     <ID>NewLineAtEndOfFile:MergeWhitelists.kt$net.corda.serialization.djvm.deserializers.MergeWhitelists.kt</ID>

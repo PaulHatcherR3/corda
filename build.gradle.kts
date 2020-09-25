@@ -72,6 +72,8 @@ subprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
         testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
+
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
     }
 
     val baseVersion = properties["cordaVersion"]

@@ -2,9 +2,41 @@
 <SmellBaseline>
   <ManuallySuppressedIssues></ManuallySuppressedIssues>
   <CurrentIssues>
+    <ID>FinalNewline:net.corda.cliutils.CordaVersionProvider.kt:1</ID>
+    <ID>FinalNewline:net.corda.cliutils.ExitCodes.kt:1</ID>
+    <ID>FinalNewline:net.corda.cliutils.InstallShellExtensionsParser.kt:1</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.CordaCliWrapper.kt:125</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.CordaCliWrapper.kt:138</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:131</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:134</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:158</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:181</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:56</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:76</ID>
+    <ID>MaximumLineLength:net.corda.cliutils.InstallShellExtensionsParser.kt:99</ID>
     <ID>NewLineAtEndOfFile:CordaVersionProvider.kt$net.corda.cliutils.CordaVersionProvider.kt</ID>
     <ID>NewLineAtEndOfFile:ExitCodes.kt$net.corda.cliutils.ExitCodes.kt</ID>
     <ID>NewLineAtEndOfFile:InstallShellExtensionsParser.kt$net.corda.cliutils.InstallShellExtensionsParser.kt</ID>
+    <ID>NoBlankLineBeforeRbrace:net.corda.cliutils.CordaCliWrapper.kt:104</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.cliutils.CordaCliWrapper.kt:92</ID>
+    <ID>NoWildcardImports:net.corda.cliutils.CordaCliWrapper.kt:11</ID>
+    <ID>NoWildcardImports:net.corda.cliutils.CordaCliWrapper.kt:8</ID>
+    <ID>NoWildcardImports:net.corda.cliutils.InstallShellExtensionsParser.kt:12</ID>
+    <ID>NoWildcardImports:net.corda.cliutils.InstallShellExtensionsParser.kt:3</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:125</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:128</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:129</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:130</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:131</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:89</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.CordaCliWrapper.kt:90</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:131</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:134</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:158</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:181</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:56</ID>
+    <ID>ParameterListWrapping:net.corda.cliutils.InstallShellExtensionsParser.kt:99</ID>
+    <ID>SpacingAroundCurly:net.corda.cliutils.InstallShellExtensionsParser.kt:84</ID>
     <ID>SpreadOperator:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$(*commandAndArgs)</ID>
     <ID>TooGenericExceptionCaught:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$exception: Exception</ID>
     <ID>UtilityClassWithPublicConstructor:ExitCodes.kt$ExitCodes</ID>
