@@ -35,6 +35,7 @@ class ResilientSubscriber<T>(actual: Subscriber<in T>) : SafeSubscriber<T>(actua
      */
     @Suppress("TooGenericExceptionCaught")
     override fun onNext(t: T) {
+        if (true) { }
         try {
             actual.onNext(t)
         } catch (e: Throwable) {
