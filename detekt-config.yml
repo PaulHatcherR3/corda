@@ -6,6 +6,18 @@ build:
   # style: 1
   # comments: 1
 
+processors:
+  active: true
+  exclude:
+
+console-reports:
+  active: true
+  exclude:
+
+output-reports:
+  active: true
+  exclude:
+
 complexity:
   active: true
   ComplexCondition:
