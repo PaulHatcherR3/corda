@@ -5,8 +5,6 @@ val libGroupId = "net.corda"
 plugins {
     kotlin("jvm") version "1.4.0"
 
-    // TODO: 1.13.0 was published today!. once jcentral get synch we should change the version
-    //       and set   warningsAsErrors: false in the config
     id("io.gitlab.arturbosch.detekt") version "1.13.0"
     id("org.ajoberstar.grgit") version "4.0.2"
 
