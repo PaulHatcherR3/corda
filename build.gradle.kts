@@ -16,7 +16,7 @@ plugins {
 }
 
 dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.13.0")
 }
 
 allprojects {
@@ -121,11 +121,4 @@ subprojects {
             "java.base/sun.security.x509=ALL-UNNAMED",
             "--add-exports",
             "java.base/sun.security.util=ALL-UNNAMED"))
-}
-
-detekt {
-    config = files("$projectDir/detekt-config.yml, " +
-            "$projectDir/detekt-baseline-config.yml")
-    baseline = file("$projectDir/detekt-baseline.xml")
-    buildUponDefaultConfig = true
 }
