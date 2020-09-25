@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MaximumLineLength:net.corda.node.djvm.CommandBuilder.kt:33</ID>
+    <ID>ParameterListWrapping:net.corda.node.djvm.AttachmentBuilder.kt:35</ID>
+    <ID>ParameterListWrapping:net.corda.node.djvm.AttachmentBuilder.kt:41</ID>
+  </CurrentIssues>
+</SmellBaseline>

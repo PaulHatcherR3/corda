@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FinalNewline:net.corda.common.validation.internal.Validated.kt:1</ID>
+    <ID>FinalNewline:net.corda.common.validation.internal.Validator.kt:1</ID>
+    <ID>MaximumLineLength:net.corda.common.validation.internal.Validated.kt:119</ID>
+    <ID>MaximumLineLength:net.corda.common.validation.internal.Validated.kt:127</ID>
+    <ID>MaximumLineLength:net.corda.common.validation.internal.Validated.kt:142</ID>
+    <ID>MaximumLineLength:net.corda.common.validation.internal.Validated.kt:15</ID>
+    <ID>MaximumLineLength:net.corda.common.validation.internal.Validated.kt:96</ID>
+    <ID>NewLineAtEndOfFile:Validated.kt$net.corda.common.validation.internal.Validated.kt</ID>
+    <ID>NewLineAtEndOfFile:Validator.kt$net.corda.common.validation.internal.Validator.kt</ID>
+    <ID>ParameterListWrapping:net.corda.common.validation.internal.Validated.kt:15</ID>
+    <ID>ParameterListWrapping:net.corda.common.validation.internal.Validated.kt:96</ID>
+  </CurrentIssues>
+</SmellBaseline>

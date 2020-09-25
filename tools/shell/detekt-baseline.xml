@@ -1,0 +1,204 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>CommentSpacing:net.corda.tools.shell.InteractiveShell.kt:450</ID>
+    <ID>CommentSpacing:net.corda.tools.shell.SerializationSupport.kt:40</ID>
+    <ID>CommentSpacing:net.corda.tools.shell.SerializationSupport.kt:43</ID>
+    <ID>CommentSpacing:net.corda.tools.shell.SerializationSupport.kt:45</ID>
+    <ID>CommentSpacing:net.corda.tools.shell.SerializationSupport.kt:48</ID>
+    <ID>ComplexMethod:ANSIProgressRenderer.kt$ANSIProgressRenderer$// Returns number of lines rendered. private fun renderLevel(ansi: Ansi, error: Boolean): Int</ID>
+    <ID>ComplexMethod:ANSIProgressRenderer.kt$ANSIProgressRenderer$@Synchronized protected fun draw(moveUp: Boolean, error: Throwable? = null)</ID>
+    <ID>ComplexMethod:InteractiveShell.kt$InteractiveShell$ @JvmStatic fun runFlowByNameFragment(nameFragment: String, inputData: String, output: RenderPrintWriter, rpcOps: CordaRPCOps, ansiProgressRenderer: ANSIProgressRenderer, inputObjectMapper: ObjectMapper = createYamlInputMapper(rpcOps))</ID>
+    <ID>ComplexMethod:InteractiveShell.kt$InteractiveShell$ private fun maybeAbbreviateGenericType(type: Type, extraRecognisedPackage: String): String</ID>
+    <ID>ComplexMethod:InteractiveShell.kt$InteractiveShell$@JvmStatic fun runRPCFromString(input: List&lt;String&gt;, out: RenderPrintWriter, context: InvocationContext&lt;out Any&gt;, cordaRPCOps: CordaRPCOps, inputObjectMapper: ObjectMapper): Any?</ID>
+    <ID>FinalNewline:net.corda.tools.shell.AttachmentTrustTable.kt:1</ID>
+    <ID>FinalNewline:net.corda.tools.shell.CordaAuthenticationPlugin.kt:1</ID>
+    <ID>FinalNewline:net.corda.tools.shell.CordaSSHAuthInfo.kt:1</ID>
+    <ID>FinalNewline:net.corda.tools.shell.SSHDConfiguration.kt:1</ID>
+    <ID>FinalNewline:net.corda.tools.shell.SerializationSupport.kt:1</ID>
+    <ID>FinalNewline:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:1</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Add a command to view last N lines/tail/control log4j2 loggers.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Add command history.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Command completion.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Configure default renderers, send objects down the pipeline, add support for xml output format.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Do something sensible with commands that return a future.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Fix up the 'dashboard' command which has some rendering issues.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Get rid of the 'java' command, it's kind of worthless.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Make it notice new shell commands added after the node started.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Resurrect or reimplement the mail plugin.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$// TODO: Review or fix the JVM commands which have bitrotted and some are useless.</ID>
+    <ID>ForbiddenComment:InteractiveShell.kt$InteractiveShell$// TODO: A default renderer could be used, instead of an object mapper. See: http://www.crashub.org/1.3/reference.html#_renderers</ID>
+    <ID>LongParameterList:InteractiveShell.kt$InteractiveShell$(nameFragment: String, inputData: String, output: RenderPrintWriter, rpcOps: CordaRPCOps, ansiProgressRenderer: ANSIProgressRenderer, inputObjectMapper: ObjectMapper = createYamlInputMapper(rpcOps))</ID>
+    <ID>LoopWithTooManyJumpStatements:InteractiveShell.kt$InteractiveShell$while (!Thread.currentThread().isInterrupted) { try { latch.await() break } catch (e: InterruptedException) { try { rpcOps.killFlow(stateObservable.id) } finally { Thread.currentThread().interrupt() break } } }</ID>
+    <ID>MagicNumber:AttachmentTrustTable.kt$AttachmentTrustTable$3</ID>
+    <ID>MagicNumber:SSHDConfiguration.kt$SSHDConfiguration$0xffff</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.CordaAuthenticationPlugin.kt:11</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.CordaSSHAuthInfo.kt:10</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:63</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:147</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:148</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:205</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:256</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:265</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:402</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:452</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:586</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:593</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:707</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.InteractiveShell.kt:711</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.RPCOpsWithContext.kt:12</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.RPCOpsWithContext.kt:7</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:306</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:308</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:341</ID>
+    <ID>MaximumLineLength:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:88</ID>
+    <ID>MultiLineIfElse:net.corda.tools.shell.InteractiveShell.kt:427</ID>
+    <ID>MultiLineIfElse:net.corda.tools.shell.InteractiveShell.kt:429</ID>
+    <ID>MultiLineIfElse:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:161</ID>
+    <ID>MultiLineIfElse:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:330</ID>
+    <ID>NestedBlockDepth:ANSIProgressRenderer.kt$ANSIProgressRenderer$// Returns number of lines rendered. private fun renderLevel(ansi: Ansi, error: Boolean): Int</ID>
+    <ID>NestedBlockDepth:InteractiveShell.kt$InteractiveShell$ @JvmStatic fun runFlowByNameFragment(nameFragment: String, inputData: String, output: RenderPrintWriter, rpcOps: CordaRPCOps, ansiProgressRenderer: ANSIProgressRenderer, inputObjectMapper: ObjectMapper = createYamlInputMapper(rpcOps))</ID>
+    <ID>NewLineAtEndOfFile:ANSIProgressRenderer.kt$net.corda.tools.shell.utlities.ANSIProgressRenderer.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentTrustTable.kt$net.corda.tools.shell.AttachmentTrustTable.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaAuthenticationPlugin.kt$net.corda.tools.shell.CordaAuthenticationPlugin.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaSSHAuthInfo.kt$net.corda.tools.shell.CordaSSHAuthInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:SSHDConfiguration.kt$net.corda.tools.shell.SSHDConfiguration.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializationSupport.kt$net.corda.tools.shell.SerializationSupport.kt</ID>
+    <ID>NoBlankLineBeforeRbrace:net.corda.tools.shell.InteractiveShell.kt:523</ID>
+    <ID>NoBlankLineBeforeRbrace:net.corda.tools.shell.InteractiveShell.kt:789</ID>
+    <ID>NoBlankLineBeforeRbrace:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:257</ID>
+    <ID>NoBlankLineBeforeRbrace:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:275</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.tools.shell.InteractiveShell.kt:753</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:276</ID>
+    <ID>NoMultipleSpaces:net.corda.tools.shell.InteractiveShell.kt:507</ID>
+    <ID>NoMultipleSpaces:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:223</ID>
+    <ID>NoWildcardImports:net.corda.tools.shell.InteractiveShell.kt:75</ID>
+    <ID>NoWildcardImports:net.corda.tools.shell.SerializationSupport.kt:18</ID>
+    <ID>NoWildcardImports:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:21</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.CordaAuthenticationPlugin.kt:11</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.CordaSSHAuthInfo.kt:10</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.CordaSSHAuthInfo.kt:11</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:63</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:72</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:73</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:74</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:75</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:76</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:77</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:87</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:88</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:89</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.FlowWatchPrintingSubscriber.kt:90</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:119</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:120</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:121</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:125</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:126</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:127</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:129</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:130</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:147</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:164</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:165</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:166</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:169</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:170</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:171</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:174</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:175</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:176</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:179</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:180</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:181</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:184</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:185</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:186</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:189</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:190</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:191</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:194</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:195</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:196</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:205</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:256</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:267</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:268</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:333</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:334</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:335</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:336</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:337</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:338</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:364</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:365</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:366</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:367</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:402</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:438</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:439</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:440</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:441</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:478</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:479</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:480</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:481</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:500</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:501</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:502</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:586</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:587</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:593</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:666</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:668</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:673</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:701</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:702</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:703</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:707</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:743</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:744</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:745</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:781</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:782</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.InteractiveShell.kt:783</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.RPCOpsWithContext.kt:7</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:10</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:11</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:12</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:13</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:14</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:15</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:16</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:17</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:18</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:19</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:8</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.ShellConfiguration.kt:9</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:308</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:313</ID>
+    <ID>ParameterListWrapping:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:314</ID>
+    <ID>ReturnCount:CordaAuthenticationPlugin.kt$CordaAuthenticationPlugin$override fun authenticate(username: String?, credential: String?): AuthInfo</ID>
+    <ID>ReturnCount:InteractiveShell.kt$InteractiveShell$ @JvmStatic fun runFlowByNameFragment(nameFragment: String, inputData: String, output: RenderPrintWriter, rpcOps: CordaRPCOps, ansiProgressRenderer: ANSIProgressRenderer, inputObjectMapper: ObjectMapper = createYamlInputMapper(rpcOps))</ID>
+    <ID>ReturnCount:InteractiveShell.kt$InteractiveShell$@JvmStatic fun runRPCFromString(input: List&lt;String&gt;, out: RenderPrintWriter, context: InvocationContext&lt;out Any&gt;, cordaRPCOps: CordaRPCOps, inputObjectMapper: ObjectMapper): Any?</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.InteractiveShell.kt:502</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.InteractiveShell.kt:605</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:260</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:347</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:58</ID>
+    <ID>SpacingAroundColon:net.corda.tools.shell.utlities.ANSIProgressRenderer.kt:60</ID>
+    <ID>SpacingAroundCurly:net.corda.tools.shell.InteractiveShell.kt:348</ID>
+    <ID>SpacingAroundCurly:net.corda.tools.shell.InteractiveShell.kt:354</ID>
+    <ID>SpacingAroundKeyword:net.corda.tools.shell.InteractiveShell.kt:301</ID>
+    <ID>SpacingAroundKeyword:net.corda.tools.shell.InteractiveShell.kt:525</ID>
+    <ID>SpacingAroundKeyword:net.corda.tools.shell.InteractiveShell.kt:528</ID>
+    <ID>SpacingAroundKeyword:net.corda.tools.shell.InteractiveShell.kt:531</ID>
+    <ID>SpacingAroundKeyword:net.corda.tools.shell.InteractiveShell.kt:535</ID>
+    <ID>SpreadOperator:InteractiveShell.kt$InteractiveShell$(clazz, *args)</ID>
+    <ID>SpreadOperator:RPCOpsWithContext.kt$(cordaRPCOps, *(args ?: arrayOf()))</ID>
+    <ID>TooGenericExceptionCaught:CordaAuthenticationPlugin.kt$CordaAuthenticationPlugin$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InteractiveShell.kt$InteractiveShell$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InteractiveShell.kt$InteractiveShell$e: IndexOutOfBoundsException</ID>
+    <ID>TooManyFunctions:InteractiveShell.kt$InteractiveShell$InteractiveShell</ID>
+  </CurrentIssues>
+</SmellBaseline>

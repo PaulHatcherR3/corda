@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>Filename:net.corda.core.internal.rules.TargetVersionDependentRules.kt:1</ID>
+    <ID>FinalNewline:net.corda.core.internal.ToggleField.kt:1</ID>
+    <ID>FinalNewline:net.corda.core.internal.rules.TargetVersionDependentRules.kt:1</ID>
+    <ID>FunctionOnlyReturningConstant:TargetVersionDependentRules.kt$StateContractValidationEnforcementRule$fun shouldEnforce(@Suppress("UNUSED_PARAMETER") state: ContractState): Boolean</ID>
+    <ID>MatchingDeclarationName:TargetVersionDependentRules.kt$StateContractValidationEnforcementRule</ID>
+    <ID>MaximumLineLength:net.corda.core.crypto.DelegatingSecureRandomService.kt:8</ID>
+    <ID>MaximumLineLength:net.corda.core.internal.ToggleField.kt:52</ID>
+    <ID>MaximumLineLength:net.corda.core.serialization.SerializationFactory.kt:30</ID>
+    <ID>MaximumLineLength:net.corda.core.serialization.SerializationFactory.kt:87</ID>
+    <ID>NewLineAtEndOfFile:TargetVersionDependentRules.kt$net.corda.core.internal.rules.TargetVersionDependentRules.kt</ID>
+    <ID>NewLineAtEndOfFile:ToggleField.kt$net.corda.core.internal.ToggleField.kt</ID>
+    <ID>ParameterListWrapping:net.corda.core.crypto.DelegatingSecureRandomService.kt:8</ID>
+    <ID>ParameterListWrapping:net.corda.core.internal.ToggleField.kt:50</ID>
+    <ID>ParameterListWrapping:net.corda.core.internal.ToggleField.kt:51</ID>
+    <ID>ParameterListWrapping:net.corda.core.internal.ToggleField.kt:52</ID>
+    <ID>ParameterListWrapping:net.corda.core.serialization.SerializationFactory.kt:30</ID>
+    <ID>SpacingAroundColon:net.corda.core.crypto.DelegatingSecureRandomService.kt:7</ID>
+    <ID>SpacingAroundOperators:net.corda.core.serialization.SerializationFactory.kt:73</ID>
+  </CurrentIssues>
+</SmellBaseline>

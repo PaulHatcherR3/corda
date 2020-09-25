@@ -1,13 +1,14 @@
 import org.gradle.api.tasks.testing.logging.TestLogEvent
+import io.gitlab.arturbosch.detekt.DetektPlugin
 
 val libGroupId = "net.corda"
+val rootProjectDir = rootDir
+
 
 plugins {
     kotlin("jvm") version "1.4.0"
 
-    // TODO: 1.13.0 was published today!. once jcentral get synch we should change the version
-    //       and set   warningsAsErrors: false in the config
-    id("io.gitlab.arturbosch.detekt") version "1.13.0"
+    id("io.gitlab.arturbosch.detekt") version "1.12.0"
     id("org.ajoberstar.grgit") version "4.0.2"
 
     id("com.jfrog.artifactory") version "4.17.2"
@@ -15,10 +16,6 @@ plugins {
     `maven-publish`
 
     `java-library`
-}
-
-dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
 }
 
 allprojects {
@@ -57,16 +54,9 @@ allprojects {
     }
 }
 
-detekt {
-    config = files("$projectDir/detekt-config.yml, " +
-            "$projectDir/detekt-baseline-config.yml")
-    baseline = file("$projectDir/detekt-baseline.xml")
-    buildUponDefaultConfig = true
-}
-
 subprojects {
-
     apply(plugin = "kotlin")
+    apply<DetektPlugin>()
 
     dependencies {
         implementation(kotlin("stdlib"))
@@ -81,30 +71,56 @@ subprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
         testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
+
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
     }
 
     val baseVersion = properties["cordaVersion"]
 
     version = "${baseVersion}-${properties["versionSuffix"]}"
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
-        compileKotlin.kotlinOptions.allWarningsAsErrors = true
-        compileKotlin.kotlinOptions.verbose = true
-        compileKotlin.kotlinOptions.jvmTarget = "11"
-        compileKotlin.kotlinOptions.freeCompilerArgs += "-Xjvm-default=compatibility"
-        compileKotlin.kotlinOptions.freeCompilerArgs += "-java-parameters"
-    }
-    tasks.withType<JavaCompile>().forEach { compileJava ->
-        compileJava.options.compilerArgs.add("-parameters")
-    }
-
-    // Added to support junit5 tests
-    tasks.withType<Test>{
-        useJUnitPlatform()
-        testLogging {
-            info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+    tasks {
+        withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
+            compileKotlin.kotlinOptions.allWarningsAsErrors = true
+            compileKotlin.kotlinOptions.verbose = true
+            compileKotlin.kotlinOptions.jvmTarget = "11"
+            compileKotlin.kotlinOptions.freeCompilerArgs += "-Xjvm-default=compatibility"
+            compileKotlin.kotlinOptions.freeCompilerArgs += "-java-parameters"
         }
 
+        withType<JavaCompile>().forEach { compileJava ->
+            compileJava.options.compilerArgs.add("-parameters")
+        }
+
+
+        // Added to support junit5 tests
+        withType<Test> {
+            useJUnitPlatform()
+            testLogging {
+                info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+            }
+
+        }
+
+        detekt {
+            baseline = file("$projectDir/detekt-baseline.xml")
+            config = files("$rootProjectDir/detekt-config.yml")
+            parallel = true
+            reports {
+                xml {
+                    enabled = true
+                    destination = file("$projectDir/build/detekt-report.xml")
+                }
+                html {
+                    enabled = true
+                    destination = file("$projectDir/build/detekt-report.html")
+                }
+                txt {
+                    enabled = true
+                    destination = file("$projectDir/build/detekt-report.txt")
+                }
+            }
+        }
     }
 
     tasks.withType<Jar>().forEach { task ->
@@ -117,6 +133,7 @@ subprojects {
             attributes("Corda-Docs-Link" to "https://docs.corda.net/docs/corda-os/$baseVersion")
         }
     }
+
 
     val javaTestCompiler = tasks.getByName("compileTestJava") as JavaCompile
     javaTestCompiler.options.compilerArgs.addAll(listOf("--add-exports",

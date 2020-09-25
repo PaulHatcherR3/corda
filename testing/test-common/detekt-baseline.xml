@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FinalNewline:net.corda.testing.common.internal.Eventually.kt:1</ID>
+    <ID>ForbiddenComment:ParametersUtilities.kt$// TODO: Make this configurable and consistence across driver, bootstrapper, demobench and NetworkMapServer</ID>
+    <ID>LongParameterList:ParametersUtilities.kt$( notaries: List&lt;NotaryInfo&gt; = emptyList(), minimumPlatformVersion: Int = 1, modifiedTime: Instant = Instant.now(), maxMessageSize: Int = 10485760, // TODO: Make this configurable and consistence across driver, bootstrapper, demobench and NetworkMapServer maxTransactionSize: Int = maxMessageSize * 50, whitelistedContractImplementations: Map&lt;String, List&lt;AttachmentId&gt;&gt; = emptyMap(), epoch: Int = 1, eventHorizon: Duration = 30.days, packageOwnership: Map&lt;String, PublicKey&gt; = emptyMap() )</ID>
+    <ID>MagicNumber:Eventually.kt$100</ID>
+    <ID>MagicNumber:Eventually.kt$5</ID>
+    <ID>MagicNumber:ParametersUtilities.kt$30</ID>
+    <ID>MagicNumber:ParametersUtilities.kt$50</ID>
+    <ID>MaximumLineLength:net.corda.testing.common.internal.TestCommonUtils.kt:14</ID>
+    <ID>NewLineAtEndOfFile:Eventually.kt$net.corda.testing.common.internal.Eventually.kt</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.testing.common.internal.CommonSerializationTestHelpers.kt:10</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.testing.common.internal.Eventually.kt:41</ID>
+    <ID>NoConsecutiveBlankLines:net.corda.testing.common.internal.ParametersUtilities.kt:50</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.Eventually.kt:18</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.Eventually.kt:19</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.Eventually.kt:20</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.Eventually.kt:21</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:14</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:15</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:16</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:17</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:19</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:20</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:21</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:22</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.ParametersUtilities.kt:23</ID>
+    <ID>ParameterListWrapping:net.corda.testing.common.internal.TestCommonUtils.kt:14</ID>
+    <ID>TooGenericExceptionCaught:Eventually.kt$e: Exception</ID>
+  </CurrentIssues>
+</SmellBaseline>
