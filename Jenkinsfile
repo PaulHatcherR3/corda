@@ -1,3 +1,3 @@
-@Library('corda-shared-build-pipeline-steps@benmcmahon/add-detekt') _
+@Library('corda-shared-build-pipeline-steps@driessamyn/corda5-pipeline') _
 
 cordaPipeline()
