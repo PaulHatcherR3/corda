@@ -106,6 +106,7 @@ subprojects {
             baseline = file("$projectDir/detekt-baseline.xml")
             config = files("$rootProjectDir/detekt-config.yml")
             parallel = true
+            buildUponDefaultConfig = true
             reports {
                 xml {
                     enabled = true
