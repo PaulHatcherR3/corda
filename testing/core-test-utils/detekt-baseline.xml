@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexMethod:JarSignatureTestUtils.kt$JarSignatureTestUtils$fun Path.addManifest(fileName: String, vararg entries: Pair&lt;Attributes.Name, String&gt;)</ID>
+    <ID>LongParameterList:CertificateStoreStubs.kt$CertificateStoreStubs.P2P.Companion$(baseDirectory: Path, certificatesDirectoryName: String = DEFAULT_CERTIFICATES_DIRECTORY_NAME, keyStoreFileName: String = KeyStore.DEFAULT_STORE_FILE_NAME, keyStorePassword: String = KeyStore.DEFAULT_STORE_PASSWORD, keyPassword: String = keyStorePassword, trustStoreFileName: String = TrustStore.DEFAULT_STORE_FILE_NAME, trustStorePassword: String = TrustStore.DEFAULT_STORE_PASSWORD)</ID>
+    <ID>LongParameterList:ContractJarTestUtils.kt$ContractJarTestUtils$(workingDir: Path, contractNames: List&lt;String&gt;, signed: Boolean = false, version: Int = 1, generateManifest: Boolean = true, jarFileName : String? = null)</ID>
+    <ID>LongParameterList:JarSignatureTestUtils.kt$JarSignatureTestUtils$(alias: String = "Test", storePassword: String = "secret!", name: String = CODE_SIGNER.toString(), keyalg: String = "RSA", keyPassword: String = storePassword, storeName: String = "_teststore")</ID>
+    <ID>MagicNumber:JarSignatureTestUtils.kt$JarSignatureTestUtils$14</ID>
+    <ID>MagicNumber:NettyTestClient.kt$NettyTestClient$5</ID>
+    <ID>MagicNumber:NettyTestHandler.kt$NettyTestHandler$5</ID>
+    <ID>MagicNumber:NettyTestServer.kt$NettyTestServer$100</ID>
+    <ID>MagicNumber:NettyTestServer.kt$NettyTestServer$5</ID>
+    <ID>MagicNumber:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$1234</ID>
+    <ID>MagicNumber:TestUtils.kt$10000</ID>
+    <ID>MagicNumber:TestUtils.kt$30000</ID>
+    <ID>MatchingDeclarationName:CheckpointSerializationTestHelpers.kt$CheckpointSerializationEnvironmentRule : TestRule</ID>
+    <ID>NestedBlockDepth:JarSignatureTestUtils.kt$JarSignatureTestUtils$fun Path.addManifest(fileName: String, vararg entries: Pair&lt;Attributes.Name, String&gt;)</ID>
+    <ID>NewLineAtEndOfFile:CertificateStoreStubs.kt$net.corda.coretesting.internal.stubs.CertificateStoreStubs.kt</ID>
+    <ID>NewLineAtEndOfFile:ContractJarTestUtils.kt$net.corda.testing.core.internal.ContractJarTestUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowMatchers.kt$net.corda.coretesting.internal.matchers.flow.FlowMatchers.kt</ID>
+    <ID>NewLineAtEndOfFile:FutureMatchers.kt$net.corda.coretesting.internal.matchers.future.FutureMatchers.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalTestConstants.kt$net.corda.coretesting.internal.InternalTestConstants.kt</ID>
+    <ID>NewLineAtEndOfFile:Matchers.kt$net.corda.coretesting.internal.matchers.Matchers.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyTestClient.kt$net.corda.coretesting.internal.NettyTestClient.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyTestHandler.kt$net.corda.coretesting.internal.NettyTestHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyTestServer.kt$net.corda.coretesting.internal.NettyTestServer.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcMatchers.kt$net.corda.coretesting.internal.matchers.rpc.RpcMatchers.kt</ID>
+    <ID>ReturnCount:NettyTestHandler.kt$NettyTestHandler$fun waitForReadCalled(numberOfExpectedCalls: Int = 1): Boolean</ID>
+    <ID>ReturnCount:RigorousMock.kt$SpectatorDefaultAnswer$override fun answerImpl(invocation: InvocationOnMock): Any?</ID>
+    <ID>SpreadOperator:ContractJarTestUtils.kt$ContractJarTestUtils$(jarName, *contractNames.map{ "${it.replace(".", "/")}.class" }.toTypedArray())</ID>
+    <ID>SpreadOperator:DummyContract.kt$DummyContract.Companion$( /* INPUTS */ *priors.toTypedArray(), /* COMMAND */ Command(cmd, priorState.owner.owningKey), /* OUTPUT */ StateAndContract(state, PROGRAM_ID) )</ID>
+    <ID>SpreadOperator:DummyContract.kt$DummyContract.Companion$(*items)</ID>
+    <ID>SpreadOperator:Expect.kt$(*Array(number) { expectation(it) })</ID>
+    <ID>SpreadOperator:Expect.kt$(*expectations)</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$((bin / command[0]).toString(), *command.sliceArray(1 until command.size))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "cvf", fileName) + contents))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "i", fileName)))</ID>
+    <ID>SpreadOperator:JarSignatureTestUtils.kt$JarSignatureTestUtils$(*(arrayOf("jar", "uvf", fileName) + contents))</ID>
+    <ID>SpreadOperator:TestNodeInfoBuilder.kt$TestNodeInfoBuilder$(*certs, intermediateAndRoot.first.certificate, intermediateAndRoot.second)</ID>
+    <ID>SpreadOperator:TestUtils.kt$TestIdentity$(*bytes)</ID>
+    <ID>TooGenericExceptionCaught:Expect.kt$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:FutureMatchers.kt$&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NettyTestHandler.kt$NettyTestHandler$e: Throwable</ID>
+    <ID>UtilityClassWithPublicConstructor:CertificateStoreStubs.kt$CertificateStoreStubs$Signing</ID>
+    <ID>UtilityClassWithPublicConstructor:CertificateStoreStubs.kt$CertificateStoreStubs.P2P$KeyStore</ID>
+    <ID>UtilityClassWithPublicConstructor:CertificateStoreStubs.kt$CertificateStoreStubs.P2P$TrustStore</ID>
+    <ID>VariableNaming:DummyContract.kt$DummyContract$val PROGRAM_ID = "net.corda.testing.contracts.DummyContract"</ID>
+    <ID>WildcardImport:DummyContract.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:DummyContractV2.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:DummyContractV3.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:FlowMatchers.kt$import net.corda.coretesting.internal.matchers.*</ID>
+    <ID>WildcardImport:Matchers.kt$import com.natpryce.hamkrest.*</ID>
+    <ID>WildcardImport:TestUtils.kt$import net.corda.core.crypto.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>IteratorNotThrowingNoSuchElementException:ExceptionsErrorCodeFunctions.kt$&lt;no name provided&gt; : Iterator</ID>
+    <ID>MagicNumber:ExceptionsErrorCodeFunctions.kt$3</ID>
+    <ID>MagicNumber:ExceptionsErrorCodeFunctions.kt$36</ID>
+    <ID>NewLineAtEndOfFile:Constants.kt$net.corda.common.logging.Constants.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaErrorContextProvider.kt$net.corda.common.logging.errorReporting.CordaErrorContextProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaVersion.kt$net.corda.common.logging.CordaVersion.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorCode.kt$net.corda.common.logging.errorReporting.ErrorCode.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorCodes.kt$net.corda.common.logging.errorReporting.ErrorCodes.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorContextProvider.kt$net.corda.common.logging.errorReporting.ErrorContextProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorReporter.kt$net.corda.common.logging.errorReporting.ErrorReporter.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorReporterImpl.kt$net.corda.common.logging.errorReporting.ErrorReporterImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorReporting.kt$net.corda.common.logging.errorReporting.ErrorReporting.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorReportingExceptions.kt$net.corda.common.logging.errorReporting.ErrorReportingExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorReportingUtils.kt$net.corda.common.logging.errorReporting.ErrorReportingUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorResource.kt$net.corda.common.logging.errorReporting.ErrorResource.kt</ID>
+    <ID>NewLineAtEndOfFile:Errors.kt$net.corda.common.logging.errorReporting.Errors.kt</ID>
+    <ID>NewLineAtEndOfFile:ExceptionsErrorCodeFunctions.kt$net.corda.common.logging.ExceptionsErrorCodeFunctions.kt</ID>
+    <ID>NewLineAtEndOfFile:ResourceBundleProperties.kt$net.corda.common.logging.errorReporting.ResourceBundleProperties.kt</ID>
+    <ID>SpreadOperator:ExceptionsErrorCodeFunctions.kt$(*fields)</ID>
+    <ID>SpreadOperator:ExceptionsErrorCodeFunctions.kt$(*fields, cause.staticLocationBasedHash(hashedFields, visited + cause))</ID>
+    <ID>SpreadOperator:ExceptionsErrorCodeFunctions.kt$(*hashedFields.invoke(this))</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ForbiddenComment:BusinessCalendar.kt$BusinessCalendar.Companion$// TODO: Fix addl period logic</ID>
+    <ID>ForbiddenComment:BusinessCalendar.kt$BusinessCalendar.Companion$// TODO: The rest.</ID>
+    <ID>ForbiddenComment:Cash.kt$Cash$// TODO: This doesn't work with the trader demo, so use the underlying key instead</ID>
+    <ID>ForbiddenComment:CommercialPaper.kt$CommercialPaper$// TODO: Consider how to handle the case of mistaken issuances, or other need to patch.</ID>
+    <ID>ForbiddenComment:CommercialPaper.kt$CommercialPaper$// TODO: Generalise the notion of an owned instrument into a superclass/supercontract. Consider composition vs inheritance.</ID>
+    <ID>ForbiddenComment:CommercialPaper.kt$CommercialPaper$// TODO: Think about how to evolve contracts over time with new commands.</ID>
+    <ID>ForbiddenComment:FinanceTypes.kt$// TODO: Make Calendar data come from an oracle</ID>
+    <ID>ForbiddenComment:FinanceTypes.kt$Frequency$// TODO: Revisit post-Vega and see if annualCompoundCount is still needed.</ID>
+    <ID>ForbiddenComment:Obligation.kt$Obligation$// TODO: Handle proxies nominated by parties, i.e. a central clearing service</ID>
+    <ID>ForbiddenComment:OnLedgerAsset.kt$OnLedgerAsset.Companion$// TODO: Check that re-running this on the same transaction multiple times does the right thing.</ID>
+    <ID>ForbiddenComment:OnLedgerAsset.kt$OnLedgerAsset.Companion$// TODO: We should be prepared to produce multiple transactions exiting inputs from</ID>
+    <ID>ForbiddenComment:OnLedgerAsset.kt$OnLedgerAsset.Companion$// TODO: We should be prepared to produce multiple transactions spending inputs from</ID>
+    <ID>LongParameterList:BusinessCalendar.kt$BusinessCalendar.Companion$(startDate: LocalDate, period: Frequency, calendar: BusinessCalendar = EMPTY, dateRollConvention: DateRollConvention = DateRollConvention.Following, noOfAdditionalPeriods: Int = Integer.MAX_VALUE, endDate: LocalDate? = null, periodOffset: Int? = null)</ID>
+    <ID>LongParameterList:Cash.kt$Cash$(inputs: List&lt;State&gt;, outputs: List&lt;State&gt;, tx: LedgerTransaction, issueCommand: CommandWithParties&lt;Commands.Issue&gt;, currency: Currency, issuer: PartyAndReference)</ID>
+    <ID>LongParameterList:CommercialPaperSchemaV1.kt$CommercialPaperSchemaV1.PersistentCommercialPaperState$( @Column(name = "issuance_key_hash", length = MAX_HASH_HEX_SIZE, nullable = false) var issuancePartyHash: String, @Column(name = "issuance_ref", nullable = false) @Type(type = "corda-wrapper-binary") var issuanceRef: ByteArray, @Column(name = "owner_key_hash", length = MAX_HASH_HEX_SIZE, nullable = false) var ownerHash: String, @Column(name = "maturity_instant", nullable = false) var maturity: Instant, @Column(name = "face_value", nullable = false) var faceValue: Long, @Column(name = "ccy_code", length = 3, nullable = false) var currency: String, @Column(name = "face_value_issuer_key_hash", length = MAX_HASH_HEX_SIZE, nullable = false) var faceValueIssuerPartyHash: String, @Column(name = "face_value_issuer_ref", length = MAX_ISSUER_REF_SIZE, nullable = false) @Type(type = "corda-wrapper-binary") var faceValueIssuerRef: ByteArray )</ID>
+    <ID>LongParameterList:OnLedgerAsset.kt$OnLedgerAsset.Companion$(tx: TransactionBuilder, amount: Amount&lt;T&gt;, to: AbstractParty, acceptableStates: List&lt;StateAndRef&lt;S&gt;&gt;, payChangeTo: AbstractParty, deriveState: (TransactionState&lt;S&gt;, Amount&lt;Issued&lt;T&gt;&gt;, AbstractParty) -&gt; TransactionState&lt;S&gt;, generateMoveCommand: () -&gt; CommandData)</ID>
+    <ID>LongParameterList:OnLedgerAsset.kt$OnLedgerAsset.Companion$(tx: TransactionBuilder, amountIssued: Amount&lt;Issued&lt;T&gt;&gt;, assetStates: List&lt;StateAndRef&lt;S&gt;&gt;, deriveState: (TransactionState&lt;S&gt;, Amount&lt;Issued&lt;T&gt;&gt;, AbstractParty) -&gt; TransactionState&lt;S&gt;, generateMoveCommand: () -&gt; CommandData, generateExitCommand: (Amount&lt;Issued&lt;T&gt;&gt;) -&gt; CommandData)</ID>
+    <ID>LongParameterList:OnLedgerAsset.kt$OnLedgerAsset.Companion$(tx: TransactionBuilder, amountIssued: Amount&lt;Issued&lt;T&gt;&gt;, assetStates: List&lt;StateAndRef&lt;S&gt;&gt;, payChangeTo: AbstractParty, deriveState: (TransactionState&lt;S&gt;, Amount&lt;Issued&lt;T&gt;&gt;, AbstractParty) -&gt; TransactionState&lt;S&gt;, generateMoveCommand: () -&gt; CommandData, generateExitCommand: (Amount&lt;Issued&lt;T&gt;&gt;) -&gt; CommandData)</ID>
+    <ID>LongParameterList:OnLedgerAsset.kt$OnLedgerAsset.Companion$(tx: TransactionBuilder, payments: List&lt;PartyAndAmount&lt;T&gt;&gt;, acceptableStates: List&lt;StateAndRef&lt;S&gt;&gt;, payChangeTo: AbstractParty, deriveState: (TransactionState&lt;S&gt;, Amount&lt;Issued&lt;T&gt;&gt;, AbstractParty) -&gt; TransactionState&lt;S&gt;, generateMoveCommand: () -&gt; CommandData)</ID>
+    <ID>MagicNumber:BusinessCalendar.kt$BusinessCalendar.Companion$30.0</ID>
+    <ID>MagicNumber:BusinessCalendar.kt$BusinessCalendar.Companion$360.0</ID>
+    <ID>MagicNumber:Obligation.kt$Obligation.Terms$30</ID>
+    <ID>NestedBlockDepth:Obligation.kt$Obligation$override fun verify(tx: LedgerTransaction)</ID>
+    <ID>NewLineAtEndOfFile:CommercialPaper.kt$net.corda.finance.contracts.CommercialPaper.kt</ID>
+    <ID>WildcardImport:Cash.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CashSchemaV1.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:CommercialPaper.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:OnLedgerAsset.kt$import net.corda.core.contracts.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

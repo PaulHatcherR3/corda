@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>LongParameterList:SandboxSerializationSchemeBuilder.kt$SandboxSerializationSchemeBuilder$( private val classLoader: SandboxClassLoader, private val sandboxBasicInput: Function&lt;in Any?, out Any?&gt;, private val rawTaskFactory: Function&lt;in Any, out Function&lt;in Any?, out Any?&gt;&gt;, private val taskFactory: Function&lt;Class&lt;out Function&lt;*, *&gt;&gt;, out Function&lt;in Any?, out Any?&gt;&gt;, private val predicateFactory: Function&lt;Class&lt;out Predicate&lt;*&gt;&gt;, out Predicate&lt;in Any?&gt;&gt;, private val customSerializerClassNames: Set&lt;String&gt;, private val serializationWhitelistNames: Set&lt;String&gt;, private val serializerFactoryFactory: SerializerFactoryFactory )</ID>
+    <ID>NewLineAtEndOfFile:ExceptionUtils.kt$net.corda.serialization.djvm.serializers.ExceptionUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:SandboxCorDappCustomSerializer.kt$net.corda.serialization.djvm.serializers.SandboxCorDappCustomSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:SandboxEnumSerializer.kt$net.corda.serialization.djvm.serializers.SandboxEnumSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:SandboxUnsignedLongSerializer.kt$net.corda.serialization.djvm.serializers.SandboxUnsignedLongSerializer.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

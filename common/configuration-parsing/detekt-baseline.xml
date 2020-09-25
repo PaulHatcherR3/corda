@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>LongParameterList:Properties.kt$StandardProperty$(override val key: String, typeNameArg: String, private val extractSingleValue: ValueSelector&lt;TYPE&gt;, internal val extractListValue: ValueSelector&lt;List&lt;TYPE&gt;&gt;, override val isSensitive: Boolean = false, final override val schema: Configuration.Schema? = null)</ID>
+    <ID>MatchingDeclarationName:Specification.kt$PropertyDelegate&lt;TYPE&gt;</ID>
+    <ID>NewLineAtEndOfFile:Configuration.kt$net.corda.common.configuration.parsing.internal.Configuration.kt</ID>
+    <ID>NewLineAtEndOfFile:Properties.kt$net.corda.common.configuration.parsing.internal.Properties.kt</ID>
+    <ID>NewLineAtEndOfFile:Schema.kt$net.corda.common.configuration.parsing.internal.Schema.kt</ID>
+    <ID>NewLineAtEndOfFile:Specification.kt$net.corda.common.configuration.parsing.internal.Specification.kt</ID>
+    <ID>NewLineAtEndOfFile:Utils.kt$net.corda.common.configuration.parsing.internal.Utils.kt</ID>
+    <ID>NewLineAtEndOfFile:VersionExtractor.kt$net.corda.common.configuration.parsing.internal.versioned.VersionExtractor.kt</ID>
+    <ID>SpreadOperator:Configuration.kt$Configuration.Validation.Error$(*(containingPath.toList() + this.containingPath).toTypedArray())</ID>
+    <ID>SpreadOperator:Properties.kt$FunctionalListProperty$(*error.containingPath(index).toTypedArray())</ID>
+    <ID>SpreadOperator:Properties.kt$ListProperty$(*error.containingPath(index).toTypedArray())</ID>
+    <ID>SpreadOperator:Properties.kt$StandardProperty$(*key.split(".").toTypedArray())</ID>
+    <ID>TooManyFunctions:Configuration.kt$Configuration$Specification&lt;VALUE&gt; : SchemaParser</ID>
+    <ID>TooManyFunctions:Utils.kt$net.corda.common.configuration.parsing.internal.Utils.kt</ID>
+    <ID>WildcardImport:Configuration.kt$import com.typesafe.config.*</ID>
+    <ID>WildcardImport:Properties.kt$import com.typesafe.config.*</ID>
+    <ID>WildcardImport:Utils.kt$import com.typesafe.config.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

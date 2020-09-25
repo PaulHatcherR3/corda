@@ -28,7 +28,8 @@ complexity:
   LongParameterList:
     active: true
     excludes: "**/buildSrc/**"
-    threshold: 6
+    constructorThreshold: 6
+    functionThreshold: 6
     ignoreDefaultParameters: false
   NestedBlockDepth:
     active: true

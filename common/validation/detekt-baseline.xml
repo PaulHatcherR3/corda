@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:Validated.kt$net.corda.common.validation.internal.Validated.kt</ID>
+    <ID>NewLineAtEndOfFile:Validator.kt$net.corda.common.validation.internal.Validator.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

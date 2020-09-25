@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>NewLineAtEndOfFile:CordaVersionProvider.kt$net.corda.cliutils.CordaVersionProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:ExitCodes.kt$net.corda.cliutils.ExitCodes.kt</ID>
+    <ID>NewLineAtEndOfFile:InstallShellExtensionsParser.kt$net.corda.cliutils.InstallShellExtensionsParser.kt</ID>
+    <ID>SpreadOperator:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$(*commandAndArgs)</ID>
+    <ID>TooGenericExceptionCaught:InstallShellExtensionsParser.kt$ShellExtensionsGenerator$exception: Exception</ID>
+    <ID>UtilityClassWithPublicConstructor:ExitCodes.kt$ExitCodes</ID>
+    <ID>WildcardImport:CordaCliWrapper.kt$import picocli.CommandLine.*</ID>
+    <ID>WildcardImport:InstallShellExtensionsParser.kt$import net.corda.core.internal.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

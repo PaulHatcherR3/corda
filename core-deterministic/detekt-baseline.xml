@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionOnlyReturningConstant:TargetVersionDependentRules.kt$StateContractValidationEnforcementRule$fun shouldEnforce(@Suppress("UNUSED_PARAMETER") state: ContractState): Boolean</ID>
+    <ID>MatchingDeclarationName:TargetVersionDependentRules.kt$StateContractValidationEnforcementRule</ID>
+    <ID>NewLineAtEndOfFile:TargetVersionDependentRules.kt$net.corda.core.internal.rules.TargetVersionDependentRules.kt</ID>
+    <ID>NewLineAtEndOfFile:ToggleField.kt$net.corda.core.internal.ToggleField.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

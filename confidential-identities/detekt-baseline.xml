@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Receive.Companion$RECEIVING_CERTIFICATES : Step</ID>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Receive.Companion$RECEIVING_IDENTITIES : Step</ID>
+    <ID>ClassNaming:IdentitySyncFlow.kt$IdentitySyncFlow.Send.Companion$SYNCING_IDENTITIES : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$AWAITING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$GENERATING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$SIGNING_IDENTITY : Step</ID>
+    <ID>ClassNaming:SwapIdentitiesFlow.kt$SwapIdentitiesFlow.Companion$VERIFYING_IDENTITY : Step</ID>
+    <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Can this be triggered automatically from [SendTransactionFlow]?</ID>
+    <ID>ForbiddenComment:IdentitySyncFlow.kt$IdentitySyncFlow.Send$// TODO: Consider if this too restrictive - we perhaps should be checking the name on the signing certificate in the certificate path instead</ID>
+    <ID>NewLineAtEndOfFile:SwapIdentitiesFlow.kt$net.corda.confidential.SwapIdentitiesFlow.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

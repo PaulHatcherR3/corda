@@ -19,10 +19,6 @@ plugins {
     `java-library`
 }
 
-dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
-}
-
 allprojects {
     repositories {
         val cordaUseCache = System.getenv("CORDA_USE_CACHE")
@@ -106,13 +102,14 @@ subprojects {
         }
 
         detekt {
-            baseline = file("$rootProjectDir/detekt-baseline.xml")
+            baseline = file("$projectDir/detekt-baseline.xml")
             config = files("$rootProjectDir/detekt-config.yml, " +
                     "$rootProjectDir/detekt-baseline-config.yml")
             parallel = true
             buildUponDefaultConfig = true
         }
     }
+
     tasks.withType<Jar>().forEach { task ->
         task.manifest {
             attributes("Corda-Release-Version" to version)

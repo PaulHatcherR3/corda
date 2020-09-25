@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>LongParameterList:CordaModule.kt$WireTransactionJson$(val id: SecureHash, val notary: Party?, val inputs: List&lt;StateRef&gt;, val outputs: List&lt;TransactionState&lt;*&gt;&gt;, val commands: List&lt;Command&lt;*&gt;&gt;, val timeWindow: TimeWindow?, val attachments: List&lt;SecureHash&gt;, val references: List&lt;StateRef&gt;, val privacySalt: PrivacySalt, val networkParametersHash: SecureHash?)</ID>
+    <ID>SpreadOperator:StringToMethodCallParser.kt$StringToMethodCallParser.ParsedMethodCall$(target, *args)</ID>
+    <ID>ThrowsCount:JacksonSupport.kt$JacksonSupport.PartyDeserializer$private fun lookupByNameSegment(mapper: PartyObjectMapper, parser: JsonParser): Party</ID>
+    <ID>ThrowsCount:StringToMethodCallParser.kt$StringToMethodCallParser$ @Throws(UnparseableCallException::class) fun parse(target: T?, command: String): ParsedMethodCall</ID>
+    <ID>ThrowsCount:StringToMethodCallParser.kt$StringToMethodCallParser$ @Throws(UnparseableCallException::class) fun parseArguments(methodNameHint: String, parameters: List&lt;Pair&lt;String, Type&gt;&gt;, args: String): Array&lt;Any?&gt;</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.PartyDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.PublicKeyDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JacksonSupport.kt$JacksonSupport.SecureHashDeserializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:StringToMethodCallParser.kt$StringToMethodCallParser$e: Exception</ID>
+    <ID>UnnecessaryAbstractClass:CordaModule.kt$AmountMixin</ID>
+    <ID>UnnecessaryAbstractClass:JacksonSupport.kt$JacksonSupport$SignedTransactionMixin</ID>
+    <ID>UnnecessaryAbstractClass:JacksonSupport.kt$JacksonSupport$WireTransactionMixin</ID>
+    <ID>WildcardImport:CordaModule.kt$import com.fasterxml.jackson.annotation.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.identity.*</ID>
+    <ID>WildcardImport:CordaModule.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import com.fasterxml.jackson.core.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import com.fasterxml.jackson.databind.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.identity.*</ID>
+    <ID>WildcardImport:JacksonSupport.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:JacksonUtils.kt$import com.fasterxml.jackson.databind.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

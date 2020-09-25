@@ -1,0 +1,421 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:InternalUtils.kt$it.type == this &amp;&amp; it.isPublic &amp;&amp; it.isStatic &amp;&amp; it.isFinal</ID>
+    <ID>ComplexCondition:WireTransaction.kt$WireTransaction$notary != null &amp;&amp; (inputs.isNotEmpty() || references.isNotEmpty() || timeWindow != null)</ID>
+    <ID>ComplexMethod:Amount.kt$AmountTransfer$ override fun equals(other: Any?): Boolean</ID>
+    <ID>ComplexMethod:AttachmentsClassLoader.kt$AttachmentsClassLoader$private fun checkAttachments(attachments: List&lt;Attachment&gt;)</ID>
+    <ID>ComplexMethod:ConstraintsUtils.kt$ fun AttachmentConstraint.canBeTransitionedFrom(input: AttachmentConstraint, attachment: ContractAttachment): Boolean</ID>
+    <ID>ComplexMethod:MerkleTransaction.kt$FilteredTransaction.Companion$ private fun filterWithFun(wtx: WireTransaction, filtering: Predicate&lt;Any&gt;): List&lt;FilteredComponentGroup&gt;</ID>
+    <ID>ComplexMethod:SendTransactionFlow.kt$DataVendingFlow$@Suspendable override fun call(): Void?</ID>
+    <ID>ComplexMethod:TransactionUtils.kt$ fun createComponentGroups(inputs: List&lt;StateRef&gt;, outputs: List&lt;TransactionState&lt;ContractState&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, attachments: List&lt;SecureHash&gt;, notary: Party?, timeWindow: TimeWindow?, references: List&lt;StateRef&gt;, networkParametersHash: SecureHash?): List&lt;ComponentGroup&gt;</ID>
+    <ID>ComplexMethod:TransactionVerifierServiceInternal.kt$Verifier$ @Suppress("NestedBlockDepth", "MagicNumber") private fun verifyConstraints(contractAttachmentsByContract: Map&lt;ContractClassName, ContractAttachment&gt;)</ID>
+    <ID>ComplexMethod:TransactionVerifierServiceInternal.kt$Verifier$ private fun verifyConstraintsValidity(contractAttachmentsByContract: Map&lt;ContractClassName, ContractAttachment&gt;)</ID>
+    <ID>ConstructorParameterNaming:ByteArrays.kt$ByteSequence$private val _bytes: ByteArray</ID>
+    <ID>ConstructorParameterNaming:CommonSchema.kt$CommonSchemaV1.LinearState$_participants: Set&lt;AbstractParty&gt;</ID>
+    <ID>ConstructorParameterNaming:CordaException.kt$CordaException$private var _cause: Throwable? = null</ID>
+    <ID>ConstructorParameterNaming:CordaException.kt$CordaException$private var _message: String? = null</ID>
+    <ID>ConstructorParameterNaming:CordaException.kt$CordaRuntimeException$private var _cause: Throwable?</ID>
+    <ID>ConstructorParameterNaming:CordaException.kt$CordaRuntimeException$private var _message: String?</ID>
+    <ID>EmptyFunctionBlock:PlatformSecureRandom.kt$LinuxSecureRandomSpi${}</ID>
+    <ID>EmptyFunctionBlock:Utils.kt$&lt;no name provided&gt;${}</ID>
+    <ID>EqualsWithHashCodeExist:ProgressTracker.kt$ProgressTracker$DONE : Step</ID>
+    <ID>EqualsWithHashCodeExist:ProgressTracker.kt$ProgressTracker$STARTING : Step</ID>
+    <ID>EqualsWithHashCodeExist:ProgressTracker.kt$ProgressTracker$UNSTARTED : Step</ID>
+    <ID>ForbiddenComment:AbstractAttachment.kt$AbstractAttachment$// TODO: read file size information from metadata instead of loading the data.</ID>
+    <ID>ForbiddenComment:AbstractStateReplacementFlow.kt$AbstractStateReplacementFlow.Acceptor$// TODO: This step should not be necessary, as signatures are re-checked in verifyRequiredSignatures.</ID>
+    <ID>ForbiddenComment:AbstractStateReplacementFlow.kt$AbstractStateReplacementFlow.Acceptor$// TODO: use keys from the keyManagementService instead</ID>
+    <ID>ForbiddenComment:CertRole.kt$CertRole$// TODO: Link to the specification once it has a permanent URL</ID>
+    <ID>ForbiddenComment:CollectSignaturesFlow.kt$CollectSignaturesFlow$// TODO: AbstractStateReplacementFlow needs updating to use this flow.</ID>
+    <ID>ForbiddenComment:CollectSignaturesFlow.kt$CollectSignaturesFlow.Companion$// TODO: Make the progress tracker adapt to the number of counterparties to collect from.</ID>
+    <ID>ForbiddenComment:CollectSignaturesFlow.kt$SignTransactionFlow$// TODO: We should have a faster way of verifying we own a single key</ID>
+    <ID>ForbiddenComment:CompositeKey.kt$CompositeKey$// TODO: replace with the more extensive, but slower, checkValidity() test.</ID>
+    <ID>ForbiddenComment:CompositeKey.kt$CompositeKey.Companion$// TODO: node.encoded.sequence() might be expensive, consider a faster deterministic compareTo implementation</ID>
+    <ID>ForbiddenComment:CompositeKey.kt$CompositeKey.NodeAndWeight$// TODO: this might be expensive, consider a faster deterministic compareTo implementation when weights are equal.</ID>
+    <ID>ForbiddenComment:ContractUpgradeFlow.kt$ContractUpgradeFlow.Initiate$// TODO: We need a much faster way of finding our key in the transaction</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$// TODO: check transaction size is within limits</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$// TODO: copy across encumbrances when performing contract upgrades</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction$// TODO: exclude encumbrance states from this check</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction$// TODO: relax this constraint once upgrading encumbered states is supported.</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$ContractUpgradeWireTransaction.Companion$// TODO: if there are encumbrance states in the inputs, just copy them across without modifying</ID>
+    <ID>ForbiddenComment:ContractUpgradeTransactions.kt$ContractUpgradeWireTransaction.Companion$// TODO: re-map encumbrance pointers</ID>
+    <ID>ForbiddenComment:Cordapp.kt$Cordapp.Info.ContractAndWorkflow$// TODO: future work in Gradle cordapp plugins to enforce separation of Contract and Workflow classes into separate jars</ID>
+    <ID>ForbiddenComment:CordappImpl.kt$CordappImpl$// TODO: Also add [SchedulableFlow] as a Cordapp class</ID>
+    <ID>ForbiddenComment:Crypto.kt$Crypto$// TODO: We currently use SHA256(seed) when retrying, but BIP32 just skips a counter (i) that results to an invalid key.</ID>
+    <ID>ForbiddenComment:Crypto.kt$Crypto$// TODO: change the val name to a more descriptive one as it's now confusing and looks like a Key type.</ID>
+    <ID>ForbiddenComment:Crypto.kt$Crypto$// TODO: change val name to SPHINCS256_SHA512. This will break backwards compatibility.</ID>
+    <ID>ForbiddenComment:Crypto.kt$Crypto$// TODO: perform all cryptographic operations via Crypto.</ID>
+    <ID>ForbiddenComment:CryptoUtils.kt$// TODO: SignatureException should be used only for a damaged signature, as per `java.security.Signature.verify()`.</ID>
+    <ID>ForbiddenComment:DigitalSignatureWithCert.kt$// TODO: Rename this to DigitalSignature.WithCert once we're happy for it to be public API. The methods will need documentation</ID>
+    <ID>ForbiddenComment:EncodingUtils.kt$// TODO: follow the crypto-conditions ASN.1 spec, some changes are needed to be compatible with the condition</ID>
+    <ID>ForbiddenComment:FetchDataFlow.kt$FetchDataFlow$// TODO: Support "large message" response streaming so response sizes are not limited by RAM.</ID>
+    <ID>ForbiddenComment:FlowIORequest.kt$FlowIORequest.ForceCheckpoint$// TODO: consider using an empty FlowAsyncOperation instead</ID>
+    <ID>ForbiddenComment:FlowLogicRef.kt$FlowLogicRef$// TODO: align this with the existing [FlowRef] in the bank-side API (probably replace some of the API classes)</ID>
+    <ID>ForbiddenComment:IdempotentFlow.kt$TimedFlow$// TODO: allow specifying retry settings per flow</ID>
+    <ID>ForbiddenComment:IdentityService.kt$IdentityService$// TODO: This should be done via the network map cache, which is the authoritative source of well known identities</ID>
+    <ID>ForbiddenComment:InternalUtils.kt$// TODO: Add inline back when a new Kotlin version is released and check if the java.lang.VerifyError</ID>
+    <ID>ForbiddenComment:InternalUtils.kt$// TODO: Currently the certificate revocation status is not handled here. Nowhere in the code the second parameter is used. Consider adding the support in the future.</ID>
+    <ID>ForbiddenComment:LegalNameValidator.kt$LegalNameValidator.Rule.Companion$// TODO: Implement confusable character detection if we add more scripts.</ID>
+    <ID>ForbiddenComment:NodeInfoConstants.kt$// TODO: Add to Corda node.conf to allow customisation</ID>
+    <ID>ForbiddenComment:NotaryChangeFlow.kt$NotaryChangeFlow$// TODO: We need a much faster way of finding our key in the transaction</ID>
+    <ID>ForbiddenComment:NotaryError.kt$StateConsumptionDetails$// TODO: include notary timestamp?</ID>
+    <ID>ForbiddenComment:NotaryFlow.kt$NotaryFlow.Client$// TODO: This is not required any more once our AMQP serialization supports turning off object referencing.</ID>
+    <ID>ForbiddenComment:NotaryServiceFlow.kt$NotaryServiceFlow.Companion$// TODO: Determine an appropriate limit and also enforce in the network parameters and the transaction builder.</ID>
+    <ID>ForbiddenComment:NotaryUtils.kt$// TODO: if requestSignature was generated over an old version of NotarisationRequest, we need to be able to</ID>
+    <ID>ForbiddenComment:ProgressTracker.kt$// TODO: Expose the concept of errors.</ID>
+    <ID>ForbiddenComment:ProgressTracker.kt$// TODO: It'd be helpful if this class was at least partly thread safe.</ID>
+    <ID>ForbiddenComment:ProviderMap.kt$// TODO: Find a way to make JKS work with bouncy castle provider or implement our own provide so we don't have to register bouncy castle provider.</ID>
+    <ID>ForbiddenComment:ResolveTransactionsFlow.kt$ResolveTransactionsFlow$// TODO: This could be done in parallel with other fetches for extra speed.</ID>
+    <ID>ForbiddenComment:SendTransactionFlow.kt$DataVendingFlow$// Security TODO: Check for abnormally large or malformed data requests</ID>
+    <ID>ForbiddenComment:ServiceHub.kt$ServicesForResolution$// TODO: future implementation to use a Vault state ref -&gt; contract state BLOB table and perform single query bulk load</ID>
+    <ID>ForbiddenComment:ServiceHubCoreInternal.kt$ServiceHubCoreInternal$// TODO: This should really be called ServiceHubInternal but that name is already taken by net.corda.node.services.api.ServiceHubInternal.</ID>
+    <ID>ForbiddenComment:SignedTransaction.kt$SignedTransaction$// TODO: Verify contract constraints here as well as in LedgerTransaction to ensure that anything being deserialised</ID>
+    <ID>ForbiddenComment:SignedTransaction.kt$SignedTransaction$// TODO: We could probably optimise the below by</ID>
+    <ID>ForbiddenComment:SignedTransaction.kt$SignedTransaction$// TODO: We need a much better way of structuring this data.</ID>
+    <ID>ForbiddenComment:SignedTransaction.kt$SignedTransaction$// TODO: allow non-blocking verification.</ID>
+    <ID>ForbiddenComment:SinglePartyNotaryService.kt$SinglePartyNotaryService$// TODO: Log the request here. Benchmarking shows that logging is expensive and we might get better performance</ID>
+    <ID>ForbiddenComment:Structures.kt$MoveCommand$// TODO: Replace Class here with a general contract constraints object</ID>
+    <ID>ForbiddenComment:TransactionBuilder.kt$TransactionBuilder$// TODO: Add support for making recursive resolution optional if it becomes an issue.</ID>
+    <ID>ForbiddenComment:TransactionBuilder.kt$TransactionBuilder$//TODO: add link to docsite page, when there is one.</ID>
+    <ID>ForbiddenComment:TransactionState.kt$TransactionState$// TODO: Implement the contract sandbox loading of the contract attachments</ID>
+    <ID>ForbiddenComment:TransactionState.kt$TransactionState$//TODO: add link to docsite page, when there is one.</ID>
+    <ID>ForbiddenComment:TransactionUtils.kt$// TODO: [ENT-2666] Implement network parameters fuzzy checking. By design in Corda network we have propagation time delay.</ID>
+    <ID>ForbiddenComment:TransactionUtils.kt$// TODO: we could avoid deserialising unrelated signers.</ID>
+    <ID>ForbiddenComment:TransactionVerificationException.kt$TransactionVerificationException$// TODO: Make this descend from TransactionVerificationException so that untrusted attachments cause flows to be hospitalized.</ID>
+    <ID>ForbiddenComment:TransactionVerificationException.kt$TransactionVerificationException.TransactionRequiredContractUnspecifiedException$// TODO: add reference to documentation</ID>
+    <ID>ForbiddenComment:WireTransaction.kt$WireTransaction$// TODO: prevent notary field from being set if there are no inputs and no time-window.</ID>
+    <ID>ForbiddenComment:WireTransaction.kt$WireTransaction$// TODO: revisit once Deterministic JVM code updated</ID>
+    <ID>FunctionNaming:ProgressTracker.kt$ProgressTracker$private fun _allSteps(level: Int = 0): List&lt;Pair&lt;Int, Step&gt;&gt;</ID>
+    <ID>FunctionNaming:ProgressTracker.kt$ProgressTracker$private fun _allStepsLabels(level: Int = 0): List&lt;Pair&lt;Int, String&gt;&gt;</ID>
+    <ID>FunctionNaming:VaultService.kt$VaultService$ @Throws(VaultQueryException::class) fun &lt;T : ContractState&gt; _queryBy(criteria: QueryCriteria, paging: PageSpecification, sorting: Sort, contractStateType: Class&lt;out T&gt;): Vault.Page&lt;T&gt;</ID>
+    <ID>FunctionNaming:VaultService.kt$VaultService$ @Throws(VaultQueryException::class) fun &lt;T : ContractState&gt; _trackBy(criteria: QueryCriteria, paging: PageSpecification, sorting: Sort, contractStateType: Class&lt;out T&gt;): DataFeed&lt;Vault.Page&lt;T&gt;, Vault.Update&lt;T&gt;&gt;</ID>
+    <ID>LongParameterList:ContractAttachment.kt$ContractAttachment$( val attachment: Attachment, val contract: ContractClassName, val additionalContracts: Set&lt;ContractClassName&gt;, val uploader: String?, override val signerKeys: List&lt;PublicKey&gt;, val version: Int )</ID>
+    <ID>LongParameterList:ContractAttachment.kt$ContractAttachment.Companion$(attachment: Attachment, contract: ContractClassName, additionalContracts: Set&lt;ContractClassName&gt; = emptySet(), uploader: String? = null, signerKeys: List&lt;PublicKey&gt; = emptyList(), version: Int = DEFAULT_CORDAPP_VERSION)</ID>
+    <ID>LongParameterList:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction$( inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt; = this.inputs, notary: Party = this.notary, legacyContractAttachment: Attachment = this.legacyContractAttachment, upgradedContractClassName: ContractClassName = this.upgradedContract::class.java.name, upgradedContractAttachment: Attachment = this.upgradedContractAttachment, id: SecureHash = this.id, privacySalt: PrivacySalt = this.privacySalt, sigs: List&lt;TransactionSignature&gt; = this.sigs, networkParameters: NetworkParameters = this.networkParameters )</ID>
+    <ID>LongParameterList:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction$( inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt;, notary: Party, legacyContractAttachment: Attachment, upgradedContractClassName: ContractClassName, upgradedContractAttachment: Attachment, id: SecureHash, privacySalt: PrivacySalt, sigs: List&lt;TransactionSignature&gt;, networkParameters: NetworkParameters )</ID>
+    <ID>LongParameterList:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction$( override val inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt;, override val notary: Party, val legacyContractAttachment: Attachment, val upgradedContractAttachment: Attachment, override val id: SecureHash, val privacySalt: PrivacySalt, override val sigs: List&lt;TransactionSignature&gt;, override val networkParameters: NetworkParameters, private val upgradedContract: UpgradedContract&lt;ContractState, *&gt; )</ID>
+    <ID>LongParameterList:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction.Companion$( inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt;, notary: Party, legacyContractAttachment: Attachment, upgradedContractAttachment: Attachment, id: SecureHash, privacySalt: PrivacySalt, sigs: List&lt;TransactionSignature&gt;, networkParameters: NetworkParameters, upgradedContract: UpgradedContract&lt;ContractState, *&gt; )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( @Suppress("UNUSED_PARAMETER") flowConstructor: (A, B, C, D, E) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( @Suppress("UNUSED_PARAMETER") flowConstructor: (A, B, C, D, E, F) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E, arg5: F )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( @Suppress("unused_parameter") flowConstructor: (A, B, C, D, E) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( @Suppress("unused_parameter") flowConstructor: (A, B, C, D, E, F) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E, arg5: F )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( clientId: String, @Suppress("unused_parameter") flowConstructor: (A, B, C, D) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( clientId: String, @Suppress("unused_parameter") flowConstructor: (A, B, C, D, E) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E )</ID>
+    <ID>LongParameterList:CordaRPCOps.kt$( clientId: String, @Suppress("unused_parameter") flowConstructor: (A, B, C, D, E, F) -&gt; R, arg0: A, arg1: B, arg2: C, arg3: D, arg4: E, arg5: F )</ID>
+    <ID>LongParameterList:FinalityFlow.kt$FinalityFlow$(val transaction: SignedTransaction, private val oldParticipants: Collection&lt;Party&gt;, override val progressTracker: ProgressTracker, private val sessions: Collection&lt;FlowSession&gt;, private val newApi: Boolean, private val statesToRecord: StatesToRecord = ONLY_RELEVANT)</ID>
+    <ID>LongParameterList:NetworkParameters.kt$NetworkParameters$(minimumPlatformVersion: Int = this.minimumPlatformVersion, notaries: List&lt;NotaryInfo&gt; = this.notaries, maxMessageSize: Int = this.maxMessageSize, maxTransactionSize: Int = this.maxTransactionSize, modifiedTime: Instant = this.modifiedTime, epoch: Int = this.epoch, whitelistedContractImplementations: Map&lt;String, List&lt;AttachmentId&gt;&gt; = this.whitelistedContractImplementations )</ID>
+    <ID>LongParameterList:NetworkParameters.kt$NetworkParameters$(minimumPlatformVersion: Int = this.minimumPlatformVersion, notaries: List&lt;NotaryInfo&gt; = this.notaries, maxMessageSize: Int = this.maxMessageSize, maxTransactionSize: Int = this.maxTransactionSize, modifiedTime: Instant = this.modifiedTime, epoch: Int = this.epoch, whitelistedContractImplementations: Map&lt;String, List&lt;AttachmentId&gt;&gt; = this.whitelistedContractImplementations, eventHorizon: Duration = this.eventHorizon )</ID>
+    <ID>LongParameterList:NotaryChangeTransactions.kt$NotaryChangeLedgerTransaction$( override val inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt;, override val notary: Party, val newNotary: Party, override val id: SecureHash, override val sigs: List&lt;TransactionSignature&gt;, override val networkParameters: NetworkParameters? )</ID>
+    <ID>LongParameterList:NotaryChangeTransactions.kt$NotaryChangeLedgerTransaction.Companion$(inputs: List&lt;StateAndRef&lt;ContractState&gt;&gt;, notary: Party, newNotary: Party, id: SecureHash, sigs: List&lt;TransactionSignature&gt;, networkParameters: NetworkParameters)</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.FungibleAssetQueryCriteria$( participants: List&lt;AbstractParty&gt;? = this.participants, owner: List&lt;AbstractParty&gt;? = this.owner, quantity: ColumnPredicate&lt;Long&gt;? = this.quantity, issuer: List&lt;AbstractParty&gt;? = this.issuer, issuerRef: List&lt;OpaqueBytes&gt;? = this.issuerRef, status: Vault.StateStatus = this.status, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = this.contractStateTypes )</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.FungibleAssetQueryCriteria$( participants: List&lt;AbstractParty&gt;? = this.participants, owner: List&lt;AbstractParty&gt;? = this.owner, quantity: ColumnPredicate&lt;Long&gt;? = this.quantity, issuer: List&lt;AbstractParty&gt;? = this.issuer, issuerRef: List&lt;OpaqueBytes&gt;? = this.issuerRef, status: Vault.StateStatus = this.status, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = this.contractStateTypes, relevancyStatus: Vault.RelevancyStatus = this.relevancyStatus )</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.LinearStateQueryCriteria$( participants: List&lt;AbstractParty&gt;? = this.participants, uuid: List&lt;UUID&gt;? = this.uuid, externalId: List&lt;String&gt;? = this.externalId, status: Vault.StateStatus = this.status, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = this.contractStateTypes, relevancyStatus: Vault.RelevancyStatus = this.relevancyStatus )</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.VaultQueryCriteria$( status: Vault.StateStatus = Vault.StateStatus.UNCONSUMED, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = null, stateRefs: List&lt;StateRef&gt;? = null, notary: List&lt;AbstractParty&gt;? = null, softLockingCondition: SoftLockingCondition? = null, timeCondition: TimeCondition? = null, relevancyStatus: Vault.RelevancyStatus = Vault.RelevancyStatus.ALL, constraintTypes: Set&lt;Vault.ConstraintInfo.Type&gt; = emptySet(), constraints: Set&lt;Vault.ConstraintInfo&gt; = emptySet(), participants: List&lt;AbstractParty&gt;? = null )</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.VaultQueryCriteria$( status: Vault.StateStatus = Vault.StateStatus.UNCONSUMED, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = null, stateRefs: List&lt;StateRef&gt;? = null, notary: List&lt;AbstractParty&gt;? = null, softLockingCondition: SoftLockingCondition? = null, timeCondition: TimeCondition? = null, relevancyStatus: Vault.RelevancyStatus = Vault.RelevancyStatus.ALL, constraintTypes: Set&lt;Vault.ConstraintInfo.Type&gt; = emptySet(), constraints: Set&lt;Vault.ConstraintInfo&gt; = emptySet(), participants: List&lt;AbstractParty&gt;? = null, externalIds: List&lt;UUID&gt; = emptyList() )</ID>
+    <ID>LongParameterList:QueryCriteria.kt$QueryCriteria.VaultQueryCriteria$( status: Vault.StateStatus = this.status, contractStateTypes: Set&lt;Class&lt;out ContractState&gt;&gt;? = this.contractStateTypes, stateRefs: List&lt;StateRef&gt;? = this.stateRefs, notary: List&lt;AbstractParty&gt;? = this.notary, softLockingCondition: SoftLockingCondition? = this.softLockingCondition, timeCondition: TimeCondition? = this.timeCondition )</ID>
+    <ID>LongParameterList:SerializationEnvironment.kt$SerializationEnvironment.Companion$( serializationFactory: SerializationFactory, p2pContext: SerializationContext, rpcServerContext: SerializationContext? = null, rpcClientContext: SerializationContext? = null, storageContext: SerializationContext? = null, checkpointContext: CheckpointSerializationContext? = null, checkpointSerializer: CheckpointSerializer? = null )</ID>
+    <ID>LongParameterList:SerializationEnvironment.kt$SerializationEnvironmentImpl$( override val serializationFactory: SerializationFactory, override val p2pContext: SerializationContext, private val optionalRpcServerContext: SerializationContext? = null, private val optionalRpcClientContext: SerializationContext? = null, private val optionalStorageContext: SerializationContext? = null, private val optionalCheckpointContext: CheckpointSerializationContext? = null, private val optionalCheckpointSerializer: CheckpointSerializer? = null)</ID>
+    <ID>LongParameterList:SinglePartyNotaryService.kt$SinglePartyNotaryService$( inputs: List&lt;StateRef&gt;, txId: SecureHash, caller: Party, requestSignature: NotarisationRequestSignature, timeWindow: TimeWindow?, references: List&lt;StateRef&gt; )</ID>
+    <ID>LongParameterList:SinglePartyNotaryService.kt$SinglePartyNotaryService.CommitOperation$( val service: SinglePartyNotaryService, val inputs: List&lt;StateRef&gt;, val txId: SecureHash, val caller: Party, val requestSignature: NotarisationRequestSignature, val timeWindow: TimeWindow?, val references: List&lt;StateRef&gt; )</ID>
+    <ID>LongParameterList:TransactionBuilder.kt$TransactionBuilder$( var notary: Party? = null, var lockId: UUID = defaultLockId(), protected val inputs: MutableList&lt;StateRef&gt; = arrayListOf(), protected val attachments: MutableList&lt;AttachmentId&gt; = arrayListOf(), protected val outputs: MutableList&lt;TransactionState&lt;ContractState&gt;&gt; = arrayListOf(), protected val commands: MutableList&lt;Command&lt;*&gt;&gt; = arrayListOf(), protected var window: TimeWindow? = null, protected var privacySalt: PrivacySalt = PrivacySalt(), protected val references: MutableList&lt;StateRef&gt; = arrayListOf(), protected val serviceHub: ServiceHub? = (Strand.currentStrand() as? FlowStateMachine&lt;*&gt;)?.serviceHub )</ID>
+    <ID>LongParameterList:TransactionBuilder.kt$TransactionBuilder$(notary: Party? = null, lockId: UUID = defaultLockId(), inputs: MutableList&lt;StateRef&gt; = arrayListOf(), attachments: MutableList&lt;AttachmentId&gt; = arrayListOf(), outputs: MutableList&lt;TransactionState&lt;ContractState&gt;&gt; = arrayListOf(), commands: MutableList&lt;Command&lt;*&gt;&gt; = arrayListOf(), window: TimeWindow? = null, privacySalt: PrivacySalt = PrivacySalt() )</ID>
+    <ID>LongParameterList:TransactionUtils.kt$(componentGroups: List&lt;ComponentGroup&gt;, clazz: KClass&lt;T&gt;, groupEnum: ComponentGroupEnum, forceDeserialize: Boolean = false, factory: SerializationFactory = SerializationFactory.defaultFactory, context: SerializationContext = factory.defaultContext)</ID>
+    <ID>LongParameterList:TransactionUtils.kt$(inputs: List&lt;StateRef&gt;, outputs: List&lt;TransactionState&lt;ContractState&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, attachments: List&lt;SecureHash&gt;, notary: Party?, timeWindow: TimeWindow?, references: List&lt;StateRef&gt;, networkParametersHash: SecureHash?)</ID>
+    <ID>LongParameterList:TransactionUtils.kt$ContractUpgradeTransactionBuilder$( val inputs: List&lt;StateRef&gt;, val notary: Party, val legacyContractAttachmentId: SecureHash, val upgradedContractClassName: ContractClassName, val upgradedContractAttachmentId: SecureHash, val privacySalt: PrivacySalt = PrivacySalt(), val networkParametersHash: SecureHash)</ID>
+    <ID>LongParameterList:UniquenessProvider.kt$UniquenessProvider$( states: List&lt;StateRef&gt;, txId: SecureHash, callerIdentity: Party, requestSignature: NotarisationRequestSignature, timeWindow: TimeWindow? = null, references: List&lt;StateRef&gt; = emptyList() )</ID>
+    <ID>LongParameterList:VaultService.kt$Vault.StateMetadata$( ref: StateRef = this.ref, contractStateClassName: String = this.contractStateClassName, recordedTime: Instant = this.recordedTime, consumedTime: Instant? = this.consumedTime, status: Vault.StateStatus = this.status, notary: AbstractParty? = this.notary, lockId: String? = this.lockId, lockUpdateTime: Instant? = this.lockUpdateTime )</ID>
+    <ID>LongParameterList:VaultService.kt$Vault.StateMetadata$( ref: StateRef = this.ref, contractStateClassName: String = this.contractStateClassName, recordedTime: Instant = this.recordedTime, consumedTime: Instant? = this.consumedTime, status: Vault.StateStatus = this.status, notary: AbstractParty? = this.notary, lockId: String? = this.lockId, lockUpdateTime: Instant? = this.lockUpdateTime, relevancyStatus: Vault.RelevancyStatus? )</ID>
+    <ID>LongParameterList:WireTransaction.kt$WireTransaction$( inputs: List&lt;StateRef&gt;, attachments: List&lt;SecureHash&gt;, outputs: List&lt;TransactionState&lt;ContractState&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, notary: Party?, timeWindow: TimeWindow?, privacySalt: PrivacySalt = PrivacySalt() )</ID>
+    <ID>LongParameterList:WireTransaction.kt$WireTransaction.Companion$(inputs: List&lt;StateRef&gt;, outputs: List&lt;TransactionState&lt;ContractState&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, attachments: List&lt;SecureHash&gt;, notary: Party?, timeWindow: TimeWindow?)</ID>
+    <ID>LoopWithTooManyJumpStatements:AttachmentsClassLoader.kt$AttachmentsClassLoader$while (true) { val entry = jar.nextJarEntry ?: break if (entry.isDirectory) continue // We already verified that paths are not strange/game playing when we inserted the attachment // into the storage service. So we don't need to repeat it here. // // We forbid files that differ only in case, or path separator to avoid issues for Windows/Mac developers where the // filesystem tries to be case insensitive. This may break developers who attempt to use ProGuard. // // Also convert to Unix path separators as all resource/class lookups will expect this. val path = entry.name.toLowerCase(Locale.US).replace('\\', '/') // Namespace ownership. We only check class files: resources are loaded relative to a JAR anyway. if (path.endsWith(".class")) { // Get the package name from the file name. Inner classes separate their names with $ not / // in file names so they are not a problem. val pkgName = path .dropLast(".class".length) .replace('/', '.') .split('.') .dropLast(1) .joinToString(".") for ((namespace, pubkey) in params.packageOwnership) { // Note that due to the toLowerCase() call above, we'll be comparing against a lowercased // version of the ownership claim. val ns = namespace.toLowerCase(Locale.US) // We need an additional . to avoid matching com.foo.Widget against com.foobar.Zap if (pkgName == ns || pkgName.startsWith("$ns.")) { if (pubkey !in signers) throw PackageOwnershipException(sampleTxId, attachment.id, path, pkgName) } } } // Some files don't need overlap checking because they don't affect the way the code runs. if (!shouldCheckForNoOverlap(path, targetPlatformVersion)) continue // This calculates the hash of the current entry because the JarInputStream returns only the current entry. fun entryHash() = ByteArrayOutputStream().use { jar.copyTo(it) it.toByteArray() }.sha256() // If 2 entries are identical, it means the same file is present in both attachments, so that is ok. val currentHash = entryHash() val previousFileHash = classLoaderEntries[path] when { previousFileHash == null -&gt; { log.debug { "Adding new entry for $path" } classLoaderEntries[path] = currentHash } currentHash == previousFileHash -&gt; log.debug { "Duplicate entry $path has same content hash $currentHash" } else -&gt; { log.debug { "Content hash differs for $path" } throw OverlappingAttachmentsException(sampleTxId, path) } } }</ID>
+    <ID>LoopWithTooManyJumpStatements:ProgressTracker.kt$ProgressTracker$for (step in steps) { if (step == UNSTARTED) continue if (level &gt; 0 &amp;&amp; (step == DONE || step == STARTING)) continue result += Pair(level, step) getChildProgressTracker(step)?.let { result += it._allSteps(level + 1) } }</ID>
+    <ID>MagicNumber:ByteArrays.kt$10</ID>
+    <ID>MagicNumber:ByteArrays.kt$16</ID>
+    <ID>MagicNumber:ByteArrays.kt$4</ID>
+    <ID>MagicNumber:CompositeSignature.kt$CompositeSignature$1024</ID>
+    <ID>MagicNumber:CordaSecurityProvider.kt$CordaSecurityProvider$0.1</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$2048</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$256</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$3</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$3072</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$4</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$5</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$6</ID>
+    <ID>MagicNumber:Crypto.kt$Crypto$8</ID>
+    <ID>MagicNumber:CryptoUtils.kt$8</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F193</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F385</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F469</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4A1</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4B0</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4BB</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4CE</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4DA</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F4F0</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F51C</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F537</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F60E</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F634</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x1F6AB</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x200D</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x2620</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x26A0</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x2705</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x27A1</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0x2B05</ID>
+    <ID>MagicNumber:Emoji.kt$Emoji$0xFE0F</ID>
+    <ID>MagicNumber:FlowLogic.kt$FlowLogic$300</ID>
+    <ID>MagicNumber:FlowLogic.kt$FlowLogic.Companion$5</ID>
+    <ID>MagicNumber:InternalUtils.kt$30</ID>
+    <ID>MagicNumber:InternalUtils.kt$InputStreamAndHash.Companion$1024</ID>
+    <ID>MagicNumber:JarSignatureCollector.kt$JarSignatureCollector$1024</ID>
+    <ID>MagicNumber:NetworkHostAndPort.kt$NetworkHostAndPort$0xffff</ID>
+    <ID>MagicNumber:NullKeys.kt$NullKeys$32</ID>
+    <ID>MagicNumber:SecureHash.kt$SecureHash.Companion$32</ID>
+    <ID>MagicNumber:SecureHash.kt$SecureHash.SHA256$32</ID>
+    <ID>MagicNumber:Structures.kt$PrivacySalt$32</ID>
+    <ID>MagicNumber:TransactionBuilder.kt$TransactionBuilder$4</ID>
+    <ID>MagicNumber:TransactionVerificationException.kt$TransactionVerificationException.ConstraintPropagationRejection$3</ID>
+    <ID>MagicNumber:WireTransaction.kt$WireTransaction$4</ID>
+    <ID>MatchingDeclarationName:ConfigException.kt$CordappConfigException : Exception</ID>
+    <ID>MatchingDeclarationName:ContractsDSL.kt$Requirements</ID>
+    <ID>MatchingDeclarationName:NamedCache.kt$NamedCacheFactory</ID>
+    <ID>MatchingDeclarationName:NetworkParametersServiceInternal.kt$NetworkParametersStorage : NetworkParametersService</ID>
+    <ID>MatchingDeclarationName:TargetVersionDependentRules.kt$StateContractValidationEnforcementRule</ID>
+    <ID>NestedBlockDepth:Amount.kt$Amount.Companion$ @JvmStatic fun parseCurrency(input: String): Amount&lt;Currency&gt;</ID>
+    <ID>NestedBlockDepth:AttachmentsClassLoader.kt$AttachmentsClassLoader$private fun checkAttachments(attachments: List&lt;Attachment&gt;)</ID>
+    <ID>NestedBlockDepth:FetchDataFlow.kt$FetchAttachmentsFlow$override fun maybeWriteToDisk(downloaded: List&lt;Attachment&gt;)</ID>
+    <ID>NestedBlockDepth:InternalUtils.kt$ inline fun &lt;T&gt; Iterable&lt;T&gt;.noneOrSingle(predicate: (T) -&gt; Boolean): T?</ID>
+    <ID>NestedBlockDepth:TransactionVerifierServiceInternal.kt$Verifier$ private fun verifyConstraintsValidity(contractAttachmentsByContract: Map&lt;ContractClassName, ContractAttachment&gt;)</ID>
+    <ID>NewLineAtEndOfFile:AbstractParty.kt$net.corda.core.identity.AbstractParty.kt</ID>
+    <ID>NewLineAtEndOfFile:AddressBindingException.kt$net.corda.core.internal.errors.AddressBindingException.kt</ID>
+    <ID>NewLineAtEndOfFile:AnonymousParty.kt$net.corda.core.identity.AnonymousParty.kt</ID>
+    <ID>NewLineAtEndOfFile:AppServiceHub.kt$net.corda.core.node.AppServiceHub.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentTrustCalculator.kt$net.corda.core.internal.AttachmentTrustCalculator.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentWithContext.kt$net.corda.core.internal.AttachmentWithContext.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentsClassLoader.kt$net.corda.core.serialization.internal.AttachmentsClassLoader.kt</ID>
+    <ID>NewLineAtEndOfFile:BaseTransaction.kt$net.corda.core.transactions.BaseTransaction.kt</ID>
+    <ID>NewLineAtEndOfFile:BaseTransactions.kt$net.corda.core.transactions.BaseTransactions.kt</ID>
+    <ID>NewLineAtEndOfFile:CheckpointSerializationAPI.kt$net.corda.core.serialization.internal.CheckpointSerializationAPI.kt</ID>
+    <ID>NewLineAtEndOfFile:ClientRelevantError.kt$net.corda.core.ClientRelevantError.kt</ID>
+    <ID>NewLineAtEndOfFile:ClientRpcSslOptions.kt$net.corda.core.messaging.ClientRpcSslOptions.kt</ID>
+    <ID>NewLineAtEndOfFile:CommonSchema.kt$net.corda.core.schemas.CommonSchema.kt</ID>
+    <ID>NewLineAtEndOfFile:CompositeSignature.kt$net.corda.core.crypto.CompositeSignature.kt</ID>
+    <ID>NewLineAtEndOfFile:ConstructorForDeserialization.kt$net.corda.core.serialization.ConstructorForDeserialization.kt</ID>
+    <ID>NewLineAtEndOfFile:ContractUpgradeTransactions.kt$net.corda.core.transactions.ContractUpgradeTransactions.kt</ID>
+    <ID>NewLineAtEndOfFile:ContractUpgradeUtils.kt$net.corda.core.internal.ContractUpgradeUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaException.kt$net.corda.core.CordaException.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaInternal.kt$net.corda.core.CordaInternal.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaTransactionSupport.kt$net.corda.core.node.services.vault.CordaTransactionSupport.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaX500Name.kt$net.corda.core.identity.CordaX500Name.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappConfig.kt$net.corda.core.cordapp.CordappConfig.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappInfo.kt$net.corda.core.cordapp.CordappInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappProvider.kt$net.corda.core.cordapp.CordappProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:DiagnosticsService.kt$net.corda.core.node.services.diagnostics.DiagnosticsService.kt</ID>
+    <ID>NewLineAtEndOfFile:DigitalSignatureWithCert.kt$net.corda.core.internal.DigitalSignatureWithCert.kt</ID>
+    <ID>NewLineAtEndOfFile:DoNotImplement.kt$net.corda.core.DoNotImplement.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowException.kt$net.corda.core.flows.FlowException.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowExternalOperations.kt$net.corda.core.flows.FlowExternalOperations.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowHandle.kt$net.corda.core.messaging.FlowHandle.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowInitiator.kt$net.corda.core.flows.FlowInitiator.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowLogicRef.kt$net.corda.core.flows.FlowLogicRef.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowStackSnapshot.kt$net.corda.core.flows.FlowStackSnapshot.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowStateMachine.kt$net.corda.core.internal.FlowStateMachine.kt</ID>
+    <ID>NewLineAtEndOfFile:HospitalizeFlowException.kt$net.corda.core.flows.HospitalizeFlowException.kt</ID>
+    <ID>NewLineAtEndOfFile:Id.kt$net.corda.core.utilities.Id.kt</ID>
+    <ID>NewLineAtEndOfFile:IdempotentFlow.kt$net.corda.core.internal.IdempotentFlow.kt</ID>
+    <ID>NewLineAtEndOfFile:IdentityUtils.kt$net.corda.core.identity.IdentityUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:InitiatedBy.kt$net.corda.core.flows.InitiatedBy.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalCordaRPCOps.kt$net.corda.core.internal.messaging.InternalCordaRPCOps.kt</ID>
+    <ID>NewLineAtEndOfFile:InvocationContext.kt$net.corda.core.context.InvocationContext.kt</ID>
+    <ID>NewLineAtEndOfFile:InvocationHandlerTemplate.kt$net.corda.core.internal.utilities.InvocationHandlerTemplate.kt</ID>
+    <ID>NewLineAtEndOfFile:JarSignatureCollector.kt$net.corda.core.internal.JarSignatureCollector.kt</ID>
+    <ID>NewLineAtEndOfFile:KeepForDJVM.kt$net.corda.core.KeepForDJVM.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyManagementService.kt$net.corda.core.node.services.KeyManagementService.kt</ID>
+    <ID>NewLineAtEndOfFile:KilledFlowException.kt$net.corda.core.flows.KilledFlowException.kt</ID>
+    <ID>NewLineAtEndOfFile:LazyPool.kt$net.corda.core.internal.LazyPool.kt</ID>
+    <ID>NewLineAtEndOfFile:LazyStickyPool.kt$net.corda.core.internal.LazyStickyPool.kt</ID>
+    <ID>NewLineAtEndOfFile:LegalNameValidator.kt$net.corda.core.internal.LegalNameValidator.kt</ID>
+    <ID>NewLineAtEndOfFile:LifeCycle.kt$net.corda.core.internal.LifeCycle.kt</ID>
+    <ID>NewLineAtEndOfFile:MerkleTransaction.kt$net.corda.core.transactions.MerkleTransaction.kt</ID>
+    <ID>NewLineAtEndOfFile:MerkleTree.kt$net.corda.core.crypto.MerkleTree.kt</ID>
+    <ID>NewLineAtEndOfFile:MissingAttachmentsException.kt$net.corda.core.serialization.MissingAttachmentsException.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeDiagnosticInfo.kt$net.corda.core.node.NodeDiagnosticInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeVersionInfo.kt$net.corda.core.node.services.diagnostics.NodeVersionInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:NotaryService.kt$net.corda.core.internal.notary.NotaryService.kt</ID>
+    <ID>NewLineAtEndOfFile:NullKeys.kt$net.corda.core.crypto.NullKeys.kt</ID>
+    <ID>NewLineAtEndOfFile:Observables.kt$net.corda.core.observable.Observables.kt</ID>
+    <ID>NewLineAtEndOfFile:PlatformVersionSwitches.kt$net.corda.core.internal.PlatformVersionSwitches.kt</ID>
+    <ID>NewLineAtEndOfFile:ProgressTracker.kt$net.corda.core.internal.ProgressTracker.kt</ID>
+    <ID>NewLineAtEndOfFile:QueryCriteriaUtils.kt$net.corda.core.node.services.vault.QueryCriteriaUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCOps.kt$net.corda.core.messaging.RPCOps.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCReturnsObservables.kt$net.corda.core.messaging.RPCReturnsObservables.kt</ID>
+    <ID>NewLineAtEndOfFile:ResilientSubscriber.kt$net.corda.core.observable.internal.ResilientSubscriber.kt</ID>
+    <ID>NewLineAtEndOfFile:ResultSerializationException.kt$net.corda.core.flows.ResultSerializationException.kt</ID>
+    <ID>NewLineAtEndOfFile:SchedulableFlow.kt$net.corda.core.flows.SchedulableFlow.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializationAnnotations.kt$net.corda.core.serialization.SerializationAnnotations.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializationWhitelist.kt$net.corda.core.serialization.SerializationWhitelist.kt</ID>
+    <ID>NewLineAtEndOfFile:ServiceHubCoreInternal.kt$net.corda.core.internal.ServiceHubCoreInternal.kt</ID>
+    <ID>NewLineAtEndOfFile:ServiceLifecycleObserver.kt$net.corda.core.node.services.ServiceLifecycleObserver.kt</ID>
+    <ID>NewLineAtEndOfFile:SessionScope.kt$net.corda.core.node.services.vault.SessionScope.kt</ID>
+    <ID>NewLineAtEndOfFile:StartableByRPC.kt$net.corda.core.flows.StartableByRPC.kt</ID>
+    <ID>NewLineAtEndOfFile:StartableByService.kt$net.corda.core.flows.StartableByService.kt</ID>
+    <ID>NewLineAtEndOfFile:StateMachineRunId.kt$net.corda.core.flows.StateMachineRunId.kt</ID>
+    <ID>NewLineAtEndOfFile:StatePointer.kt$net.corda.core.contracts.StatePointer.kt</ID>
+    <ID>NewLineAtEndOfFile:StatePointerSearch.kt$net.corda.core.internal.StatePointerSearch.kt</ID>
+    <ID>NewLineAtEndOfFile:TargetVersionDependentRules.kt$net.corda.core.internal.rules.TargetVersionDependentRules.kt</ID>
+    <ID>NewLineAtEndOfFile:TimeWindow.kt$net.corda.core.contracts.TimeWindow.kt</ID>
+    <ID>NewLineAtEndOfFile:TimingUtils.kt$net.corda.core.internal.utilities.TimingUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:Trace.kt$net.corda.core.context.Trace.kt</ID>
+    <ID>NewLineAtEndOfFile:TransactionStorage.kt$net.corda.core.node.services.TransactionStorage.kt</ID>
+    <ID>NewLineAtEndOfFile:TransactionVerifierService.kt$net.corda.core.node.services.TransactionVerifierService.kt</ID>
+    <ID>NewLineAtEndOfFile:TransactionWithSignatures.kt$net.corda.core.transactions.TransactionWithSignatures.kt</ID>
+    <ID>NewLineAtEndOfFile:UniqueIdentifier.kt$net.corda.core.contracts.UniqueIdentifier.kt</ID>
+    <ID>NewLineAtEndOfFile:UniquenessProvider.kt$net.corda.core.internal.notary.UniquenessProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:UuidGenerator.kt$net.corda.core.utilities.UuidGenerator.kt</ID>
+    <ID>NewLineAtEndOfFile:VaultService.kt$net.corda.core.node.services.VaultService.kt</ID>
+    <ID>ReturnCount:Amount.kt$Amount.Companion$ @JvmStatic fun getDisplayTokenSize(token: Any): BigDecimal</ID>
+    <ID>ReturnCount:ByteArrays.kt$fun hexToBin(ch: Char): Int</ID>
+    <ID>ReturnCount:Crypto.kt$Crypto$// Custom key pair generator from an entropy required for various tests. It is similar to deriveKeyPairECDSA, // but the accepted range of the input entropy is more relaxed: // 2 &lt;= entropy &lt; N, where N is the order of base-point G. private fun deriveECDSAKeyPairFromEntropy(signatureScheme: SignatureScheme, entropy: BigInteger): KeyPair</ID>
+    <ID>ReturnCount:Crypto.kt$Crypto$// Given the domain parameters, this routine deterministically generates an ECDSA key pair // in accordance with X9.62 section 5.2.1 pages 26, 27. private fun deriveKeyPairECDSA(parameterSpec: ECParameterSpec, privateKey: PrivateKey, seed: ByteArray): KeyPair</ID>
+    <ID>ReturnCount:Emoji.kt$Emoji$fun renderIfSupported(obj: Any): String</ID>
+    <ID>ReturnCount:PartialMerkleTree.kt$PartialMerkleTree$// Helper function to compute the path. False means go to the left and True to the right. // Because the path is updated recursively, the path is returned in reverse order. private fun leafIndexHelper(leaf: SecureHash, node: PartialTree, path: MutableList&lt;Boolean&gt;): Boolean</ID>
+    <ID>ReturnCount:TransactionBuilder.kt$TransactionBuilder$ private fun handleContract( contractClassName: ContractClassName, inputStates: List&lt;TransactionState&lt;ContractState&gt;&gt;?, outputStates: List&lt;TransactionState&lt;ContractState&gt;&gt;?, explicitContractAttachment: AttachmentId?, services: ServicesForResolution ): Pair&lt;AttachmentId, List&lt;TransactionState&lt;ContractState&gt;&gt;?&gt;</ID>
+    <ID>ReturnCount:TransactionUtils.kt$ fun &lt;T : Any&gt; deserialiseComponentGroup(componentGroups: List&lt;ComponentGroup&gt;, clazz: KClass&lt;T&gt;, groupEnum: ComponentGroupEnum, forceDeserialize: Boolean = false, factory: SerializationFactory = SerializationFactory.defaultFactory, context: SerializationContext = factory.defaultContext): List&lt;T&gt;</ID>
+    <ID>SpreadOperator:AbstractParty.kt$AbstractParty$(*bytes)</ID>
+    <ID>SpreadOperator:ByteArrays.kt$OpaqueBytes.Companion$(*b)</ID>
+    <ID>SpreadOperator:CollectSignaturesFlow.kt$CollectSignatureFlow$(*signingKeys)</ID>
+    <ID>SpreadOperator:CompositeKey.kt$CompositeKey.Builder$(*keys.toTypedArray())</ID>
+    <ID>SpreadOperator:CordaX500Name.kt$CordaX500Name.Companion$(*Locale.getISOCountries(), unspecifiedCountry)</ID>
+    <ID>SpreadOperator:InternalUtils.kt$(this, target, *options)</ID>
+    <ID>SpreadOperator:InvocationHandlerTemplate.kt$InvocationHandlerTemplate$(delegate, *args)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(*options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(charset, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(parent / fileName, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, *attrs)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, BasicFileAttributes::class.java, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, bytes, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, charset, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, lines, charset, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, maxDepth, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, target, *options)</ID>
+    <ID>SpreadOperator:PathUtils.kt$(this, targetFile, *options)</ID>
+    <ID>SpreadOperator:ProgressTracker.kt$ProgressTracker$(UNSTARTED, STARTING, *inputSteps, DONE)</ID>
+    <ID>SpreadOperator:ServiceHub.kt$ServiceHub$(first, *remaining)</ID>
+    <ID>SpreadOperator:TransactionBuilder.kt$TransactionBuilder$(*keys)</ID>
+    <ID>SpreadOperator:TransactionBuilder.kt$TransactionBuilder$(*types)</ID>
+    <ID>SpreadOperator:TransactionWithSignatures.kt$TransactionWithSignatures$(*allowedToBeMissing)</ID>
+    <ID>SpreadOperator:WaitForStateConsumption.kt$WaitForStateConsumption$(*futures.toTypedArray())</ID>
+    <ID>ThrowsCount:ContractUpgradeTransactions.kt$ContractUpgradeWireTransaction$ fun resolve(services: ServicesForResolution, sigs: List&lt;TransactionSignature&gt;): ContractUpgradeLedgerTransaction</ID>
+    <ID>ThrowsCount:Crypto.kt$Crypto$ @JvmStatic @Throws(InvalidKeyException::class, SignatureException::class) fun doVerify(signatureScheme: SignatureScheme, publicKey: PublicKey, signatureData: ByteArray, clearData: ByteArray): Boolean</ID>
+    <ID>ThrowsCount:SignedTransaction.kt$SignedTransaction$@DeleteForDJVM private fun resolveAndCheckNetworkParameters(services: ServiceHub)</ID>
+    <ID>ThrowsCount:TransactionVerifierServiceInternal.kt$Verifier$ private fun getUniqueContractAttachmentsByContract(): Map&lt;ContractClassName, ContractAttachment&gt;</ID>
+    <ID>ThrowsCount:TransactionVerifierServiceInternal.kt$Verifier$// Using basic graph theory, a full cycle of encumbered (co-dependent) states should exist to achieve bi-directional // encumbrances. This property is important to ensure that no states involved in an encumbrance-relationship // can be spent on their own. Briefly, if any of the states is having more than one encumbrance references by // other states, a full cycle detection will fail. As a result, all of the encumbered states must be present // as "from" and "to" only once (or zero times if no encumbrance takes place). For instance, // a -&gt; b // c -&gt; b and a -&gt; b // b -&gt; a b -&gt; c // do not satisfy the bi-directionality (full cycle) property. // // In the first example "b" appears twice in encumbrance ("to") list and "c" exists in the encumbered ("from") list only. // Due the above, one could consume "a" and "b" in the same transaction and then, because "b" is already consumed, "c" cannot be spent. // // Similarly, the second example does not form a full cycle because "a" and "c" exist in one of the lists only. // As a result, one can consume "b" and "c" in the same transactions, which will make "a" impossible to be spent. // // On other hand the following are valid constructions: // a -&gt; b a -&gt; c // b -&gt; c and c -&gt; b // c -&gt; a b -&gt; a // and form a full cycle, meaning that the bi-directionality property is satisfied. private fun checkBidirectionalOutputEncumbrances(statesAndEncumbrance: List&lt;Pair&lt;Int, Int&gt;&gt;)</ID>
+    <ID>ThrowsCount:WireTransaction.kt$WireTransaction.Companion$ @CordaInternal fun resolveStateRefBinaryComponent(stateRef: StateRef, services: ServicesForResolution): SerializedBytes&lt;TransactionState&lt;ContractState&gt;&gt;?</ID>
+    <ID>TooGenericExceptionCaught:Amount.kt$Amount.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CertRole.kt$CertRole.Companion$ex: ArrayIndexOutOfBoundsException</ID>
+    <ID>TooGenericExceptionCaught:CollectSignaturesFlow.kt$SignTransactionFlow$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConcurrencyUtils.kt$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:ContractUpgradeTransactions.kt$ContractUpgradeWireTransaction$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:FlowHandle.kt$FlowProgressHandleImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InternalUtils.kt$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:InternalUtils.kt$th: Throwable</ID>
+    <ID>TooGenericExceptionCaught:MerkleTransaction.kt$FilteredTransaction$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotaryServiceFlow.kt$NotaryServiceFlow$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotaryUtils.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ReceiveTransactionFlow.kt$ReceiveTransactionFlow$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TransactionBuilder.kt$TransactionBuilder$e: Throwable</ID>
+    <ID>TooGenericExceptionCaught:TransactionUtils.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Try.kt$Try.Companion$t: Throwable</ID>
+    <ID>TooGenericExceptionThrown:MerkleTransaction.kt$FilteredTransaction$throw Exception("Malformed transaction, signers at index $internalIndex cannot be deserialised", e)</ID>
+    <ID>TooGenericExceptionThrown:SendTransactionFlow.kt$DataVendingFlow$throw Exception("Unknown payload type: ${payload::class.java} ?")</ID>
+    <ID>TooGenericExceptionThrown:SendTransactionFlow.kt$DataVendingFlow$throw Exception("Unknown payload type: ${stateAndRef!!::class.java} ?")</ID>
+    <ID>TooManyFunctions:BaseTransaction.kt$BaseTransaction : NamedByHash</ID>
+    <ID>TooManyFunctions:ContractUpgradeTransactions.kt$ContractUpgradeLedgerTransaction : FullTransactionTransactionWithSignatures</ID>
+    <ID>TooManyFunctions:CordaRPCOps.kt$CordaRPCOps : RPCOps</ID>
+    <ID>TooManyFunctions:CordaRPCOps.kt$net.corda.core.messaging.CordaRPCOps.kt</ID>
+    <ID>TooManyFunctions:Crypto.kt$Crypto$Crypto</ID>
+    <ID>TooManyFunctions:CryptoUtils.kt$net.corda.core.crypto.CryptoUtils.kt</ID>
+    <ID>TooManyFunctions:EncodingUtils.kt$net.corda.core.utilities.EncodingUtils.kt</ID>
+    <ID>TooManyFunctions:FlowLogic.kt$FlowLogic&lt;out T&gt;</ID>
+    <ID>TooManyFunctions:InternalUtils.kt$net.corda.core.internal.InternalUtils.kt</ID>
+    <ID>TooManyFunctions:LedgerTransaction.kt$LedgerTransaction : FullTransaction</ID>
+    <ID>TooManyFunctions:PathUtils.kt$net.corda.core.internal.PathUtils.kt</ID>
+    <ID>TooManyFunctions:QueryCriteria.kt$QueryCriteria$VaultQueryCriteria : CommonQueryCriteria</ID>
+    <ID>TooManyFunctions:QueryCriteriaUtils.kt$Builder$Builder</ID>
+    <ID>TooManyFunctions:ServiceHub.kt$ServiceHub : ServicesForResolution</ID>
+    <ID>TooManyFunctions:SignedTransaction.kt$SignedTransaction : TransactionWithSignatures</ID>
+    <ID>TooManyFunctions:TransactionBuilder.kt$TransactionBuilder</ID>
+    <ID>TooManyFunctions:VaultService.kt$VaultService</ID>
+    <ID>TopLevelPropertyNaming:ConcurrencyUtils.kt$@VisibleForTesting internal const val shortCircuitedTaskFailedMessage = "Short-circuited task failed:"</ID>
+    <ID>TopLevelPropertyNaming:ProviderMap.kt$// OID taken from https://tools.ietf.org/html/draft-ietf-curdle-pkix-00 val `id-Curve25519ph` = ASN1ObjectIdentifier("1.3.101.112")</ID>
+    <ID>TopLevelPropertyNaming:SerializationEnvironment.kt$val _allEnabledSerializationEnvs: List&lt;Pair&lt;String, SerializationEnvironment&gt;&gt; get() = serializationEnvFields.mapNotNull { it.get()?.let { env -&gt; Pair(it.name, env) } }</ID>
+    <ID>TopLevelPropertyNaming:SerializationEnvironment.kt$val _contextSerializationEnv = ThreadLocalToggleField&lt;SerializationEnvironment&gt;("contextSerializationEnv")</ID>
+    <ID>TopLevelPropertyNaming:SerializationEnvironment.kt$val _driverSerializationEnv = SimpleToggleField&lt;SerializationEnvironment&gt;("driverSerializationEnv")</ID>
+    <ID>TopLevelPropertyNaming:SerializationEnvironment.kt$val _inheritableContextSerializationEnv = InheritableThreadLocalToggleField&lt;SerializationEnvironment&gt;("inheritableContextSerializationEnv") { stack -&gt; stack.fold(false) { isAGlobalThreadBeingCreated, e -&gt; isAGlobalThreadBeingCreated || (e.className == "io.netty.util.concurrent.GlobalEventExecutor" &amp;&amp; e.methodName == "startThread") || (e.className == "java.util.concurrent.ForkJoinPool\$DefaultForkJoinWorkerThreadFactory" &amp;&amp; e.methodName == "newThread") } }</ID>
+    <ID>TopLevelPropertyNaming:SerializationEnvironment.kt$val _rpcClientSerializationEnv = SimpleToggleField&lt;SerializationEnvironment&gt;("rpcClientSerializationEnv")</ID>
+    <ID>UnnecessaryAbstractClass:AbstractStateReplacementFlow.kt$AbstractStateReplacementFlow</ID>
+    <ID>UnusedImports:Amount.kt$import net.corda.core.crypto.CompositeKey</ID>
+    <ID>UnusedImports:Amount.kt$import net.corda.core.identity.Party</ID>
+    <ID>UnusedPrivateClass:LegalNameValidator.kt$LegalNameValidator.Rule$WordRule : Rule</ID>
+    <ID>UtilityClassWithPublicConstructor:UuidGenerator.kt$UuidGenerator</ID>
+    <ID>WildcardImport:AliasPrivateKey.kt$import org.bouncycastle.asn1.*</ID>
+    <ID>WildcardImport:AttachmentsClassLoader.kt$import java.net.*</ID>
+    <ID>WildcardImport:AttachmentsClassLoader.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:AttachmentsClassLoader.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:BaseTransaction.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CheckpointSerializationAPI.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:CommonSchema.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CompositeKey.kt$import org.bouncycastle.asn1.*</ID>
+    <ID>WildcardImport:CompositeKeyFactory.kt$import java.security.*</ID>
+    <ID>WildcardImport:CompositeSignature.kt$import java.security.*</ID>
+    <ID>WildcardImport:ConstraintsUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:ContractUpgradeFlow.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:ContractUpgradeTransactions.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:ContractUpgradeTransactions.kt$import net.corda.core.transactions.ContractUpgradeWireTransaction.Component.*</ID>
+    <ID>WildcardImport:ContractUpgradeUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CordaInternal.kt$import kotlin.annotation.AnnotationTarget.*</ID>
+    <ID>WildcardImport:CordaRPCOps.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:Cordapp.kt$import net.corda.core.cordapp.Cordapp.Info.*</ID>
+    <ID>WildcardImport:DeleteForDJVM.kt$import kotlin.annotation.AnnotationTarget.*</ID>
+    <ID>WildcardImport:DigitalSignatureWithCert.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:FlowStateMachine.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:IdentityService.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:IdentityService.kt$import net.corda.core.identity.*</ID>
+    <ID>WildcardImport:MerkleTransaction.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:MerkleTransaction.kt$import net.corda.core.contracts.ComponentGroupEnum.*</ID>
+    <ID>WildcardImport:MerkleTransaction.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:NotaryChangeTransactions.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:NotaryChangeTransactions.kt$import net.corda.core.transactions.NotaryChangeWireTransaction.Component.*</ID>
+    <ID>WildcardImport:NotaryFlow.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:NotaryServiceFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:PartyAndCertificate.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:PathUtils.kt$import java.io.*</ID>
+    <ID>WildcardImport:PathUtils.kt$import java.nio.file.*</ID>
+    <ID>WildcardImport:QueryCriteriaUtils.kt$import net.corda.core.node.services.vault.CollectionOperator.*</ID>
+    <ID>WildcardImport:QueryCriteriaUtils.kt$import net.corda.core.node.services.vault.ColumnPredicate.*</ID>
+    <ID>WildcardImport:QueryCriteriaUtils.kt$import net.corda.core.node.services.vault.EqualityComparisonOperator.*</ID>
+    <ID>WildcardImport:QueryCriteriaUtils.kt$import net.corda.core.node.services.vault.LikenessOperator.*</ID>
+    <ID>WildcardImport:ReceiveTransactionFlow.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:SendTransactionFlow.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:ServiceHub.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:ServiceHub.kt$import net.corda.core.node.services.*</ID>
+    <ID>WildcardImport:SignedTransaction.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:SignedTransaction.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:StubOutForDJVM.kt$import kotlin.annotation.AnnotationTarget.*</ID>
+    <ID>WildcardImport:TransactionBuilder.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TransactionBuilder.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:TransactionUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TransactionUtils.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:TransactionUtils.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:TransactionVerifierServiceInternal.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:VaultService.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:VaultService.kt$import net.corda.core.node.services.Vault.RelevancyStatus.*</ID>
+    <ID>WildcardImport:VaultService.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:WireTransaction.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:WireTransaction.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:WireTransaction.kt$import net.corda.core.internal.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

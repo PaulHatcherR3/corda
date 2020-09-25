@@ -1,0 +1,509 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:FlowMessaging.kt$FlowMessagingImpl$(exception is KryoException || exception is NotSerializableException) &amp;&amp; message is ExistingSessionMessage &amp;&amp; message.payload is ErrorSessionMessage</ID>
+    <ID>ComplexMethod:AbstractNode.kt$AbstractNode$open fun runDatabaseMigrationScripts( updateCoreSchemas: Boolean, updateAppSchemas: Boolean, updateAppSchemasWithCheckpoints: Boolean )</ID>
+    <ID>ComplexMethod:ActionExecutorImpl.kt$ActionExecutorImpl$@Suspendable override fun executeAction(fiber: FlowFiber, action: Action)</ID>
+    <ID>ComplexMethod:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase$private fun set(key: K, value: V, logWarning: Boolean, store: (K, V) -&gt; V?): Boolean</ID>
+    <ID>ComplexMethod:CheckpointDumperImpl.kt$CheckpointDumperImpl$private fun FlowIORequest&lt;*&gt;.toSuspendedOn(suspendedTimestamp: Instant, now: Instant): SuspendedOn</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$// TODO Move this to KeyStoreConfigHelpers. fun MutualSslConfiguration.configureDevKeyAndTrustStores(myLegalName: CordaX500Name, signingCertificateStore: FileBasedCertificateStoreSupplier, certificatesDirectory: Path, cryptoService: CryptoService? = null)</ID>
+    <ID>ComplexMethod:DBCheckpointStorage.kt$DBCheckpointStorage.DBFlowCheckpointBlob$override fun equals(other: Any?): Boolean</ID>
+    <ID>ComplexMethod:DBCheckpointStorage.kt$DBCheckpointStorage.DBFlowException$override fun equals(other: Any?): Boolean</ID>
+    <ID>ComplexMethod:FlowMonitor.kt$FlowMonitor$private fun warningMessageForFlowWaitingOnIo(request: FlowIORequest&lt;*&gt;, flow: FlowStateMachineImpl&lt;*&gt;, suspensionDuration: Duration): String</ID>
+    <ID>ComplexMethod:GenerateRpcSslCertsCli.kt$GenerateRpcSslCerts$private fun generateRpcSslCertificates(conf: NodeConfiguration)</ID>
+    <ID>ComplexMethod:HibernateQueryCriteriaParser.kt$HibernateAttachmentQueryCriteriaParser$override fun parseCriteria(criteria: AttachmentQueryCriteria.AttachmentsQueryCriteria): Collection&lt;Predicate&gt;</ID>
+    <ID>ComplexMethod:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$override fun parseCriteria(criteria: CommonQueryCriteria): Collection&lt;Predicate&gt;</ID>
+    <ID>ComplexMethod:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$override fun parseCriteria(criteria: QueryCriteria.VaultQueryCriteria): Collection&lt;Predicate&gt;</ID>
+    <ID>ComplexMethod:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$private fun &lt;O, R&gt; parseAggregateFunction(root: Root&lt;O&gt;, expression: CriteriaExpression.AggregateFunctionExpression&lt;O, R&gt;): Expression&lt;out Any?&gt;?</ID>
+    <ID>ComplexMethod:JarScanningCordappLoader.kt$JarScanningCordappLoader$private fun parseCordappInfo(manifest: Manifest?, defaultName: String): Cordapp.Info</ID>
+    <ID>ComplexMethod:Node.kt$Node$override fun startMessagingService(rpcOps: RPCOps, nodeInfo: NodeInfo, myNotaryIdentity: PartyAndCertificate?, networkParameters: NetworkParameters)</ID>
+    <ID>ComplexMethod:NodeAttachmentService.kt$NodeAttachmentService.Companion$// Just iterate over the entries with verification enabled: should be good enough to catch mistakes. // Note that JarInputStream won't throw any kind of error at all if the file stream is in fact not // a ZIP! It'll just pretend it's an empty archive, which is kind of stupid but that's how it works. // So we have to check to ensure we found at least one item. // // For signed Jars add additional checks to close security holes left by the default jarSigner verifier: // - All entries listed in the Manifest are in the JAR file. // - No extra files in the JAR that were not listed in the Manifest. // Together with the check that all entries need to be signed by the same signers that is performed when the signers are read, // it should close any possibility of foul play. internal fun checkIsAValidJAR(stream: InputStream)</ID>
+    <ID>ComplexMethod:NodeNamedCache.kt$DefaultNamedCacheFactory$open protected fun &lt;K, V&gt; configuredForNamed(caffeine: Caffeine&lt;K, V&gt;, name: String): Caffeine&lt;K, V&gt;</ID>
+    <ID>ComplexMethod:NodeStartup.kt$NodeStartup$fun initialiseAndRun(cmdLineOptions: SharedNodeCmdLineOptions, afterNodeInitialisation: RunAfterNodeInitialisation, requireCertificates: Boolean = false): Int</ID>
+    <ID>ComplexMethod:NodeVaultService.kt$NodeVaultService$@Suspendable @Throws(StatesNotAvailableException::class) override fun &lt;T : FungibleState&lt;*&gt;&gt; tryLockFungibleStatesForSpending( lockId: UUID, eligibleStatesQuery: QueryCriteria, amount: Amount&lt;*&gt;, contractStateType: Class&lt;out T&gt; ): List&lt;StateAndRef&lt;T&gt;&gt;</ID>
+    <ID>ComplexMethod:NodeVaultService.kt$NodeVaultService$@Throws(VaultQueryException::class) private fun &lt;T : ContractState&gt; _queryBy(criteria: QueryCriteria, paging_: PageSpecification, sorting: Sort, contractStateType: Class&lt;out T&gt;, skipPagingChecks: Boolean): Vault.Page&lt;T&gt;</ID>
+    <ID>ComplexMethod:NodeVaultService.kt$NodeVaultService$private fun makeUpdates(batch: Iterable&lt;CoreTransaction&gt;, statesToRecord: StatesToRecord, previouslySeen: Boolean): List&lt;Vault.Update&lt;ContractState&gt;&gt;</ID>
+    <ID>ComplexMethod:NodeVaultService.kt$NodeVaultService$private fun processAndNotify(updates: List&lt;Vault.Update&lt;ContractState&gt;&gt;)</ID>
+    <ID>ComplexMethod:ObjectDiffer.kt$ObjectDiffer$fun diff(a: Any?, b: Any?): DiffTree?</ID>
+    <ID>ComplexMethod:RPCServer.kt$RPCServer$private fun clientArtemisMessageHandler(artemisMessage: ClientMessage)</ID>
+    <ID>ComplexMethod:ServicesForResolutionImpl.kt$ServicesForResolutionImpl$@Throws(TransactionResolutionException::class, AttachmentResolutionException::class) override fun loadContractAttachment(stateRef: StateRef): Attachment</ID>
+    <ID>ComplexMethod:StartedFlowTransition.kt$StartedFlowTransition$override fun transition(): TransitionResult</ID>
+    <ID>ConstructorParameterNaming:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase.Transactional.InFlight$private val _readerValueLoader: () -&gt; T?</ID>
+    <ID>ConstructorParameterNaming:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase.Transactional.InFlight$private val _writerValueLoader: () -&gt; T = { throw IllegalAccessException("No value loader provided") }</ID>
+    <ID>ConstructorParameterNaming:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase.Transactional.Unknown$private val _valueLoader: () -&gt; T?</ID>
+    <ID>ConstructorParameterNaming:CordaClock.kt$MutableClock$private var _delegateClock: Clock</ID>
+    <ID>ConstructorParameterNaming:DBCheckpointStorage.kt$DBCheckpointStorage.DBFlowException$@Id @Column(name = "flow_id", length = 64, nullable = false) var flow_id: String</ID>
+    <ID>ConstructorParameterNaming:DBCheckpointStorage.kt$DBCheckpointStorage.DBFlowResult$@Id @Column(name = "flow_id", length = 64, nullable = false) var flow_id: String</ID>
+    <ID>ConstructorParameterNaming:ScheduledActivityObserver.kt$ScheduledActivityObserver$private val FlowLogicRefFactory: FlowLogicRefFactory</ID>
+    <ID>ConstructorParameterNaming:VaultSchema.kt$VaultSchemaV1.VaultFungibleStates$_issuerParty: AbstractParty</ID>
+    <ID>ConstructorParameterNaming:VaultSchema.kt$VaultSchemaV1.VaultFungibleStates$_issuerRef: OpaqueBytes</ID>
+    <ID>ConstructorParameterNaming:VaultSchema.kt$VaultSchemaV1.VaultFungibleStates$_owner: AbstractParty</ID>
+    <ID>ConstructorParameterNaming:VaultSchema.kt$VaultSchemaV1.VaultFungibleStates$_quantity: Long</ID>
+    <ID>EmptyCatchBlock:PersistentUniquenessProvider.kt$PersistentUniquenessProvider${ }</ID>
+    <ID>EmptyFunctionBlock:AbstractNode.kt$FlowStarterImpl.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:BFTSmartNotaryService.kt$BFTSmartNotaryService${ }</ID>
+    <ID>EmptyFunctionBlock:CordaMigration.kt$CordaMigration${ }</ID>
+    <ID>EmptyFunctionBlock:DeterministicVerifierFactoryService.kt$BasicVerifierFactoryService${}</ID>
+    <ID>EmptyFunctionBlock:InMemoryTransactionVerifierService.kt$InMemoryTransactionVerifierService${}</ID>
+    <ID>EmptyFunctionBlock:JPANotaryService.kt$JPANotaryService${ }</ID>
+    <ID>EmptyFunctionBlock:PersistentIdentityMigration.kt$PersistentIdentityMigration${ }</ID>
+    <ID>EmptyFunctionBlock:PersistentIdentityMigrationNewTable.kt$PersistentIdentityMigrationNewTable${ }</ID>
+    <ID>EmptyIfBlock:InMemoryIdentityService.kt$InMemoryIdentityService${ }</ID>
+    <ID>EmptyKtFile:ValidatingNotaryService.kt$.ValidatingNotaryService.kt</ID>
+    <ID>ForbiddenComment:AbstractNode.kt$AbstractNode$// TODO: Use configuration to indicate composite key should be used instead of public key for the identity.</ID>
+    <ID>ForbiddenComment:AbstractNode.kt$AbstractNode$// TODO: We need a good way of handling "nice to have" shutdown events, especially those that deal with the</ID>
+    <ID>ForbiddenComment:AbstractNode.kt$AbstractNode.&lt;no name provided&gt;$// TODO: Exponential backoff? It should reach max interval of eventHorizon/2.</ID>
+    <ID>ForbiddenComment:AffinityExecutor.kt$AffinityExecutor$// TODO: Rename this to executeWithResult</ID>
+    <ID>ForbiddenComment:ArtemisMessagingServer.kt$// TODO: Implement a discovery engine that can trigger builds of new connections when another node registers? (later)</ID>
+    <ID>ForbiddenComment:ArtemisMessagingServer.kt$// TODO: Verify that nobody can connect to us and fiddle with our config over the socket due to the secman.</ID>
+    <ID>ForbiddenComment:ArtemisMessagingServer.kt$ArtemisMessagingServer$// TODO: Maybe wrap [IOException] on a key store load error so that it's clearly splitting key store loading from</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart$// TODO: Define and document the configuration of the bft-smart cluster.</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart$// TODO: Potentially update the bft-smart API for our use case or rebuild client and server from lower level building</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart$// TODO: Support cluster membership changes. This requires reading about reconfiguration of bft-smart clusters and</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: Hopefully we only need to wait for the client's initial connection to the cluster, and this method can be moved to some startup code.</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: Investigate ConcurrentModificationException in this method.</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: for now we treat all errors as equal, compare by error type as well</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: is it safe use the last message for sender/session/sequence info</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: only return an aggregate if the majority of signatures are replies</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Client$// TODO: return an error reported by the majority and not just the first one</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.CordaServiceReplica$// TODO: At the cluster level, join all Sender/Receiver threads.</ID>
+    <ID>ForbiddenComment:BFTSmart.kt$BFTSmart.Replica$// TODO:</ID>
+    <ID>ForbiddenComment:BFTSmartNotaryService.kt$BFTSmartNotaryService.ServiceFlow$// TODO: here we assume that all error will be the same, but there might be invalid onces from mailicious nodes</ID>
+    <ID>ForbiddenComment:BasicHSMKeyManagementService.kt$BasicHSMKeyManagementService$// TODO: A full KeyManagementService implementation needs to record activity to the Audit Service and to limit</ID>
+    <ID>ForbiddenComment:CordappProviderImpl.kt$CordappProviderImpl$// TODO: Use better supported APIs in Java 9</ID>
+    <ID>ForbiddenComment:CoreFlowHandlers.kt$NotaryChangeHandler$// TODO: Right now all nodes will automatically approve the notary change. We need to figure out if stricter controls are necessary.</ID>
+    <ID>ForbiddenComment:DbTransactionsResolver.kt$DbTransactionsResolver$// TODO: This approach has two problems. Analyze and resolve them:</ID>
+    <ID>ForbiddenComment:E2ETestKeyManagementService.kt$E2ETestKeyManagementService$// TODO: A full KeyManagementService implementation needs to record activity to the Audit Service and to limit</ID>
+    <ID>ForbiddenComment:FiberUtils.kt$// TODO: This method uses a built-in Quasar function to make a map of all ThreadLocals. This is probably inefficient, but the only API readily available.</ID>
+    <ID>ForbiddenComment:FlowLogicRefFactoryImpl.kt$FlowLogicRefFactoryImpl$// TODO: Replace with a per app classloader/cordapp provider/cordapp loader - this will do for now</ID>
+    <ID>ForbiddenComment:FlowLogicRefFactoryImpl.kt$FlowLogicRefFactoryImpl$// TODO: This is used via RPC but it's probably better if we pass in argument names and values explicitly</ID>
+    <ID>ForbiddenComment:GenerateRpcSslCertsCli.kt$GenerateRpcSslCerts$// TODO: consider adding a password strength policy.</ID>
+    <ID>ForbiddenComment:InitialRegistrationCli.kt$InitialRegistration$// TODO: Move node identity generation logic from node to registration helper.</ID>
+    <ID>ForbiddenComment:Node.kt$Node.Companion$// TODO: make this configurable.</ID>
+    <ID>ForbiddenComment:NodeAttachmentService.kt$NodeAttachmentService$// TODO: PLT-147: The attachment should be randomised to prevent brute force guessing and thus privacy leaks.</ID>
+    <ID>ForbiddenComment:NodeAttachmentService.kt$NodeAttachmentService$// TODO: Switch to a two-phase insert so we can handle attachments larger than RAM.</ID>
+    <ID>ForbiddenComment:NodeAttachmentService.kt$NodeAttachmentService$// TODO: this is racey. ENT-2870</ID>
+    <ID>ForbiddenComment:NodeConfigurationImpl.kt$NodeConfigurationImpl$// TODO: There are two implications here:</ID>
+    <ID>ForbiddenComment:NodeInfoWatcher.kt$NodeInfoWatcher$// TODO: Use NIO watch service instead?</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: Optimise this.</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: Perhaps these can be stored in a batch?</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: This is a catch-all solution. But why is the default pageNumber set to be -1 in the first place?</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: This is expensive - is there another way?</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: improve typing of returned other results</ID>
+    <ID>ForbiddenComment:NodeVaultService.kt$NodeVaultService$// TODO: revisit (use single instance of parser for all queries)</ID>
+    <ID>ForbiddenComment:PersistentStateService.kt$PersistentStateService$// TODO: Manage version evolution of the schemas via additional tooling.</ID>
+    <ID>ForbiddenComment:RaftTransactionCommitLog.kt$RaftTransactionCommitLog$// TODO: read &amp; put entries in batches</ID>
+    <ID>ForbiddenComment:RaftTransactionCommitLog.kt$RaftTransactionCommitLog.Commands.CommitTransaction$// TODO: Cluster membership changes need testing.</ID>
+    <ID>ForbiddenComment:RaftTransactionCommitLog.kt$RaftTransactionCommitLog.Commands.CommitTransaction$// TODO: I'm wondering if we should support resizing notary clusters, or if we could require users to</ID>
+    <ID>ForbiddenComment:RaftUniquenessProvider.kt$RaftUniquenessProvider$// TODO: use local transport for client-server communications</ID>
+    <ID>ForbiddenComment:ScheduledActivityObserver.kt$ScheduledActivityObserver.Companion$// TODO: Beware we are calling dynamically loaded contract code inside here.</ID>
+    <ID>ForbiddenComment:ServiceHubInternal.kt$WritableTransactionStorage$// TODO: Throw an exception if trying to add a transaction with fewer signatures than an existing entry.</ID>
+    <ID>ForbiddenComment:ServicesForResolutionImpl.kt$ServicesForResolutionImpl$// TODO: check only one (or until one is resolved successfully), max recursive invocations check?</ID>
+    <ID>ForbiddenComment:VaultSchema.kt$VaultSchemaV1.VaultStates$// TODO: create a distinct table to hold serialized state data (once DBTransactionStore is encrypted)</ID>
+    <ID>FunctionNaming:NodeVaultService.kt$NodeVaultService$@Throws(VaultQueryException::class) private fun &lt;T : ContractState&gt; _queryBy(criteria: QueryCriteria, paging_: PageSpecification, sorting: Sort, contractStateType: Class&lt;out T&gt;, skipPagingChecks: Boolean): Vault.Page&lt;T&gt;</ID>
+    <ID>FunctionOnlyReturningConstant:Permissions.kt$Permissions.Companion$ @JvmStatic fun all()</ID>
+    <ID>FunctionOnlyReturningConstant:SerialFilter.kt$internal fun defaultSerialFilter(@Suppress("UNUSED_PARAMETER") clazz: Class&lt;*&gt;)</ID>
+    <ID>FunctionParameterNaming:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase.Transactional.InFlight$_value: T</ID>
+    <ID>FunctionParameterNaming:NodeVaultService.kt$NodeVaultService$paging_: PageSpecification</ID>
+    <ID>IteratorNotThrowingNoSuchElementException:VaultStateMigration.kt$VaultStateIterator : Iterator</ID>
+    <ID>LargeClass:AbstractNode.kt$AbstractNode&lt;S&gt; : SingletonSerializeAsToken</ID>
+    <ID>LargeClass:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager : StateMachineManagerStateMachineManagerInternal</ID>
+    <ID>LongMethod:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$override fun parseCriteria(criteria: CommonQueryCriteria): Collection&lt;Predicate&gt;</ID>
+    <ID>LongParameterList:AbstractNode.kt$AbstractNode$(val configuration: NodeConfiguration, val platformClock: CordaClock, cacheFactoryPrototype: BindableNamedCacheFactory, protected val versionInfo: VersionInfo, protected val flowManager: FlowManager, val serverThread: AffinityExecutor.ServiceAffinityExecutor, val busyNodeLatch: ReusableLatch = ReusableLatch(), djvmBootstrapSource: ApiSource = EmptyApi, djvmCordaSource: UserSource? = null, protected val allowHibernateToManageAppSchema: Boolean = false, private val allowAppSchemaUpgradeWithCheckpoints: Boolean = false)</ID>
+    <ID>LongParameterList:ActionExecutorImpl.kt$ActionExecutorImpl$( private val services: ServiceHubInternal, private val checkpointStorage: CheckpointStorage, private val flowMessaging: FlowMessaging, private val stateMachineManager: StateMachineManagerInternal, private val actionFutureExecutor: ActionFutureExecutor, private val checkpointSerializationContext: CheckpointSerializationContext )</ID>
+    <ID>LongParameterList:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMap$( cacheFactory: NamedCacheFactory, name: String, toPersistentEntityKey: (K) -&gt; EK, fromPersistentEntity: (E) -&gt; Pair&lt;K, V&gt;, toPersistentEntity: (key: K, value: V) -&gt; E, persistentEntityClass: Class&lt;E&gt; )</ID>
+    <ID>LongParameterList:AppendOnlyPersistentMap.kt$WeightBasedAppendOnlyPersistentMap$( cacheFactory: NamedCacheFactory, name: String, toPersistentEntityKey: (K) -&gt; EK, fromPersistentEntity: (E) -&gt; Pair&lt;K, V&gt;, toPersistentEntity: (key: K, value: V) -&gt; E, persistentEntityClass: Class&lt;E&gt;, weighingFunc: (K, Transactional&lt;V&gt;) -&gt; Int )</ID>
+    <ID>LongParameterList:ArtemisMessagingServer.kt$ArtemisMessagingServer$(name: String, send: Boolean = false, consume: Boolean = false, createDurableQueue: Boolean = false, deleteDurableQueue: Boolean = false, createNonDurableQueue: Boolean = false, deleteNonDurableQueue: Boolean = false, manage: Boolean = false, browse: Boolean = false)</ID>
+    <ID>LongParameterList:ArtemisRpcBroker.kt$ArtemisRpcBroker$( address: NetworkHostAndPort, private val adminAddressOptional: NetworkHostAndPort?, private val sslOptions: BrokerRpcSslOptions?, private val useSsl: Boolean, private val securityManager: RPCSecurityManager, private val maxMessageSize: Int, private val journalBufferTimeout: Int?, private val jmxEnabled: Boolean = false, private val baseDirectory: Path, private val nodeConfiguration: MutualSslConfiguration, private val shouldStartLocalShell: Boolean)</ID>
+    <ID>LongParameterList:ArtemisRpcBroker.kt$ArtemisRpcBroker.Companion$(configuration: MutualSslConfiguration, address: NetworkHostAndPort, adminAddress: NetworkHostAndPort, securityManager: RPCSecurityManager, maxMessageSize: Int, journalBufferTimeout: Int?, jmxEnabled: Boolean, baseDirectory: Path, shouldStartLocalShell: Boolean)</ID>
+    <ID>LongParameterList:ArtemisRpcBroker.kt$ArtemisRpcBroker.Companion$(configuration: MutualSslConfiguration, address: NetworkHostAndPort, adminAddress: NetworkHostAndPort, sslOptions: BrokerRpcSslOptions, securityManager: RPCSecurityManager, maxMessageSize: Int, journalBufferTimeout: Int?, jmxEnabled: Boolean, baseDirectory: Path, shouldStartLocalShell: Boolean)</ID>
+    <ID>LongParameterList:BFTSmart.kt$BFTSmart.Replica$( states: List&lt;StateRef&gt;, txId: SecureHash, callerName: CordaX500Name, requestSignature: NotarisationRequestSignature, timeWindow: TimeWindow?, references: List&lt;StateRef&gt; = emptyList() )</ID>
+    <ID>LongParameterList:CheckpointDumperImpl.kt$CheckpointDumperImpl.CheckpointJson$( val flowId: UUID, val topLevelFlowClass: Class&lt;FlowLogic&lt;*&gt;&gt;, val topLevelFlowLogic: FlowLogic&lt;*&gt;, val flowCallStackSummary: List&lt;FlowCallSummary&gt;, val suspendedOn: SuspendedOn?, val flowCallStack: List&lt;FlowCall&gt;, val origin: Origin, val ourIdentity: Party, val activeSessions: List&lt;ActiveSession&gt;, val errored: ErrorState.Errored? )</ID>
+    <ID>LongParameterList:CheckpointDumperImpl.kt$CheckpointDumperImpl.SuspendedOn$( val send: List&lt;SendJson&gt;? = null, val receive: NonEmptySet&lt;FlowSession&gt;? = null, val sendAndReceive: List&lt;SendJson&gt;? = null, val closeSessions: NonEmptySet&lt;FlowSession&gt;? = null, val waitForLedgerCommit: SecureHash? = null, val waitForStateConsumption: Set&lt;StateRef&gt;? = null, val getFlowInfo: NonEmptySet&lt;FlowSession&gt;? = null, val sleepTill: Instant? = null, val waitForSessionConfirmations: FlowIORequest.WaitForSessionConfirmations? = null, val customOperation: FlowIORequest.ExecuteAsyncOperation&lt;*&gt;? = null, val forceCheckpoint: FlowIORequest.ForceCheckpoint? = null )</ID>
+    <ID>LongParameterList:DBCheckpointStorage.kt$DBCheckpointStorage.DBPausedFields$( val id: String, val checkpoint: ByteArray = EMPTY_BYTE_ARRAY, val status: FlowStatus, val progressStep: String?, val ioRequestType: String?, val compatible: Boolean, exception: String? )</ID>
+    <ID>LongParameterList:DBNetworkParametersStorage.kt$DBNetworkParametersStorage.PersistentNetworkParameters$( @Id @Column(name = "hash", length = MAX_HASH_HEX_SIZE, nullable = false) val hash: String = "", @Column(name = "epoch", nullable = false) val epoch: Int = 0, // Stored as serialized bytes because network parameters structure evolves over time. @Lob @Column(name = "parameters_bytes", nullable = false) val networkParametersBytes: ByteArray = ArrayUtils.EMPTY_BYTE_ARRAY, @Lob @Column(name = "signature_bytes", nullable = false) private val signature: ByteArray = ArrayUtils.EMPTY_BYTE_ARRAY, // First certificate in the certificate chain. @Lob @Column(name = "cert", nullable = false) private val certificate: ByteArray = ArrayUtils.EMPTY_BYTE_ARRAY, // Parent certificate path (the first one is stored separately), so node is agnostic to certificate hierarchy. @Lob @Column(name = "parent_cert_path", nullable = false) private val certPath: ByteArray = ArrayUtils.EMPTY_BYTE_ARRAY )</ID>
+    <ID>LongParameterList:FlowCreator.kt$FlowCreator$( private val checkpointSerializationContext: CheckpointSerializationContext, private val checkpointStorage: CheckpointStorage, private val scheduler: FiberScheduler, private val database: CordaPersistence, private val transitionExecutor: TransitionExecutor, private val actionExecutor: ActionExecutor, private val secureRandom: SecureRandom, private val serviceHub: ServiceHubInternal, private val unfinishedFibers: ReusableLatch, private val resetCustomTimeout: (StateMachineRunId, Long) -&gt; Unit)</ID>
+    <ID>LongParameterList:JPAUniquenessProvider.kt$JPAUniquenessProvider.Request$( @Id @Column(nullable = true, length = 76) var id: String? = null, @Column(name = "consuming_transaction_id", nullable = true, length = 64) val consumingTxHash: String?, @Column(name = "requesting_party_name", nullable = true, length = 255) var partyName: String?, @Lob @Column(name = "request_signature", nullable = false) val requestSignature: ByteArray, @Column(name = "request_timestamp", nullable = false) var requestDate: Instant, @Column(name = "worker_node_x500_name", nullable = true, length = 255) val workerNodeX500Name: String? )</ID>
+    <ID>LongParameterList:NetworkMapUpdater.kt$NetworkMapUpdater$(private val networkMapCache: NetworkMapCacheInternal, private val nodeInfoWatcher: NodeInfoWatcher, private val networkMapClient: NetworkMapClient?, private val baseDirectory: Path, private val extraNetworkMapKeys: List&lt;UUID&gt;, private val networkParametersStorage: NetworkParametersStorage )</ID>
+    <ID>LongParameterList:NetworkRegistrationHelper.kt$NetworkRegistrationHelper$( config: NodeRegistrationConfiguration, private val certService: NetworkRegistrationService, private val networkRootTrustStorePath: Path, networkRootTrustStorePassword: String, private val nodeCaKeyAlias: String, private val certRole: CertRole, private val nextIdleDuration: (Duration?) -&gt; Duration? = FixedPeriodLimitedRetrialStrategy(10, Duration.ofMinutes(1)), protected val logProgress: (String) -&gt; Unit = ::println, protected val logError: (String) -&gt; Unit = System.err::println )</ID>
+    <ID>LongParameterList:NetworkRegistrationHelper.kt$NodeRegistrationConfiguration$( val p2pSslOptions: MutualSslConfiguration, val myLegalName: CordaX500Name, val tlsCertCrlIssuer: X500Principal?, val tlsCertCrlDistPoint: URL?, val certificatesDirectory: Path, val emailAddress: String, val cryptoService: CryptoService, val certificateStore: CertificateStore, val notaryServiceConfig: NotaryServiceConfig? = null)</ID>
+    <ID>LongParameterList:NetworkRegistrationHelper.kt$NodeRegistrationHelper$( private val config: NodeRegistrationConfiguration, certService: NetworkRegistrationService, regConfig: NodeRegistrationOption, computeNextIdleDoormanConnectionPollInterval: (Duration?) -&gt; Duration? = FixedPeriodLimitedRetrialStrategy(10, Duration.ofMinutes(1)), logProgress: (String) -&gt; Unit = ::println, logError: (String) -&gt; Unit = System.err::println)</ID>
+    <ID>LongParameterList:Node.kt$Node$(configuration: NodeConfiguration, versionInfo: VersionInfo, private val initialiseSerialization: Boolean = true, flowManager: FlowManager = NodeFlowManager(configuration.flowOverrides), cacheFactoryPrototype: BindableNamedCacheFactory = DefaultNamedCacheFactory(), djvmBootstrapSource: ApiSource = createBootstrapSource(configuration), djvmCordaSource: UserSource? = createCordaSource(configuration), allowHibernateToManageAppSchema: Boolean = false )</ID>
+    <ID>LongParameterList:NodeAttachmentService.kt$NodeAttachmentService.DBAttachment$( @Id @Column(name = "att_id", nullable = false) var attId: String, @Column(name = "content", nullable = false) @Lob var content: ByteArray, @Column(name = "insertion_date", nullable = false, updatable = false) var insertionDate: Instant = Instant.now(), @Column(name = "uploader", nullable = true) var uploader: String? = null, @Column(name = "filename", updatable = false, nullable = true) var filename: String? = null, @ElementCollection @Column(name = "contract_class_name", nullable = false) @CollectionTable(name = "${NODE_DATABASE_PREFIX}attachments_contracts", joinColumns = [(JoinColumn(name = "att_id", referencedColumnName = "att_id"))], foreignKey = ForeignKey(name = "FK__ctr_class__attachments")) var contractClassNames: List&lt;ContractClassName&gt;? = null, @ElementCollection(targetClass = PublicKey::class, fetch = FetchType.EAGER) @Column(name = "signer", nullable = false) @CollectionTable(name = "${NODE_DATABASE_PREFIX}attachments_signers", joinColumns = [(JoinColumn(name = "att_id", referencedColumnName = "att_id"))], foreignKey = ForeignKey(name = "FK__signers__attachments")) var signers: List&lt;PublicKey&gt;? = null, // Assumption: only Contract Attachments are versioned, version unknown or value for other attachments other than Contract Attachment defaults to 1 @Column(name = "version", nullable = false) var version: Int = DEFAULT_CORDAPP_VERSION )</ID>
+    <ID>LongParameterList:NodeInfoSchema.kt$NodeInfoSchemaV1.PersistentNodeInfo$( @Id @GeneratedValue @Column(name = "node_info_id", nullable = false) var id: Int, @Suppress("MagicNumber") // database column width @Column(name = "node_info_hash", length = 64, nullable = false) val hash: String, @Column(name = "addresses", nullable = false) @OneToMany(cascade = [(CascadeType.ALL)], orphanRemoval = true) @JoinColumn(name = "node_info_id", foreignKey = ForeignKey(name = "FK__info_hosts__infos")) val addresses: List&lt;DBHostAndPort&gt;, @Column(name = "legal_identities_certs", nullable = false) @ManyToMany(cascade = [(CascadeType.ALL)]) @JoinTable(name = "node_link_nodeinfo_party", joinColumns = [(JoinColumn(name = "node_info_id", foreignKey = ForeignKey(name = "FK__link_nodeinfo_party__infos")))], inverseJoinColumns = [(JoinColumn(name = "party_name", foreignKey = ForeignKey(name = "FK__link_ni_p__info_p_cert")))]) val legalIdentitiesAndCerts: List&lt;DBPartyAndCertificate&gt;, @Column(name = "platform_version", nullable = false) val platformVersion: Int, /** * serial is an increasing value which represents the version of [NodeInfo]. * Not expected to be sequential, but later versions of the registration must have higher values * Similar to the serial number on DNS records. */ @Column(name = "serial", nullable = false) val serial: Long )</ID>
+    <ID>LongParameterList:NodeSchedulerService.kt$NodeSchedulerService$(private val clock: CordaClock, private val database: CordaPersistence, private val flowStarter: FlowStarter, private val servicesForResolution: ServicesForResolution, private val flowLogicRefFactory: FlowLogicRefFactory, private val nodeProperties: NodePropertiesStore, private val drainingModePollPeriod: Duration, private val log: Logger = staticLog, private val unfinishedSchedules: ReusableLatch = ReusableLatch(), private val schedulerRepo: ScheduledFlowRepository = PersistentScheduledFlowRepository(database))</ID>
+    <ID>LongParameterList:NodeVaultService.kt$NodeVaultService$( private val clock: Clock, private val keyManagementService: KeyManagementService, private val servicesForResolution: ServicesForResolution, private val database: CordaPersistence, private val schemaService: SchemaService, private val appClassloader: ClassLoader )</ID>
+    <ID>LongParameterList:P2PMessagingClient.kt$P2PMessagingClient$(val config: NodeConfiguration, private val versionInfo: VersionInfo, val serverAddress: NetworkHostAndPort, private val nodeExecutor: AffinityExecutor.ServiceAffinityExecutor, private val database: CordaPersistence, private val networkMap: NetworkMapCacheInternal, @Suppress("UNUSED") private val metricRegistry: MetricRegistry, cacheFactory: NamedCacheFactory, private val isDrainingModeOn: () -&gt; Boolean, private val drainingModeWasChangedEvents: Observable&lt;Pair&lt;Boolean, Boolean&gt;&gt;, private val stateHelper: ServiceStateHelper = ServiceStateHelper(log) )</ID>
+    <ID>LongParameterList:P2PMessagingClient.kt$P2PMessagingClient.ArtemisReceivedMessage$(override val topic: String, override val peer: CordaX500Name, override val platformVersion: Int, override val uniqueMessageId: DeduplicationId, override val senderUUID: String?, override val senderSeqNo: Long?, override val isSessionInit: Boolean, private val message: ClientMessage)</ID>
+    <ID>LongParameterList:PersistentMap.kt$PersistentMap$( name: String, val toPersistentEntityKey: (K) -&gt; EK, val fromPersistentEntity: (E) -&gt; Pair&lt;K, V&gt;, val toPersistentEntity: (key: K, value: V) -&gt; E, val persistentEntityClass: Class&lt;E&gt;, cacheFactory: NamedCacheFactory )</ID>
+    <ID>LongParameterList:PersistentUniquenessProvider.kt$PersistentUniquenessProvider$( states: List&lt;StateRef&gt;, txId: SecureHash, callerIdentity: Party, requestSignature: NotarisationRequestSignature, timeWindow: TimeWindow?, references: List&lt;StateRef&gt; )</ID>
+    <ID>LongParameterList:RPCServer.kt$RPCServer$( ops: RPCOps, rpcServerUsername: String, rpcServerPassword: String, serverLocator: ServerLocator, securityManager: RPCSecurityManager, nodeLegalName: CordaX500Name, rpcConfiguration: RPCServerConfiguration, cacheFactory: NamedCacheFactory )</ID>
+    <ID>LongParameterList:RPCServer.kt$RPCServer$( private val opsList: List&lt;RPCOps&gt;, private val rpcServerUsername: String, private val rpcServerPassword: String, private val serverLocator: ServerLocator, private val securityManager: RPCSecurityManager, private val nodeLegalName: CordaX500Name, private val rpcConfiguration: RPCServerConfiguration, private val cacheFactory: NamedCacheFactory )</ID>
+    <ID>LongParameterList:RaftTransactionCommitLog.kt$RaftTransactionCommitLog.Commands.CommitTransaction$( val states: List&lt;StateRef&gt;, val txId: SecureHash, val requestingParty: String, val requestSignature: ByteArray, val timeWindow: TimeWindow? = null, val references: List&lt;StateRef&gt; = emptyList() )</ID>
+    <ID>LongParameterList:RaftUniquenessProvider.kt$RaftUniquenessProvider$( /** If *null* the Raft log will be stored in memory. */ private val storagePath: Path? = null, private val transportConfiguration: MutualSslConfiguration, private val db: CordaPersistence, private val clock: Clock, private val metrics: MetricRegistry, private val cacheFactory: NamedCacheFactory, private val raftConfig: RaftConfig, private val signTransaction: SigningFunction )</ID>
+    <ID>LongParameterList:RpcBrokerConfiguration.kt$RpcBrokerConfiguration$(baseDirectory: Path, maxMessageSize: Int, journalBufferTimeout: Int?, jmxEnabled: Boolean, address: NetworkHostAndPort, adminAddress: NetworkHostAndPort?, sslOptions: BrokerRpcSslOptions?, useSsl: Boolean, nodeConfiguration: MutualSslConfiguration, shouldStartLocalShell: Boolean)</ID>
+    <ID>LongParameterList:RpcBrokerConfiguration.kt$RpcBrokerConfiguration$(name: String, send: Boolean = false, consume: Boolean = false, createDurableQueue: Boolean = false, deleteDurableQueue: Boolean = false, createNonDurableQueue: Boolean = false, deleteNonDurableQueue: Boolean = false, manage: Boolean = false, browse: Boolean = false)</ID>
+    <ID>LongParameterList:ServiceHubInternal.kt$ServiceHubInternal.Companion$(statesToRecord: StatesToRecord, txs: Collection&lt;SignedTransaction&gt;, validatedTransactions: WritableTransactionStorage, stateMachineRecordedTransactionMapping: StateMachineRecordedTransactionMappingStorage, vaultService: VaultServiceInternal, database: CordaPersistence)</ID>
+    <ID>LongParameterList:SignatureScheme.kt$SignatureScheme$( val schemeNumberID: Int, val schemeCodeName: String, val signatureOID: AlgorithmIdentifier, val alternativeOIDs: List&lt;AlgorithmIdentifier&gt;, val providerName: String, val algorithmName: String, val signatureName: String, val algSpec: AlgorithmParameterSpec?, val keySize: Integer?, val desc: String )</ID>
+    <ID>LongParameterList:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$( val serviceHub: ServiceHubInternal, private val checkpointStorage: CheckpointStorage, val executor: ExecutorService, val database: CordaPersistence, private val secureRandom: SecureRandom, private val unfinishedFibers: ReusableLatch = ReusableLatch(), private val classloader: ClassLoader = SingleThreadedStateMachineManager::class.java.classLoader )</ID>
+    <ID>LongParameterList:StateMachineState.kt$Checkpoint.Companion$( invocationContext: InvocationContext, flowStart: FlowStart, flowLogicClass: Class&lt;FlowLogic&lt;*&gt;&gt;, frozenFlowLogic: SerializedBytes&lt;FlowLogic&lt;*&gt;&gt;, ourIdentity: Party, subFlowVersion: SubFlowVersion, isEnabledTimedFlow: Boolean )</ID>
+    <ID>LongParameterList:VaultSchema.kt$VaultSchemaV1.VaultStates$( /** NOTE: serialized transaction state (including contract state) is now resolved from transaction store */ // TODO: create a distinct table to hold serialized state data (once DBTransactionStore is encrypted) /** refers to the X500Name of the notary a state is attached to */ @Column(name = "notary_name", nullable = false) var notary: Party, /** references a concrete ContractState that is [QueryableState] and has a [MappedSchema] */ @Column(name = "contract_state_class_name", nullable = false) var contractStateClassName: String, /** state lifecycle: unconsumed, consumed */ @Column(name = "state_status", nullable = false) var stateStatus: Vault.StateStatus, /** refers to timestamp recorded upon entering UNCONSUMED state */ @Column(name = "recorded_timestamp", nullable = false) var recordedTime: Instant, /** refers to timestamp recorded upon entering CONSUMED state */ @Column(name = "consumed_timestamp", nullable = true) var consumedTime: Instant? = null, /** used to denote a state has been soft locked (to prevent double spend) * will contain a temporary unique [UUID] obtained from a flow session */ @Column(name = "lock_id", nullable = true) var lockId: String? = null, /** Used to determine whether a state abides by the relevancy rules of the recording node */ @Column(name = "relevancy_status", nullable = false) var relevancyStatus: Vault.RelevancyStatus, /** refers to the last time a lock was taken (reserved) or updated (released, re-reserved) */ @Column(name = "lock_timestamp", nullable = true) var lockUpdateTime: Instant? = null, /** refers to constraint type (none, hash, whitelisted, signature) associated with a contract state */ @Column(name = "constraint_type", nullable = false) var constraintType: Vault.ConstraintInfo.Type, /** associated constraint type data (if any) */ @Column(name = "constraint_data", length = MAX_CONSTRAINT_DATA_SIZE, nullable = true) @Type(type = "corda-wrapper-binary") var constraintData: ByteArray? = null )</ID>
+    <ID>LoopWithTooManyJumpStatements:GenerateRpcSslCertsCli.kt$GenerateRpcSslCerts$while (true) { val keystorePassword1 = console.readPassword("Enter the RPC keystore password:") // TODO: consider adding a password strength policy. if (keystorePassword1.isEmpty()) { println("The RPC keystore password cannot be an empty String.") continue } val keystorePassword2 = console.readPassword("Re-enter the RPC keystore password:") if (!keystorePassword1.contentEquals(keystorePassword2)) { println("The RPC keystore passwords don't match.") continue } saveToKeyStore(keyStorePath, keyPair, cert, String(keystorePassword1), "rpcssl") println("The RPC keystore was saved to: $keyStorePath .") break }</ID>
+    <ID>LoopWithTooManyJumpStatements:GenerateRpcSslCertsCli.kt$GenerateRpcSslCerts$while (true) { val trustStorePassword1 = console.readPassword("Enter the RPC truststore password:") // TODO: consider adding a password strength policy. if (trustStorePassword1.isEmpty()) { println("The RPC truststore password cannot be an empty string.") continue } val trustStorePassword2 = console.readPassword("Re-enter the RPC truststore password:") if (!trustStorePassword1.contentEquals(trustStorePassword2)) { println("The RPC truststore passwords don't match.") continue } saveToTrustStore(trustStorePath, cert, String(trustStorePassword1), "rpcssl") println("The RPC truststore was saved to: $trustStorePath.") println("You need to distribute this file along with the password in a secure way to all RPC clients.") break }</ID>
+    <ID>MagicNumber:AbstractNode.kt$AbstractNode$50</ID>
+    <ID>MagicNumber:ArtemisMessagingServer.kt$ArtemisMessagingServer$10L</ID>
+    <ID>MagicNumber:ArtemisMessagingServer.kt$ArtemisMessagingServer$2000</ID>
+    <ID>MagicNumber:BFTSmart.kt$BFTSmart.Client$100</ID>
+    <ID>MagicNumber:BFTSmart.kt$BFTSmart.Replica.&lt;no name provided&gt;$20000</ID>
+    <ID>MagicNumber:BFTSmartConfigInternal.kt$3</ID>
+    <ID>MagicNumber:BFTSmartConfigInternal.kt$BFTSmartConfigInternal$200</ID>
+    <ID>MagicNumber:FlowMonitor.kt$FlowMonitor$1000</ID>
+    <ID>MagicNumber:HTTPNetworkRegistrationService.kt$HTTPNetworkRegistrationService$10</ID>
+    <ID>MagicNumber:InternalRPCMessagingClient.kt$InternalRPCMessagingClient$30000</ID>
+    <ID>MagicNumber:InternalRPCMessagingClient.kt$InternalRPCMessagingClient$60000</ID>
+    <ID>MagicNumber:JarScanningCordappLoader.kt$CordappLoaderTemplate$36</ID>
+    <ID>MagicNumber:JarScanningCordappLoader.kt$CordappLoaderTemplate$64</ID>
+    <ID>MagicNumber:KMSUtils.kt$3650</ID>
+    <ID>MagicNumber:MigrationNamedCacheFactory.kt$MigrationNamedCacheFactory$1024L</ID>
+    <ID>MagicNumber:NetworkMapUpdater.kt$NetworkMapUpdater$24</ID>
+    <ID>MagicNumber:NetworkMapUpdater.kt$NetworkMapUpdater$4</ID>
+    <ID>MagicNumber:NetworkMapUpdater.kt$NetworkMapUpdater$50</ID>
+    <ID>MagicNumber:NetworkRegistrationHelper.kt$NetworkRegistrationHelper$10</ID>
+    <ID>MagicNumber:NetworkRegistrationHelper.kt$NodeRegistrationHelper$10</ID>
+    <ID>MagicNumber:Node.kt$Node$128</ID>
+    <ID>MagicNumber:Node.kt$Node$256</ID>
+    <ID>MagicNumber:Node.kt$Node$4</ID>
+    <ID>MagicNumber:Node.kt$Node.Companion$171</ID>
+    <ID>MagicNumber:Node.kt$Node.Companion$40</ID>
+    <ID>MagicNumber:NodeCmdLineOptions.kt$NodeCmdLineOptions$2222</ID>
+    <ID>MagicNumber:NodeConfiguration.kt$1024L</ID>
+    <ID>MagicNumber:NodeConfiguration.kt$NodeConfiguration$5</ID>
+    <ID>MagicNumber:NodeConfiguration.kt$NodeConfiguration.Companion$20</ID>
+    <ID>MagicNumber:NodeConfiguration.kt$NodeConfiguration.Companion$300</ID>
+    <ID>MagicNumber:NodeConfigurationImpl.kt$NodeConfigurationImpl.Defaults$5</ID>
+    <ID>MagicNumber:NodeInfoWatcher.kt$NodeInfoWatcher$5</ID>
+    <ID>MagicNumber:NodeNamedCache.kt$DefaultNamedCacheFactory$1024L</ID>
+    <ID>MagicNumber:NodeSchedulerService.kt$NodeSchedulerService$60</ID>
+    <ID>MagicNumber:NodeStartup.kt$NodeStartup$10</ID>
+    <ID>MagicNumber:NodeStartup.kt$NodeStartup$100.0</ID>
+    <ID>MagicNumber:NodeStartup.kt$NodeStartup$1000</ID>
+    <ID>MagicNumber:NodeStartup.kt$NodeStartup$20</ID>
+    <ID>MagicNumber:NodeStartup.kt$NodeStartup$7</ID>
+    <ID>MagicNumber:ObjectDiffer.kt$ObjectDiffer$3</ID>
+    <ID>MagicNumber:ObjectDiffer.kt$ObjectDiffer$4</ID>
+    <ID>MagicNumber:P2PMessagingClient.kt$P2PMessagingClient$30000</ID>
+    <ID>MagicNumber:P2PMessagingClient.kt$P2PMessagingClient$60000</ID>
+    <ID>MagicNumber:P2PMessagingClient.kt$P2PMessagingConsumer$10</ID>
+    <ID>MagicNumber:Password.kt$Password$5</ID>
+    <ID>MagicNumber:PersistentUniquenessProvider.kt$PersistentUniquenessProvider$100</ID>
+    <ID>MagicNumber:RPCServer.kt$RPCServer$5</ID>
+    <ID>MagicNumber:RpcBrokerConfiguration.kt$RpcBrokerConfiguration$2000</ID>
+    <ID>MagicNumber:RpcBrokerConfiguration.kt$RpcBrokerConfiguration$5L</ID>
+    <ID>MagicNumber:RpcBrokerConfiguration.kt$RpcBrokerConfiguration$8</ID>
+    <ID>MagicNumber:SecureArtemisConfiguration.kt$SecureArtemisConfiguration$128</ID>
+    <ID>MagicNumber:SecureArtemisConfiguration.kt$SecureArtemisConfiguration$16</ID>
+    <ID>MagicNumber:StaffedFlowHospital.kt$StaffedFlowHospital$1.5</ID>
+    <ID>MagicNumber:StaffedFlowHospital.kt$StaffedFlowHospital$10</ID>
+    <ID>MagicNumber:VaultStateMigration.kt$VaultStateIterator$1000</ID>
+    <ID>MagicNumber:VaultStateMigration.kt$VaultStateIterator.VaultPageTask$10</ID>
+    <ID>MagicNumber:errorAndTerminate.kt$10</ID>
+    <ID>MatchingDeclarationName:VirtualCordapps.kt$VirtualCordapp</ID>
+    <ID>MayBeConst:BrokerJaasLoginModule.kt$BrokerJaasLoginModule.Companion$internal val NODE_SECURITY_CONFIG = "NODE_SECURITY_CONFIG"</ID>
+    <ID>MayBeConst:BrokerJaasLoginModule.kt$BrokerJaasLoginModule.Companion$internal val P2P_SECURITY_CONFIG = "P2P_SECURITY_CONFIG"</ID>
+    <ID>MayBeConst:BrokerJaasLoginModule.kt$BrokerJaasLoginModule.Companion$internal val RPC_SECURITY_CONFIG = "RPC_SECURITY_CONFIG"</ID>
+    <ID>MayBeConst:ConfigUtilities.kt$ConfigHelper$val DEFAULT_CONFIG_FILENAME = "node.conf"</ID>
+    <ID>MayBeConst:NodeConfiguration.kt$DevModeOptions.Defaults$val allowCompatibilityZone = false</ID>
+    <ID>MayBeConst:NodeConfiguration.kt$DevModeOptions.Defaults$val disableCheckpointChecker = false</ID>
+    <ID>MayBeConst:NodeConfigurationImpl.kt$NodeRpcSettings.Defaults$val standAloneBroker = false</ID>
+    <ID>MayBeConst:NodeConfigurationImpl.kt$NodeRpcSettings.Defaults$val useSsl = false</ID>
+    <ID>MemberNameEqualsClassName:BFTSmart.kt$BFTSmart.Replica$private val replica = run { config.waitUntilReplicaWillNotPrintStackTrace(replicaId) @Suppress("LeakingThis") (CordaServiceReplica(replicaId, config.path, this)) }</ID>
+    <ID>MemberNameEqualsClassName:InitialRegistrationCli.kt$InitialRegistration$private fun initialRegistration(config: NodeConfiguration)</ID>
+    <ID>ModifierOrder:NodeNamedCache.kt$DefaultNamedCacheFactory$open protected</ID>
+    <ID>NestedBlockDepth:AbstractNode.kt$AbstractNode$private fun installCordaServices()</ID>
+    <ID>NestedBlockDepth:AbstractNode.kt$AbstractNode$private fun registerCordappFlows()</ID>
+    <ID>NestedBlockDepth:CheckpointVerifier.kt$CheckpointVerifier$ fun verifyCheckpointsCompatible( checkpointStorage: CheckpointStorage, currentCordapps: List&lt;Cordapp&gt;, platformVersion: Int, serviceHub: ServiceHub, tokenizableServices: List&lt;Any&gt; )</ID>
+    <ID>NestedBlockDepth:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$override fun parseCriteria(criteria: CommonQueryCriteria): Collection&lt;Predicate&gt;</ID>
+    <ID>NestedBlockDepth:NetworkRegistrationHelper.kt$NetworkRegistrationHelper$ private fun pollServerForCertificates(requestId: String): List&lt;X509Certificate&gt;</ID>
+    <ID>NestedBlockDepth:Node.kt$Node$ override fun startDatabase()</ID>
+    <ID>NestedBlockDepth:Node.kt$Node$ private fun tryDetectIfNotPublicHost(host: String): String?</ID>
+    <ID>NestedBlockDepth:Node.kt$Node$private fun startLocalRpcBroker(securityManager: RPCSecurityManager): BrokerAddresses?</ID>
+    <ID>NestedBlockDepth:NodeVaultService.kt$NodeVaultService$private fun recordUpdate(update: Vault.Update&lt;ContractState&gt;): Vault.Update&lt;ContractState&gt;</ID>
+    <ID>NestedBlockDepth:NonValidatingNotaryFlow.kt$NonValidatingNotaryFlow$override fun verifyTransaction(requestPayload: NotarisationPayload)</ID>
+    <ID>NestedBlockDepth:ObjectDiffer.kt$ObjectDiffer$fun diff(a: Any?, b: Any?): DiffTree?</ID>
+    <ID>NewLineAtEndOfFile:AbstractPartyDescriptor.kt$net.corda.node.services.persistence.AbstractPartyDescriptor.kt</ID>
+    <ID>NewLineAtEndOfFile:ActionFutureExecutor.kt$net.corda.node.services.statemachine.ActionFutureExecutor.kt</ID>
+    <ID>NewLineAtEndOfFile:AddressUtils.kt$net.corda.node.utilities.AddressUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:AppServiceHubImpl.kt$net.corda.node.internal.AppServiceHubImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:ArtemisBroker.kt$net.corda.node.internal.artemis.ArtemisBroker.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentStorageInternal.kt$net.corda.node.services.persistence.AttachmentStorageInternal.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthenticatedRpcOpsProxy.kt$net.corda.node.internal.rpc.proxies.AuthenticatedRpcOpsProxy.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthorizingSubject.kt$net.corda.node.internal.security.AuthorizingSubject.kt</ID>
+    <ID>NewLineAtEndOfFile:BatchSigning.kt$net.corda.notary.common.BatchSigning.kt</ID>
+    <ID>NewLineAtEndOfFile:BrokerJaasLoginModule.kt$net.corda.node.internal.artemis.BrokerJaasLoginModule.kt</ID>
+    <ID>NewLineAtEndOfFile:CertificateChainCheckPolicy.kt$net.corda.node.internal.artemis.CertificateChainCheckPolicy.kt</ID>
+    <ID>NewLineAtEndOfFile:CertificatesUtils.kt$net.corda.node.utilities.CertificatesUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:CheckpointDumperImpl.kt$net.corda.node.services.rpc.CheckpointDumperImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:ClearNetworkCacheCli.kt$net.corda.node.internal.subcommands.ClearNetworkCacheCli.kt</ID>
+    <ID>NewLineAtEndOfFile:ConfigSections.kt$net.corda.node.services.config.schema.v1.ConfigSections.kt</ID>
+    <ID>NewLineAtEndOfFile:ContextualLoggingUtils.kt$net.corda.node.services.logging.ContextualLoggingUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappConfigProvider.kt$net.corda.node.internal.cordapp.CordappConfigProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:DbTransactionsResolver.kt$net.corda.node.services.DbTransactionsResolver.kt</ID>
+    <ID>NewLineAtEndOfFile:DeduplicationId.kt$net.corda.node.services.statemachine.DeduplicationId.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowDefaultUncaughtExceptionHandler.kt$net.corda.node.services.statemachine.FlowDefaultUncaughtExceptionHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowMonitor.kt$net.corda.node.services.statemachine.FlowMonitor.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowTimeoutException.kt$net.corda.node.services.statemachine.FlowTimeoutException.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowTimeoutScheduler.kt$net.corda.node.services.statemachine.FlowTimeoutScheduler.kt</ID>
+    <ID>NewLineAtEndOfFile:GeneralExceptionHandler.kt$net.corda.node.internal.GeneralExceptionHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:GenerateNodeInfoCli.kt$net.corda.node.internal.subcommands.GenerateNodeInfoCli.kt</ID>
+    <ID>NewLineAtEndOfFile:HTTPNetworkRegistrationService.kt$net.corda.node.utilities.registration.HTTPNetworkRegistrationService.kt</ID>
+    <ID>NewLineAtEndOfFile:HibernateQueryCriteriaParser.kt$net.corda.node.services.vault.HibernateQueryCriteriaParser.kt</ID>
+    <ID>NewLineAtEndOfFile:IdentityServiceInternal.kt$net.corda.node.services.api.IdentityServiceInternal.kt</ID>
+    <ID>NewLineAtEndOfFile:InfrequentlyMutatedCache.kt$net.corda.node.utilities.InfrequentlyMutatedCache.kt</ID>
+    <ID>NewLineAtEndOfFile:KilledFlowTransition.kt$net.corda.node.services.statemachine.transitions.KilledFlowTransition.kt</ID>
+    <ID>NewLineAtEndOfFile:LifecycleSupport.kt$net.corda.node.internal.LifecycleSupport.kt</ID>
+    <ID>NewLineAtEndOfFile:MetricInterceptor.kt$net.corda.node.services.statemachine.interceptors.MetricInterceptor.kt</ID>
+    <ID>NewLineAtEndOfFile:MigrationNamedCacheFactory.kt$net.corda.node.migration.MigrationNamedCacheFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:MigrationServicesForResolution.kt$net.corda.node.migration.MigrationServicesForResolution.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkParameterUpdateListener.kt$net.corda.node.services.network.NetworkParameterUpdateListener.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkParametersHotloader.kt$net.corda.node.services.network.NetworkParametersHotloader.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeAttachmentService.kt$net.corda.node.services.persistence.NodeAttachmentService.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeAttachmentTrustCalculator.kt$net.corda.node.services.attachments.NodeAttachmentTrustCalculator.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeBuildProperties.kt$net.corda.node.utilities.NodeBuildProperties.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeConfigurationImpl.kt$net.corda.node.services.config.NodeConfigurationImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeDiagnosticsService.kt$net.corda.node.services.diagnostics.NodeDiagnosticsService.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeNamedCache.kt$net.corda.node.utilities.NodeNamedCache.kt</ID>
+    <ID>NewLineAtEndOfFile:NodePropertiesStore.kt$net.corda.node.services.api.NodePropertiesStore.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeRpcOptions.kt$net.corda.node.services.config.rpc.NodeRpcOptions.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeUniqueIdProvider.kt$net.corda.node.internal.NodeUniqueIdProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeVaultService.kt$net.corda.node.services.vault.NodeVaultService.kt</ID>
+    <ID>NewLineAtEndOfFile:NonInvalidatingCache.kt$net.corda.node.utilities.NonInvalidatingCache.kt</ID>
+    <ID>NewLineAtEndOfFile:NonInvalidatingUnboundCache.kt$net.corda.node.utilities.NonInvalidatingUnboundCache.kt</ID>
+    <ID>NewLineAtEndOfFile:NotaryLoader.kt$net.corda.node.utilities.NotaryLoader.kt</ID>
+    <ID>NewLineAtEndOfFile:NotaryUpdateListener.kt$net.corda.node.services.network.NotaryUpdateListener.kt</ID>
+    <ID>NewLineAtEndOfFile:ObjectDiffer.kt$net.corda.node.utilities.ObjectDiffer.kt</ID>
+    <ID>NewLineAtEndOfFile:Password.kt$net.corda.node.internal.security.Password.kt</ID>
+    <ID>NewLineAtEndOfFile:Permissions.kt$net.corda.node.services.Permissions.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentIdentityMigration.kt$net.corda.node.migration.PersistentIdentityMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentIdentityMigrationNewTable.kt$net.corda.node.migration.PersistentIdentityMigrationNewTable.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentIdentityService.kt$net.corda.node.services.identity.PersistentIdentityService.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentScheduledFlowRepository.kt$net.corda.node.services.events.PersistentScheduledFlowRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeyHashToExternalId.kt$net.corda.node.services.persistence.PublicKeyHashToExternalId.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeyToOwningIdentityCacheImpl.kt$net.corda.node.services.persistence.PublicKeyToOwningIdentityCacheImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeyToTextConverter.kt$net.corda.node.services.persistence.PublicKeyToTextConverter.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCSecurityManagerImpl.kt$net.corda.node.internal.security.RPCSecurityManagerImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:RaftConfig.kt$net.corda.notary.experimental.raft.RaftConfig.kt</ID>
+    <ID>NewLineAtEndOfFile:RaftTransactionCommitLog.kt$net.corda.notary.experimental.raft.RaftTransactionCommitLog.kt</ID>
+    <ID>NewLineAtEndOfFile:ReactiveArtemisConsumer.kt$net.corda.node.internal.artemis.ReactiveArtemisConsumer.kt</ID>
+    <ID>NewLineAtEndOfFile:RolesAdderOnLogin.kt$net.corda.node.services.rpc.RolesAdderOnLogin.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcBrokerConfiguration.kt$net.corda.node.services.rpc.RpcBrokerConfiguration.kt</ID>
+    <ID>NewLineAtEndOfFile:RunMigrationScriptsCli.kt$net.corda.node.internal.subcommands.RunMigrationScriptsCli.kt</ID>
+    <ID>NewLineAtEndOfFile:SchedulerService.kt$net.corda.node.services.api.SchedulerService.kt</ID>
+    <ID>NewLineAtEndOfFile:Schema.kt$net.corda.notary.experimental.bftsmart.Schema.kt</ID>
+    <ID>NewLineAtEndOfFile:Schema.kt$net.corda.notary.experimental.raft.Schema.kt</ID>
+    <ID>NewLineAtEndOfFile:SecureArtemisConfiguration.kt$net.corda.node.internal.artemis.SecureArtemisConfiguration.kt</ID>
+    <ID>NewLineAtEndOfFile:ShadowingException.kt$net.corda.node.services.config.ShadowingException.kt</ID>
+    <ID>NewLineAtEndOfFile:StandardConfigValueParsers.kt$net.corda.node.services.config.schema.parsers.StandardConfigValueParsers.kt</ID>
+    <ID>NewLineAtEndOfFile:StateMachineInnerState.kt$net.corda.node.services.statemachine.StateMachineInnerState.kt</ID>
+    <ID>NewLineAtEndOfFile:StateMachineInstanceId.kt$net.corda.node.services.statemachine.StateMachineInstanceId.kt</ID>
+    <ID>NewLineAtEndOfFile:StateMachineState.kt$net.corda.node.services.statemachine.StateMachineState.kt</ID>
+    <ID>NewLineAtEndOfFile:StateTransitionExceptions.kt$net.corda.node.services.statemachine.StateTransitionExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:SynchroniseSchemasCli.kt$net.corda.node.internal.subcommands.SynchroniseSchemasCli.kt</ID>
+    <ID>NewLineAtEndOfFile:ThreadContextAdjustingRpcOpsProxy.kt$net.corda.node.internal.rpc.proxies.ThreadContextAdjustingRpcOpsProxy.kt</ID>
+    <ID>NewLineAtEndOfFile:TimedFlowUtils.kt$net.corda.node.utilities.TimedFlowUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:TransitionBuilder.kt$net.corda.node.services.statemachine.transitions.TransitionBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:TransitionExecutorImpl.kt$net.corda.node.services.statemachine.TransitionExecutorImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:TypesafeCordappConfig.kt$net.corda.node.internal.cordapp.TypesafeCordappConfig.kt</ID>
+    <ID>NewLineAtEndOfFile:UserValidationPlugin.kt$net.corda.node.internal.artemis.UserValidationPlugin.kt</ID>
+    <ID>NewLineAtEndOfFile:Utils.kt$net.corda.node.internal.classloading.Utils.kt</ID>
+    <ID>NewLineAtEndOfFile:V1NodeConfigurationSpec.kt$net.corda.node.services.config.schema.v1.V1NodeConfigurationSpec.kt</ID>
+    <ID>NewLineAtEndOfFile:VaultStateMigration.kt$net.corda.node.migration.VaultStateMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:VersionInfo.kt$net.corda.node.VersionInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:VirtualCordapps.kt$net.corda.node.internal.cordapp.VirtualCordapps.kt</ID>
+    <ID>NewLineAtEndOfFile:WritablePublicKeyToOwningIdentityCache.kt$net.corda.node.services.persistence.WritablePublicKeyToOwningIdentityCache.kt</ID>
+    <ID>NewLineAtEndOfFile:errorAndTerminate.kt$net.corda.node.utilities.errorAndTerminate.kt</ID>
+    <ID>ReturnCount:AbstractPartyDescriptor.kt$AbstractPartyDescriptor$override fun &lt;X : Any&gt; unwrap(value: AbstractParty?, type: Class&lt;X&gt;, options: WrapperOptions): X?</ID>
+    <ID>ReturnCount:AbstractPartyDescriptor.kt$AbstractPartyDescriptor$override fun &lt;X : Any&gt; wrap(value: X?, options: WrapperOptions): AbstractParty?</ID>
+    <ID>ReturnCount:FlowCreator.kt$FlowCreator$@Suppress("TooGenericExceptionCaught") private fun Checkpoint.getFiberFromCheckpoint(runId: StateMachineRunId, firstRestore: Boolean): FlowStateMachineImpl&lt;*&gt;?</ID>
+    <ID>ReturnCount:FlowManager.kt$NodeFlowManager.FlowWeightComparator$override fun compare(o1: NodeFlowManager.RegisteredFlowContainer, o2: NodeFlowManager.RegisteredFlowContainer): Int</ID>
+    <ID>ReturnCount:JarScanningCordappLoader.kt$JarScanningCordappLoader$private fun parseCordappInfo(manifest: Manifest?, defaultName: String): Cordapp.Info</ID>
+    <ID>ReturnCount:NetworkRegistrationHelper.kt$NodeRegistrationHelper$override fun validateAndGetTlsCrlIssuerCert(): X509Certificate?</ID>
+    <ID>ReturnCount:NodeAttachmentTrustCalculator.kt$NodeAttachmentTrustCalculator$override fun calculate(attachment: Attachment): Boolean</ID>
+    <ID>ReturnCount:NodeConfigurationImpl.kt$NodeConfigurationImpl$private fun validateDevModeOptions(): List&lt;String&gt;</ID>
+    <ID>ReturnCount:NodeSchemaService.kt$NodeSchemaService$// Because schema is always one supported by the state, just delegate. override fun generateMappedObject(state: ContractState, schema: MappedSchema): PersistentState</ID>
+    <ID>ReturnCount:NodeStartup.kt$NodeStartup$fun initialiseAndRun(cmdLineOptions: SharedNodeCmdLineOptions, afterNodeInitialisation: RunAfterNodeInitialisation, requireCertificates: Boolean = false): Int</ID>
+    <ID>ReturnCount:NodeStartup.kt$NodeStartup$fun isNodeRunningAt(baseDirectory: Path): Boolean</ID>
+    <ID>ReturnCount:NodeStartup.kt$NodeStartup$private fun canReadCertificatesDirectory(certDirectory: Path, devMode: Boolean): Boolean</ID>
+    <ID>ReturnCount:NodeStartup.kt$fun CliWrapperBase.initLogging(baseDirectory: Path): Boolean</ID>
+    <ID>ReturnCount:NodeVaultService.kt$NodeVaultService$@Suspendable @Throws(StatesNotAvailableException::class) override fun &lt;T : FungibleState&lt;*&gt;&gt; tryLockFungibleStatesForSpending( lockId: UUID, eligibleStatesQuery: QueryCriteria, amount: Amount&lt;*&gt;, contractStateType: Class&lt;out T&gt; ): List&lt;StateAndRef&lt;T&gt;&gt;</ID>
+    <ID>ReturnCount:ObjectDiffer.kt$ObjectDiffer$fun diff(a: Any?, b: Any?): DiffTree?</ID>
+    <ID>ReturnCount:PersistentNetworkMapCache.kt$PersistentNetworkMapCache$override fun getPartyInfo(party: Party): PartyInfo?</ID>
+    <ID>ReturnCount:RPCSecurityManagerImpl.kt$RPCPermissionResolver$override fun resolvePermission(representation: String): Permission</ID>
+    <ID>ReturnCount:SerialFilter.kt$SerialFilter$internal fun applyPredicate(acceptClass: (Class&lt;*&gt;) -&gt; Boolean, serialClass: Class&lt;*&gt;?): Boolean</ID>
+    <ID>ReturnCount:ServicesForResolutionImpl.kt$ServicesForResolutionImpl$// We may need to recursively chase transactions if there are notary changes. fun inner(stateRef: StateRef, forContractClassName: String?): Attachment</ID>
+    <ID>ReturnCount:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$@Suppress("ComplexMethod") private fun restoreFlowsFromCheckpoints(): Pair&lt;MutableMap&lt;StateMachineRunId, Flow&lt;*&gt;&gt;, MutableMap&lt;StateMachineRunId, NonResidentFlow&gt;&gt;</ID>
+    <ID>ReturnCount:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$@Suppress("TooGenericExceptionCaught", "ComplexMethod", "MaxLineLength") // this is fully intentional here, see comment in the catch clause override fun retryFlowFromSafePoint(currentState: StateMachineState)</ID>
+    <ID>ReturnCount:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$private inline fun &lt;R&gt; Flow&lt;R&gt;.withFlowLock( validStatuses: Set&lt;Checkpoint.FlowStatus&gt;, block: FlowStateMachineImpl&lt;R&gt;.() -&gt; Boolean ): Boolean</ID>
+    <ID>SpreadOperator:AbstractNode.kt$FlowStarterImpl$(logicType, *args)</ID>
+    <ID>SpreadOperator:AuthenticatedRpcOpsProxy.kt$(methodName, *(args.map(Class&lt;*&gt;::getName).toTypedArray()))</ID>
+    <ID>SpreadOperator:AuthenticatedRpcOpsProxy.kt$AuthenticatedRpcOpsProxy$(logicType, *args)</ID>
+    <ID>SpreadOperator:ConfigUtilities.kt$(*pairs)</ID>
+    <ID>SpreadOperator:FlowLogicRefFactoryImpl.kt$FlowLogicRefFactoryImpl$(flowClass, *args)</ID>
+    <ID>SpreadOperator:HTTPNetworkRegistrationService.kt$HTTPNetworkRegistrationService$(OpaqueBytes(request.encoded), "Platform-Version" to "${versionInfo.platformVersion}", "Client-Version" to versionInfo.releaseVersion, "Private-Network-Map" to (config.pnm?.toString() ?: ""), *(config.csrToken?.let { arrayOf(CENM_SUBMISSION_TOKEN to it) } ?: arrayOf()))</ID>
+    <ID>SpreadOperator:HibernateQueryCriteriaParser.kt$AbstractQueryCriteriaParser$(*leftPredicates.toTypedArray())</ID>
+    <ID>SpreadOperator:HibernateQueryCriteriaParser.kt$AbstractQueryCriteriaParser$(*leftPredicates.toTypedArray(), *rightPredicates.toTypedArray())</ID>
+    <ID>SpreadOperator:HibernateQueryCriteriaParser.kt$AbstractQueryCriteriaParser$(*rightPredicates.toTypedArray())</ID>
+    <ID>SpreadOperator:HibernateQueryCriteriaParser.kt$HibernateAttachmentQueryCriteriaParser$(*predicateSet.toTypedArray())</ID>
+    <ID>SpreadOperator:NetworkMapUpdater.kt$NetworkMapUpdater$(*networkMapDownloadFutures)</ID>
+    <ID>SpreadOperator:NodeVaultService.kt$NodeVaultService$(*commonPredicates)</ID>
+    <ID>SpreadOperator:NodeVaultService.kt$NodeVaultService$(*commonPredicates, stateRefsPredicate)</ID>
+    <ID>SpreadOperator:NodeVaultService.kt$NodeVaultService$(lockUpdateTime, lockIdPredicate, *commonPredicates)</ID>
+    <ID>SpreadOperator:NodeVaultService.kt$NodeVaultService$(stateStatusPredication, lockIdPredicate, *commonPredicates)</ID>
+    <ID>SpreadOperator:RPCServer.kt$RPCServer$(invocationTarget.instance, *arguments.toTypedArray())</ID>
+    <ID>SpreadOperator:ReactiveArtemisConsumer.kt$ReactiveArtemisConsumer.Companion$(queueName, *queueNames)</ID>
+    <ID>ThrowsCount:AbstractNode.kt$AbstractNode$private fun installCordaServices()</ID>
+    <ID>ThrowsCount:ArtemisMessagingServer.kt$ArtemisMessagingServer$// TODO: Maybe wrap [IOException] on a key store load error so that it's clearly splitting key store loading from // Artemis IO errors @Throws(IOException::class, AddressBindingException::class, KeyStoreException::class) private fun configureAndStartServer()</ID>
+    <ID>ThrowsCount:BrokerJaasLoginModule.kt$BaseBrokerJaasLoginModule$@Suppress("DEPRECATION") // should use java.security.cert.X509Certificate protected fun getUsernamePasswordAndCerts(): Triple&lt;String, String, Array&lt;javax.security.cert.X509Certificate&gt;?&gt;</ID>
+    <ID>ThrowsCount:CheckpointVerifier.kt$CheckpointVerifier$ fun verifyCheckpointsCompatible( checkpointStorage: CheckpointStorage, currentCordapps: List&lt;Cordapp&gt;, platformVersion: Int, serviceHub: ServiceHub, tokenizableServices: List&lt;Any&gt; )</ID>
+    <ID>ThrowsCount:CheckpointVerifier.kt$CheckpointVerifier$// Throws exception when the flow is incompatible private fun checkFlowCompatible(subFlow: SubFlow, currentCordappsByHash: Map&lt;SecureHash.SHA256, Cordapp&gt;, platformVersion: Int)</ID>
+    <ID>ThrowsCount:JarScanningCordappLoader.kt$JarScanningCordappLoader$private fun parseVersion(versionStr: String?, attributeName: String): Int</ID>
+    <ID>ThrowsCount:NetworkRegistrationHelper.kt$NetworkRegistrationHelper$private fun validateCertificates( registeringPublicKey: PublicKey, registeringLegalName: CordaX500Name, expectedCertRole: CertRole, certificates: List&lt;X509Certificate&gt; )</ID>
+    <ID>ThrowsCount:NodeVaultService.kt$NodeVaultService$@Throws(VaultQueryException::class) private fun &lt;T : ContractState&gt; _queryBy(criteria: QueryCriteria, paging_: PageSpecification, sorting: Sort, contractStateType: Class&lt;out T&gt;, skipPagingChecks: Boolean): Vault.Page&lt;T&gt;</ID>
+    <ID>ThrowsCount:NodeVaultService.kt$NodeVaultService$private fun makeUpdates(batch: Iterable&lt;CoreTransaction&gt;, statesToRecord: StatesToRecord, previouslySeen: Boolean): List&lt;Vault.Update&lt;ContractState&gt;&gt;</ID>
+    <ID>ThrowsCount:NonValidatingNotaryFlow.kt$NonValidatingNotaryFlow$ private fun checkNotaryWhitelisted(notary: Party, attachedParameterHash: SecureHash?)</ID>
+    <ID>ThrowsCount:RPCServer.kt$RPCServer$private fun invokeRpc(context: RpcAuthContext, inMethodName: String, arguments: List&lt;Any?&gt;): Try&lt;Any&gt;</ID>
+    <ID>ThrowsCount:ServicesForResolutionImpl.kt$ServicesForResolutionImpl$// We may need to recursively chase transactions if there are notary changes. fun inner(stateRef: StateRef, forContractClassName: String?): Attachment</ID>
+    <ID>ThrowsCount:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$private fun getInitiatedFlowFactory(message: InitialSessionMessage): InitiatedFlowFactory&lt;*&gt;</ID>
+    <ID>TooGenericExceptionCaught:AbstractNode.kt$AbstractNode$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AbstractNode.kt$AbstractNode.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AbstractNode.kt$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:ArtemisRpcBroker.kt$ArtemisRpcBroker$th: Throwable</ID>
+    <ID>TooGenericExceptionCaught:BrokerJaasLoginModule.kt$BrokerJaasLoginModule$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CheckpointDumperImpl.kt$CheckpointDumperImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CheckpointVerifier.kt$CheckpointVerifier$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CordaRPCOpsImpl.kt$CordaRPCOpsImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DBNetworkParametersStorage.kt$DBNetworkParametersStorage$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:FlowMessaging.kt$FlowMessagingImpl$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:FlowStateMachineImpl.kt$FlowStateMachineImpl$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:FlowStateMachineImpl.kt$FlowStateMachineImpl$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InitialRegistrationCli.kt$InitialRegistration$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InitialRegistrationCli.kt$InitialRegistration.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:JarScanningCordappLoader.kt$JarScanningCordappLoader$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MigrationServicesForResolution.kt$MigrationServicesForResolution$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkMapUpdater.kt$NetworkMapUpdater$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkMapUpdater.kt$NetworkMapUpdater.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkParametersReader.kt$NetworkParametersReader$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkRegistrationHelper.kt$NetworkRegistrationHelper$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeInfoWatcher.kt$NodeInfoWatcher$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeSchedulerService.kt$NodeSchedulerService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeStartup.kt$NodeStartup$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NodeVaultService.kt$NodeVaultService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NonValidatingNotaryFlow.kt$NonValidatingNotaryFlow$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ObjectDiffer.kt$ObjectDiffer$throwable: Exception</ID>
+    <ID>TooGenericExceptionCaught:P2PMessagingClient.kt$P2PMessagingClient$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PersistentUniquenessProvider.kt$PersistentUniquenessProvider$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RPCServer.kt$RPCServer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RPCServer.kt$RPCServer$exception: Throwable</ID>
+    <ID>TooGenericExceptionCaught:RPCServer.kt$RPCServer$throwable: Throwable</ID>
+    <ID>TooGenericExceptionCaught:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:StandardConfigValueParsers.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TransitionExecutorImpl.kt$TransitionExecutorImpl$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:UserValidationPlugin.kt$UserValidationPlugin$e: Throwable</ID>
+    <ID>TooGenericExceptionCaught:V1NodeConfigurationSpec.kt$V1NodeConfigurationSpec$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ValidatingNotaryFlow.kt$ValidatingNotaryFlow$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VaultStateMigration.kt$VaultStateIterator$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VaultStateMigration.kt$VaultStateMigration$e: Exception</ID>
+    <ID>TooManyFunctions:AbstractNode.kt$AbstractNode&lt;S&gt; : SingletonSerializeAsToken</ID>
+    <ID>TooManyFunctions:ActionExecutorImpl.kt$ActionExecutorImpl : ActionExecutor</ID>
+    <ID>TooManyFunctions:AppendOnlyPersistentMap.kt$AppendOnlyPersistentMapBase&lt;K, V, E, out EK&gt;</ID>
+    <ID>TooManyFunctions:BFTSmart.kt$BFTSmart$Replica : DefaultRecoverable</ID>
+    <ID>TooManyFunctions:CordaRPCOpsImpl.kt$CordaRPCOpsImpl : InternalCordaRPCOpsAutoCloseable</ID>
+    <ID>TooManyFunctions:FlowStateMachineImpl.kt$FlowStateMachineImpl&lt;R&gt; : FiberFlowStateMachineFlowFiber</ID>
+    <ID>TooManyFunctions:HibernateQueryCriteriaParser.kt$HibernateQueryCriteriaParser : AbstractQueryCriteriaParserIQueryCriteriaParser</ID>
+    <ID>TooManyFunctions:JarScanningCordappLoader.kt$JarScanningCordappLoader : CordappLoaderTemplate</ID>
+    <ID>TooManyFunctions:Node.kt$Node : AbstractNode</ID>
+    <ID>TooManyFunctions:NodeAttachmentService.kt$NodeAttachmentService : AttachmentStorageInternalSingletonSerializeAsToken</ID>
+    <ID>TooManyFunctions:NodeVaultService.kt$NodeVaultService : SingletonSerializeAsTokenVaultServiceInternal</ID>
+    <ID>TooManyFunctions:P2PMessagingClient.kt$P2PMessagingClient : SingletonSerializeAsTokenMessagingServiceAddressToArtemisQueueResolverServiceStateSupport</ID>
+    <ID>TooManyFunctions:RPCServer.kt$RPCServer</ID>
+    <ID>TooManyFunctions:SingleThreadedStateMachineManager.kt$SingleThreadedStateMachineManager : StateMachineManagerStateMachineManagerInternal</ID>
+    <ID>TooManyFunctions:StartedFlowTransition.kt$StartedFlowTransition : Transition</ID>
+    <ID>TooManyFunctions:TopLevelTransition.kt$TopLevelTransition : Transition</ID>
+    <ID>UnnecessaryInheritance:Crypto.kt$Crypto : Object</ID>
+    <ID>UnnecessaryInheritance:SignatureScheme.kt$SignatureScheme : Object</ID>
+    <ID>UnusedImports:VaultSchema.kt$import net.corda.core.contracts.ContractState</ID>
+    <ID>UnusedPrivateClass:ActionExecutorImpl.kt$ActionExecutorImpl$LatchedGauge : Gauge</ID>
+    <ID>UtilityClassWithPublicConstructor:Permissions.kt$Permissions</ID>
+    <ID>VariableNaming:NodeVaultService.kt$NodeVaultService.InnerState$val _rawUpdatesPublisher = PublishSubject.create&lt;Vault.Update&lt;ContractState&gt;&gt;()!!</ID>
+    <ID>VariableNaming:NodeVaultService.kt$NodeVaultService.InnerState$val _updatesInDbTx = _updatesPublisher.wrapWithDatabaseTransaction().asObservable()!!</ID>
+    <ID>VariableNaming:NodeVaultService.kt$NodeVaultService.InnerState$val _updatesPublisher = PublishSubject.create&lt;Vault.Update&lt;ContractState&gt;&gt;()!!</ID>
+    <ID>WildcardImport:ArtemisMessagingServer.kt$import net.corda.node.internal.artemis.*</ID>
+    <ID>WildcardImport:ArtemisRpcBroker.kt$import net.corda.node.internal.artemis.*</ID>
+    <ID>WildcardImport:BFTSmart.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:BFTSmartNotaryService.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:BasicHSMKeyManagementService.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:BasicHSMKeyManagementService.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:CertificatesUtils.kt$import net.corda.nodeapi.internal.crypto.*</ID>
+    <ID>WildcardImport:CoreFlowHandlers.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:DBNetworkParametersStorage.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DBTransactionStorage.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DBTransactionStorage.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:DBTransactionStorage.kt$import net.corda.nodeapi.internal.persistence.*</ID>
+    <ID>WildcardImport:E2ETestKeyManagementService.kt$import net.corda.core.crypto.*</ID>
+    <ID>WildcardImport:ErrorFlowTransition.kt$import net.corda.node.services.statemachine.*</ID>
+    <ID>WildcardImport:FlowLogicRefFactoryImpl.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:HTTPNetworkRegistrationService.kt$import java.net.HttpURLConnection.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import javax.persistence.criteria.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.BinaryComparisonOperator.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.CollectionOperator.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.ColumnPredicate.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.EqualityComparisonOperator.*</ID>
+    <ID>WildcardImport:HibernateQueryCriteriaParser.kt$import net.corda.core.node.services.vault.LikenessOperator.*</ID>
+    <ID>WildcardImport:InMemoryIdentityService.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:InitialRegistrationCli.kt$import net.corda.node.internal.*</ID>
+    <ID>WildcardImport:JarScanningCordappLoader.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:JarScanningCordappLoader.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:MigrationServicesForResolution.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:NetworkParametersReader.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NetworkRegistrationHelper.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeAttachmentService.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:NodeAttachmentService.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeAttachmentService.kt$import net.corda.core.serialization.*</ID>
+    <ID>WildcardImport:NodeAttachmentTrustCalculator.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeInfoSchema.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:NodeInfoWatcher.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeSchedulerService.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeSchemaService.kt$import net.corda.core.schemas.*</ID>
+    <ID>WildcardImport:NodeStartup.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeStartup.kt$import net.corda.node.*</ID>
+    <ID>WildcardImport:NodeStartup.kt$import net.corda.node.internal.subcommands.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.node.services.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:NodeVaultService.kt$import net.corda.nodeapi.internal.persistence.*</ID>
+    <ID>WildcardImport:P2PMessagingClient.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:P2PMessagingClient.kt$import net.corda.nodeapi.internal.ArtemisMessagingComponent.*</ID>
+    <ID>WildcardImport:P2PMessagingClient.kt$import org.apache.activemq.artemis.api.core.client.*</ID>
+    <ID>WildcardImport:PublicKeyHashToExternalId.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:RPCSecurityManagerImpl.kt$import org.apache.shiro.authc.*</ID>
+    <ID>WildcardImport:ServiceHubInternal.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:ServicesForResolutionImpl.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:StartedFlowTransition.kt$import net.corda.node.services.statemachine.*</ID>
+    <ID>WildcardImport:SubFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:V1NodeConfigurationSpec.kt$import net.corda.common.configuration.parsing.internal.*</ID>
+    <ID>WildcardImport:V1NodeConfigurationSpec.kt$import net.corda.node.services.config.*</ID>
+    <ID>WildcardImport:V1NodeConfigurationSpec.kt$import net.corda.node.services.config.schema.parsers.*</ID>
+    <ID>WildcardImport:VaultSchema.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:VaultSchema.kt$import net.corda.core.schemas.*</ID>
+    <ID>WildcardImport:VaultStateMigration.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:VaultStateMigration.kt$import net.corda.core.serialization.internal.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

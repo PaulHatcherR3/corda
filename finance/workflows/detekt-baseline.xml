@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ClassNaming:AbstractCashFlow.kt$AbstractCashFlow.Companion$FINALISING_TX : Step</ID>
+    <ID>ClassNaming:AbstractCashFlow.kt$AbstractCashFlow.Companion$GENERATING_ID : Step</ID>
+    <ID>ClassNaming:AbstractCashFlow.kt$AbstractCashFlow.Companion$GENERATING_TX : Step</ID>
+    <ID>ClassNaming:AbstractCashFlow.kt$AbstractCashFlow.Companion$SIGNING_TX : Step</ID>
+    <ID>ClassNaming:TwoPartyDealFlow.kt$TwoPartyDealFlow.Primary.Companion$GENERATING_ID : Step</ID>
+    <ID>ClassNaming:TwoPartyDealFlow.kt$TwoPartyDealFlow.Primary.Companion$SENDING_PROPOSAL : Step</ID>
+    <ID>ClassNaming:TwoPartyDealFlow.kt$TwoPartyDealFlow.Secondary.Companion$COLLECTING_SIGNATURES : Step</ID>
+    <ID>ClassNaming:TwoPartyTradeFlow.kt$TwoPartyTradeFlow.Buyer$COLLECTING_SIGNATURES : Step</ID>
+    <ID>ClassNaming:TwoPartyTradeFlow.kt$TwoPartyTradeFlow.Seller.Companion$AWAITING_PROPOSAL : Step</ID>
+    <ID>ClassNaming:TwoPartyTradeFlow.kt$TwoPartyTradeFlow.Seller.Companion$VERIFYING_AND_SIGNING : Step</ID>
+    <ID>ComplexMethod:CashSelectionH2Impl.kt$CashSelectionH2Impl$// We are using an H2 specific means of selecting a minimum set of rows that match a request amount of coins: // 1) There is no standard SQL mechanism of calculating a cumulative total on a field and restricting row selection on the // running total of such an accumulator // 2) H2 uses session variables to perform this accumulator function: // http://www.h2database.com/html/functions.html#set // 3) H2 does not support JOIN's in FOR UPDATE (hence we are forced to execute 2 queries) override fun executeQuery(connection: Connection, amount: Amount&lt;Currency&gt;, lockId: UUID, notary: Party?, onlyFromIssuerParties: Set&lt;AbstractParty&gt;, withIssuerRefs: Set&lt;OpaqueBytes&gt;, withResultSet: (ResultSet) -&gt; Boolean): Boolean</ID>
+    <ID>ForbiddenComment:AbstractCashSelection.kt$AbstractCashSelection$// TODO: future implementation to retrieve contract states from a Vault BLOB store</ID>
+    <ID>ForbiddenComment:AbstractCashSelection.kt$AbstractCashSelection$// TODO: make parameters configurable when we get CorDapp configuration.</ID>
+    <ID>ForbiddenComment:AbstractCashSelection.kt$AbstractCashSelection$// TODO: revisit the back off strategy for contended spending.</ID>
+    <ID>ForbiddenComment:CashPaymentFlow.kt$CashPaymentFlow$// TODO: Have some way of restricting this to states the caller controls</ID>
+    <ID>ForbiddenComment:ObligationUtils.kt$ObligationUtils$// TODO: A much better (but more complex) solution would be to have two iterators, one for obligations,</ID>
+    <ID>ForbiddenComment:TwoPartyDealFlow.kt$TwoPartyDealFlow$// TODO: Also, the term Deal is used here where we might prefer Agreement.</ID>
+    <ID>ForbiddenComment:TwoPartyDealFlow.kt$TwoPartyDealFlow$// TODO: Make this flow more generic.</ID>
+    <ID>ForbiddenComment:TwoPartyDealFlow.kt$TwoPartyDealFlow$// TODO: The subclasses should probably be broken out into individual flows rather than making this an ever expanding collection of subclasses.</ID>
+    <ID>ForbiddenComment:TwoPartyTradeFlow.kt$TwoPartyTradeFlow$// TODO: Common elements in multi-party transaction consensus and signing should be refactored into a superclass of this</ID>
+    <ID>ForbiddenComment:TwoPartyTradeFlow.kt$TwoPartyTradeFlow.Buyer.RECORDING$// TODO: Currently triggers a race condition on Team City. See https://github.com/corda/corda/issues/733.</ID>
+    <ID>FunctionNaming:Currencies.kt$fun &lt;T : Any&gt; AMOUNT(amount: Double, token: T): Amount&lt;T&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun &lt;T : Any&gt; AMOUNT(amount: Int, token: T): Amount&lt;T&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun &lt;T : Any&gt; AMOUNT(amount: Long, token: T): Amount&lt;T&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun DOLLARS(amount: Double): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun DOLLARS(amount: Int): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun DOLLARS(amount: Long): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun POUNDS(amount: Double): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun POUNDS(amount: Int): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun POUNDS(amount: Long): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun SWISS_FRANCS(amount: Double): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun SWISS_FRANCS(amount: Int): Amount&lt;Currency&gt;</ID>
+    <ID>FunctionNaming:Currencies.kt$fun SWISS_FRANCS(amount: Long): Amount&lt;Currency&gt;</ID>
+    <ID>LongParameterList:AbstractCashSelection.kt$AbstractCashSelection$(connection: Connection, amount: Amount&lt;Currency&gt;, lockId: UUID, notary: Party?, onlyFromIssuerParties: Set&lt;AbstractParty&gt;, withIssuerRefs: Set&lt;OpaqueBytes&gt;, withResultSet: (ResultSet) -&gt; Boolean)</ID>
+    <ID>LongParameterList:AbstractCashSelection.kt$AbstractCashSelection$(services: ServiceHub, amount: Amount&lt;Currency&gt;, lockId: UUID, notary: Party?, onlyFromIssuerParties: Set&lt;AbstractParty&gt;, withIssuerRefs: Set&lt;OpaqueBytes&gt;, stateAndRefs: MutableList&lt;StateAndRef&lt;Cash.State&gt;&gt;)</ID>
+    <ID>LongParameterList:AbstractCashSelection.kt$AbstractCashSelection$(services: ServiceHub, amount: Amount&lt;Currency&gt;, onlyFromIssuerParties: Set&lt;AbstractParty&gt; = emptySet(), notary: Party? = null, lockId: UUID, withIssuerRefs: Set&lt;OpaqueBytes&gt; = emptySet())</ID>
+    <ID>LongParameterList:CashIssueAndPaymentFlow.kt$CashIssueAndPaymentFlow$(val amount: Amount&lt;Currency&gt;, val issueRef: OpaqueBytes, val recipient: Party, val anonymous: Boolean, val notary: Party, progressTracker: ProgressTracker)</ID>
+    <ID>LongParameterList:CashPaymentFlow.kt$CashPaymentFlow$( val amount: Amount&lt;Currency&gt;, val recipient: Party, val anonymous: Boolean, progressTracker: ProgressTracker, val issuerConstraint: Set&lt;Party&gt; = emptySet(), val notary: Party? = null )</ID>
+    <ID>LongParameterList:CashUtils.kt$CashUtils$(services: ServiceHub, tx: TransactionBuilder, amount: Amount&lt;Currency&gt;, ourIdentity: PartyAndCertificate, to: AbstractParty, onlyFromParties: Set&lt;AbstractParty&gt; = emptySet(), anonymous: Boolean = true)</ID>
+    <ID>LongParameterList:CashUtils.kt$CashUtils$(services: ServiceHub, tx: TransactionBuilder, payments: List&lt;PartyAndAmount&lt;Currency&gt;&gt;, ourIdentity: PartyAndCertificate, onlyFromParties: Set&lt;AbstractParty&gt; = emptySet(), anonymous: Boolean = true)</ID>
+    <ID>LongParameterList:ObligationUtils.kt$ObligationUtils$(tx: TransactionBuilder, obligor: AbstractParty, acceptableContract: SecureHash, amount: Amount&lt;Issued&lt;Currency&gt;&gt;, dueBefore: Instant, beneficiary: AbstractParty, notary: Party)</ID>
+    <ID>LongParameterList:ObligationUtils.kt$ObligationUtils$(tx: TransactionBuilder, obligor: AbstractParty, issuanceDef: Obligation.Terms&lt;P&gt;, pennies: Long, beneficiary: AbstractParty, notary: Party)</ID>
+    <ID>MagicNumber:AbstractCashSelection.kt$AbstractCashSelection$3</ID>
+    <ID>MagicNumber:AbstractCashSelection.kt$AbstractCashSelection$4</ID>
+    <ID>MagicNumber:AbstractCashSelection.kt$AbstractCashSelection$5</ID>
+    <ID>MagicNumber:CashSelectionPostgreSQLImpl.kt$CashSelectionPostgreSQLImpl$3</ID>
+    <ID>MagicNumber:TwoPartyDealFlow.kt$TwoPartyDealFlow.Acceptor$60</ID>
+    <ID>MagicNumber:TwoPartyTradeFlow.kt$TwoPartyTradeFlow.Buyer$30</ID>
+    <ID>NewLineAtEndOfFile:AbstractCashFlow.kt$net.corda.finance.flows.AbstractCashFlow.kt</ID>
+    <ID>NewLineAtEndOfFile:CashSelectionH2Impl.kt$net.corda.finance.workflows.asset.selection.CashSelectionH2Impl.kt</ID>
+    <ID>NewLineAtEndOfFile:CashSelectionSQLServerImpl.kt$net.corda.finance.workflows.asset.selection.CashSelectionSQLServerImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:ObligationUtils.kt$net.corda.finance.workflows.asset.ObligationUtils.kt</ID>
+    <ID>SpreadOperator:ObligationUtils.kt$ObligationUtils$(*inputs)</ID>
+    <ID>TooManyFunctions:Currencies.kt$net.corda.finance.Currencies.kt</ID>
+    <ID>UnnecessaryAbstractClass:AbstractCashFlow.kt$AbstractCashFlow$AbstractRequest</ID>
+    <ID>WildcardImport:AbstractCashFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:AbstractCashSelection.kt$import net.corda.core.utilities.*</ID>
+    <ID>WildcardImport:CashExitFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:CashPaymentFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:CashUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:CommercialPaperUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:ObligationUtils.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TwoPartyDealFlow.kt$import net.corda.core.flows.*</ID>
+    <ID>WildcardImport:TwoPartyTradeFlow.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TwoPartyTradeFlow.kt$import net.corda.core.flows.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

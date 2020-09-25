@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl$it != null &amp;&amp; (it is FlowLogic&lt;*&gt; || it is FlowStateMachine&lt;*&gt; || it is Fiber&lt;*&gt; || it is SerializeAsToken)</ID>
+    <ID>EmptyFunctionBlock:UniqueDummyFungibleContract.kt$UniqueDummyFungibleContract${}</ID>
+    <ID>EmptyFunctionBlock:UniqueDummyLinearContract.kt$UniqueDummyLinearContract${}</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _transaction(transactionLabel: String?, transactionBuilder: TransactionBuilder, dsl: T.() -&gt; EnforceVerifyOrFail): WireTransaction</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _tweak(dsl: LedgerDSLInterpreter&lt;T&gt;.() -&gt; Unit)</ID>
+    <ID>FunctionNaming:LedgerDSLInterpreter.kt$LedgerDSLInterpreter$ fun _unverifiedTransaction(transactionLabel: String?, transactionBuilder: TransactionBuilder, dsl: T.() -&gt; Unit): WireTransaction</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _attachment(contractClassName: ContractClassName, attachmentId: AttachmentId, signers: List&lt;PublicKey&gt;, jarManifestAttributes: Map&lt;String,String&gt;)</ID>
+    <ID>FunctionNaming:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$ fun _tweak(dsl: TransactionDSLInterpreter.() -&gt; EnforceVerifyOrFail): EnforceVerifyOrFail</ID>
+    <ID>LongParameterList:DummyLinearStateSchemaV1.kt$DummyLinearStateSchemaV1.PersistentDummyLinearState$( /** [ContractState] attributes */ /** X500Name of participant parties **/ @ElementCollection var participants: MutableSet&lt;AbstractParty&gt;, /** * UniqueIdentifier */ @Column(name = "external_id", nullable = true) var externalId: String?, @Column(name = "uuid", nullable = false) @Type(type = "uuid-char") var uuid: UUID, /** * Dummy attributes */ @Column(name = "linear_string", nullable = true) var linearString: String?, @Column(name = "linear_number", nullable = false) var linearNumber: Long, @Column(name = "linear_timestamp", nullable = false) var linearTimestamp: Instant, @Column(name = "linear_boolean", nullable = false) var linearBoolean: Boolean )</ID>
+    <ID>LongParameterList:DummyLinearStateSchemaV2.kt$DummyLinearStateSchemaV2.PersistentDummyLinearState$( @ElementCollection @Column(name = "participants") @CollectionTable(name = "dummy_linear_states_v2_parts", joinColumns = [(JoinColumn(name = "output_index", referencedColumnName = "output_index")), (JoinColumn(name = "transaction_id", referencedColumnName = "transaction_id"))]) override var participants: MutableSet&lt;AbstractParty&gt;? = null, @Column(name = "linear_string", nullable = true) var linearString: String?, @Column(name = "linear_number", nullable = false) var linearNumber: Long, @Column(name = "linear_timestamp", nullable = false) var linearTimestamp: java.time.Instant, @Column(name = "linear_boolean", nullable = false) var linearBoolean: Boolean, @Transient val uid: UniqueIdentifier )</ID>
+    <ID>LongParameterList:InternalTestUtils.kt$(inputs: List&lt;StateRef&gt;, attachments: List&lt;SecureHash&gt;, outputs: List&lt;TransactionState&lt;*&gt;&gt;, commands: List&lt;Command&lt;*&gt;&gt;, notary: Party?, timeWindow: TimeWindow?, privacySalt: PrivacySalt = PrivacySalt())</ID>
+    <ID>LongParameterList:SampleCashSchemaV2.kt$SampleCashSchemaV2.PersistentCashState$( /** product type */ @Column(name = "ccy_code", length = 3, nullable = false) var currency: String, participants: Set&lt;AbstractParty?&gt;, owner: AbstractParty, quantity: Long, issuerParty: AbstractParty, issuerRef: OpaqueBytes )</ID>
+    <ID>LongParameterList:SampleCashSchemaV3.kt$SampleCashSchemaV3.PersistentCashState$( /** [ContractState] attributes */ /** X500Name of participant parties **/ @ElementCollection var participants: MutableSet&lt;AbstractParty?&gt;? = null, /** X500Name of owner party **/ @Column(name = "owner_name", nullable = true) var owner: AbstractParty?, @Column(name = "pennies", nullable = false) var pennies: Long, @Column(name = "ccy_code", length = 3, nullable = false) var currency: String, /** X500Name of issuer party **/ @Column(name = "issuer_name", nullable = true) var issuer: AbstractParty?, @Column(name = "issuer_ref", length = MAX_ISSUER_REF_SIZE, nullable = false) @Type(type = "corda-wrapper-binary") var issuerRef: ByteArray )</ID>
+    <ID>LongParameterList:TransactionDSLInterpreter.kt$TransactionDSLInterpreter$(contractClassName: ContractClassName, label: String?, notary: Party, encumbrance: Int?, attachmentConstraint: AttachmentConstraint, contractState: ContractState)</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$14</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$16</ID>
+    <ID>MagicNumber:FlowStackSnapshot.kt$64</ID>
+    <ID>MagicNumber:HttpUtils.kt$HttpUtils$5</ID>
+    <ID>MagicNumber:HttpUtils.kt$HttpUtils$60</ID>
+    <ID>MagicNumber:InternalTestUtils.kt$70</ID>
+    <ID>MagicNumber:TransactionDSLInterpreter.kt$TransactionDSL$30</ID>
+    <ID>MatchingDeclarationName:FlowStackSnapshot.kt$FlowStackSnapshotFactoryImpl : FlowStackSnapshotFactory</ID>
+    <ID>NewLineAtEndOfFile:DummyLinearContract.kt$net.corda.testing.internal.vault.DummyLinearContract.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalMockAttachmentStorage.kt$net.corda.testing.internal.services.InternalMockAttachmentStorage.kt</ID>
+    <ID>NewLineAtEndOfFile:InternalTestUtils.kt$net.corda.testing.internal.InternalTestUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:MockAttachmentStorage.kt$net.corda.testing.services.MockAttachmentStorage.kt</ID>
+    <ID>NewLineAtEndOfFile:MockCordappConfigProvider.kt$net.corda.testing.internal.MockCordappConfigProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:TestingNamedCacheFactory.kt$net.corda.testing.internal.TestingNamedCacheFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:UniqueDummyFungibleContract.kt$net.corda.testing.internal.vault.UniqueDummyFungibleContract.kt</ID>
+    <ID>NewLineAtEndOfFile:UniqueDummyLinearContract.kt$net.corda.testing.internal.vault.UniqueDummyLinearContract.kt</ID>
+    <ID>SpreadOperator:LogHelper.kt$LogHelper$(*classes.map { "+" + it.packageName }.toTypedArray())</ID>
+    <ID>SpreadOperator:LogHelper.kt$LogHelper$(*classes.map { it.packageName }.toTypedArray())</ID>
+    <ID>ThrowsCount:LedgerDSLInterpreter.kt$Verifies$ fun failsWith(expectedMessage: String?): EnforceVerifyOrFail</ID>
+    <ID>TooGenericExceptionCaught:LedgerDSLInterpreter.kt$Verifies$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:MockAttachmentStorage.kt$MockAttachmentStorage$e: Exception</ID>
+    <ID>TooManyFunctions:InternalTestUtils.kt$net.corda.testing.internal.InternalTestUtils.kt</ID>
+    <ID>TooManyFunctions:TestDSL.kt$TestLedgerDSLInterpreter : LedgerDSLInterpreter</ID>
+    <ID>TooManyFunctions:TransactionDSLInterpreter.kt$TransactionDSL&lt;out T : TransactionDSLInterpreter&gt; : TransactionDSLInterpreter</ID>
+    <ID>UnusedImports:DummyLinearStateSchemaV1.kt$import net.corda.core.contracts.ContractState</ID>
+    <ID>WildcardImport:DummyDealStateSchemaV1.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DummyLinearStateSchemaV1.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:DummyLinearStateSchemaV2.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:MockAttachmentStorage.kt$import net.corda.core.node.services.vault.*</ID>
+    <ID>WildcardImport:SampleCashSchemaV2.kt$import javax.persistence.*</ID>
+    <ID>WildcardImport:TestDSL.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:TestDSL.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:TransactionDSLInterpreter.kt$import net.corda.core.contracts.*</ID>
+    <ID>WildcardImport:UniqueDummyFungibleContract.kt$import net.corda.core.contracts.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

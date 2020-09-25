@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ClassNaming:NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS.kt$NOT_YET_REGISTERED_MARKER_KEYS_AND_CERTS</ID>
+    <ID>ComplexCondition:ConfigUtilities.kt$value is Temporal || value is NetworkHostAndPort || value is CordaX500Name || value is Path || value is URL || value is UUID || value is X500Principal</ID>
+    <ID>ComplexCondition:CordaClassResolver.kt$CordaClassResolver$type.isPrimitive || type == Any::class.java || type == String::class.java || (!type.isEnum &amp;&amp; isAbstract(type.modifiers))</ID>
+    <ID>ComplexMethod:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$private fun clientArtemisMessageHandler(artemisMessage: ClientMessage)</ID>
+    <ID>ComplexMethod:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>ComplexMethod:BridgeControlListener.kt$BridgeControlListener$private fun processControlMessage(msg: ClientMessage)</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$// For Iterables figure out the type parameter and apply the same logic as above on the individual elements. private fun Iterable&lt;*&gt;.toConfigIterable(field: Field): Iterable&lt;Any?&gt;</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$@Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN") // Reflect over the fields of the receiver and generate a value Map that can use to create Config object. private fun Any.toConfigMap(): Map&lt;String, Any&gt;</ID>
+    <ID>ComplexMethod:ConfigUtilities.kt$private fun convertValue(value: Any): Any</ID>
+    <ID>ComplexMethod:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onConnectionFinal(event: Event)</ID>
+    <ID>ComplexMethod:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onDelivery(event: Event)</ID>
+    <ID>ComplexMethod:CordaClassResolver.kt$CordaClassResolver$private fun checkClass(type: Class&lt;*&gt;): Registration?</ID>
+    <ID>ComplexMethod:Kryo.kt$ImmutableClassSerializer$override fun read(kryo: Kryo, input: Input, type: Class&lt;T&gt;): T</ID>
+    <ID>ComplexMethod:Kryo.kt$ImmutableClassSerializer$override fun write(kryo: Kryo, output: Output, obj: T)</ID>
+    <ID>ComplexMethod:NetworkBootstrapper.kt$NetworkBootstrapper$private fun createNodeDirectoriesIfNeeded(directory: Path, fromCordform: Boolean): Boolean</ID>
+    <ID>ConstructorParameterNaming:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPConfigurationImpl$private val _sslHandshakeTimeout: Long?</ID>
+    <ID>EmptyFunctionBlock:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration${ }</ID>
+    <ID>EmptyFunctionBlock:CordaPersistence.kt$NoOpSubscriber${}</ID>
+    <ID>ForbiddenComment:ArtemisMessagingComponent.kt$ArtemisMessagingComponent.Companion$// TODO: we might want to make this value configurable.</ID>
+    <ID>ForbiddenComment:CordaClassResolver.kt$CordaClassResolver$// TODO: Later we can support annotations on attachment classes and spin up a proxy via bytecode that we know is harmless.</ID>
+    <ID>ForbiddenComment:CordaClassResolver.kt$CordaClassResolver$// TODO: come up with a more efficient way. e.g. segregate the name space by class loader.</ID>
+    <ID>ForbiddenComment:KeyStoreConfigHelpers.kt$// TODO: X509Utilities.validateCertificateChain()</ID>
+    <ID>ForbiddenComment:Kryo.kt$PublicKeySerializer$// TODO: Instead of encoding to the default X509 format, we could have a custom per key type (space-efficient) serialiser.</ID>
+    <ID>ForbiddenComment:LoopbackBridgeManager.kt$LoopbackBridgeManager.LoopbackBridge$// TODO: refactor MDC support, duplicated in AMQPBridgeManager.</ID>
+    <ID>ForbiddenComment:NetworkBootstrapper.kt$NetworkBootstrapper$// TODO: pass a commandline parameter to the bootstrapper instead. Better yet, a notary config map</ID>
+    <ID>ForbiddenComment:X509Utilities.kt$CertificateType.LEGAL_IDENTITY$// TODO: Identity certs should have tight name constraints on child certificates</ID>
+    <ID>LongParameterList:AMQPBridgeManager.kt$AMQPBridgeManager$(keyStore: CertificateStore, trustStore: CertificateStore, useOpenSSL: Boolean, proxyConfig: ProxyConfig? = null, maxMessageSize: Int, revocationConfig: RevocationConfig, enableSNI: Boolean, private val artemisMessageClientFactory: () -&gt; ArtemisSessionProvider, private val bridgeMetricsService: BridgeMetricsService? = null, trace: Boolean, sslHandshakeTimeout: Long?, private val bridgeConnectionTTLSeconds: Int)</ID>
+    <ID>LongParameterList:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPBridge$(val sourceX500Name: String, val queueName: String, val targets: List&lt;NetworkHostAndPort&gt;, val legalNames: Set&lt;CordaX500Name&gt;, private val amqpConfig: AMQPConfiguration, sharedEventGroup: EventLoopGroup, private val artemis: ArtemisSessionProvider, private val bridgeMetricsService: BridgeMetricsService?, private val bridgeConnectionTTLSeconds: Int)</ID>
+    <ID>LongParameterList:AMQPBridgeManager.kt$AMQPBridgeManager.AMQPConfigurationImpl$(override val keyStore: CertificateStore, override val trustStore: CertificateStore, override val proxyConfig: ProxyConfig?, override val maxMessageSize: Int, override val revocationConfig: RevocationConfig, override val useOpenSsl: Boolean, override val enableSNI: Boolean, override val sourceX500Name: String? = null, override val trace: Boolean, private val _sslHandshakeTimeout: Long?)</ID>
+    <ID>LongParameterList:AMQPChannelHandler.kt$AMQPChannelHandler$(private val serverMode: Boolean, private val allowedRemoteLegalNames: Set&lt;CordaX500Name&gt;?, private val keyManagerFactoriesMap: Map&lt;String, CertHoldingKeyManagerFactoryWrapper&gt;, private val userName: String?, private val password: String?, private val trace: Boolean, private val suppressLogs: Boolean, private val onOpen: (SocketChannel, ConnectionChange) -&gt; Unit, private val onClose: (SocketChannel, ConnectionChange) -&gt; Unit, private val onReceive: (ReceivedMessage) -&gt; Unit)</ID>
+    <ID>LongParameterList:ArtemisMessagingClient.kt$ArtemisMessagingClient$(private val config: MutualSslConfiguration, private val serverAddress: NetworkHostAndPort, private val maxMessageSize: Int, private val autoCommitSends: Boolean = true, private val autoCommitAcks: Boolean = true, private val confirmationWindowSize: Int = -1, private val messagingServerConnectionConfig: MessagingServerConnectionConfiguration? = null, private val backupServerAddressPool: List&lt;NetworkHostAndPort&gt; = emptyList(), private val failoverCallback: ((FailoverEventType) -&gt; Unit)? = null )</ID>
+    <ID>LongParameterList:BridgeControlListener.kt$BridgeControlListener$(config: MutualSslConfiguration, p2pAddress: NetworkHostAndPort, maxMessageSize: Int, revocationConfig: RevocationConfig, enableSNI: Boolean, proxy: ProxyConfig? = null)</ID>
+    <ID>LongParameterList:BridgeControlListener.kt$BridgeControlListener$(private val keyStore: CertificateStore, trustStore: CertificateStore, useOpenSSL: Boolean, proxyConfig: ProxyConfig? = null, maxMessageSize: Int, revocationConfig: RevocationConfig, enableSNI: Boolean, private val artemisMessageClientFactory: () -&gt; ArtemisSessionProvider, bridgeMetricsService: BridgeMetricsService? = null, trace: Boolean = false, sslHandshakeTimeout: Long? = null, bridgeConnectionTTLSeconds: Int = 0)</ID>
+    <ID>LongParameterList:ConnectionStateMachine.kt$ConnectionStateMachine$(private val serverMode: Boolean, collector: Collector, private val localLegalName: String, private val remoteLegalName: String, userName: String?, password: String?)</ID>
+    <ID>LongParameterList:CordaPersistence.kt$CordaPersistence$( exportHibernateJMXStatistics: Boolean, schemas: Set&lt;MappedSchema&gt;, val jdbcUrl: String, cacheFactory: NamedCacheFactory, attributeConverters: Collection&lt;AttributeConverter&lt;*, *&gt;&gt; = emptySet(), customClassLoader: ClassLoader? = null, val closeConnection: Boolean = true, val errorHandler: DatabaseTransaction.(e: Exception) -&gt; Unit = {}, allowHibernateToManageAppSchema: Boolean = false )</ID>
+    <ID>LongParameterList:EventProcessor.kt$EventProcessor$(private val channel: Channel, private val serverMode: Boolean, private val localLegalName: String, private val remoteLegalName: String, userName: String?, password: String?)</ID>
+    <ID>LongParameterList:HibernateConfiguration.kt$HibernateConfiguration$( schemas: Set&lt;MappedSchema&gt;, private val exportHibernateJMXStatistics: Boolean, private val attributeConverters: Collection&lt;AttributeConverter&lt;*, *&gt;&gt;, jdbcUrl: String, cacheFactory: NamedCacheFactory, val customClassLoader: ClassLoader? = null, val allowHibernateToManageAppSchema: Boolean = false )</ID>
+    <ID>LongParameterList:LoopbackBridgeManager.kt$LoopbackBridgeManager$(keyStore: CertificateStore, trustStore: CertificateStore, useOpenSSL: Boolean, proxyConfig: ProxyConfig? = null, maxMessageSize: Int, revocationConfig: RevocationConfig, enableSNI: Boolean, private val artemisMessageClientFactory: () -&gt; ArtemisSessionProvider, private val bridgeMetricsService: BridgeMetricsService? = null, private val isLocalInbox: (String) -&gt; Boolean, trace: Boolean, sslHandshakeTimeout: Long? = null, bridgeConnectionTTLSeconds: Int = 0)</ID>
+    <ID>LongParameterList:LoopbackBridgeManager.kt$LoopbackBridgeManager.LoopbackBridge$(val sourceX500Name: String, val queueName: String, val targets: List&lt;NetworkHostAndPort&gt;, val legalNames: Set&lt;CordaX500Name&gt;, artemis: ArtemisSessionProvider, private val bridgeMetricsService: BridgeMetricsService?)</ID>
+    <ID>LongParameterList:ReceivedMessageImpl.kt$ReceivedMessageImpl$(override var payload: ByteArray, override val topic: String, override val sourceLegalName: String, override val sourceLink: NetworkHostAndPort, override val destinationLegalName: String, override val destinationLink: NetworkHostAndPort, override val applicationProperties: Map&lt;String, Any?&gt;, private val channel: Channel, private val delivery: Delivery)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerKeyPair: KeyPair, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerPublicKey: PublicKey, issuerSigner: ContentSigner, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuer: X500Principal, issuerPublicKey: PublicKey, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Date, Date&gt;, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LongParameterList:X509Utilities.kt$X509Utilities$(certificateType: CertificateType, issuerCertificate: X509Certificate, issuerKeyPair: KeyPair, subject: X500Principal, subjectPublicKey: PublicKey, validityWindow: Pair&lt;Duration, Duration&gt; = DEFAULT_VALIDITY_WINDOW, nameConstraints: NameConstraints? = null, crlDistPoint: String? = null, crlIssuer: X500Name? = null)</ID>
+    <ID>LoopWithTooManyJumpStatements:ConfigUtilities.kt$for (field in javaClass.declaredFields) { if (field.isStatic || field.isSynthetic) continue field.isAccessible = true val value = field.get(this) ?: continue val configValue = if (value is String || value is Boolean || value is Number) { // These types are supported by Config as use as is value } else if (value is Temporal || value is NetworkHostAndPort || value is CordaX500Name || value is Path || value is URL || value is UUID || value is X500Principal) { // These types make sense to be represented as Strings and the exact inverse parsing function for use in parseAs value.toString() } else if (value is Enum&lt;*&gt;) { // Expicitly use the Enum's name in case the toString is overridden, which would make parsing problematic. value.name } else if (value is Properties) { // For Properties we treat keys with . as nested configs ConfigFactory.parseMap(uncheckedCast(value)).root() } else if (value is Iterable&lt;*&gt;) { value.toConfigIterable(field) } else { // Else this is a custom object recursed over value.toConfigMap() } values[field.name] = configValue }</ID>
+    <ID>MagicNumber:AMQPClientSerializationScheme.kt$AMQPClientSerializationScheme.Companion$128</ID>
+    <ID>MagicNumber:AMQPServer.kt$AMQPServer$100</ID>
+    <ID>MagicNumber:AMQPServerSerializationScheme.kt$AMQPServerSerializationScheme$128</ID>
+    <ID>MagicNumber:ArtemisMessagingClient.kt$ArtemisMessagingClient$30000</ID>
+    <ID>MagicNumber:ArtemisMessagingClient.kt$ArtemisMessagingClient$60000</ID>
+    <ID>MagicNumber:ConnectionStateMachine.kt$ConnectionStateMachine$1500</ID>
+    <ID>MagicNumber:ConnectionStateMachine.kt$ConnectionStateMachine$4</ID>
+    <ID>MagicNumber:CordaPersistence.kt$DatabaseConfig.Defaults$100L</ID>
+    <ID>MagicNumber:DefaultKryoCustomizer.kt$DefaultKryoCustomizer.ContractAttachmentSerializer$32</ID>
+    <ID>MagicNumber:Kryo.kt$InputStreamSerializer$4096</ID>
+    <ID>MagicNumber:KryoStreams.kt$1024</ID>
+    <ID>MagicNumber:KryoStreams.kt$64</ID>
+    <ID>MagicNumber:MessageSizeChecksInterceptor.kt$ArtemisMessageSizeChecksInterceptor$4</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper$3</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper$30</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper.Companion$3</ID>
+    <ID>MagicNumber:NetworkBootstrapper.kt$NetworkBootstrapper.Companion$40</ID>
+    <ID>MagicNumber:NetworkMap.kt$NetworkMap$10</ID>
+    <ID>MagicNumber:SSLHelper.kt$32</ID>
+    <ID>MagicNumber:X509Utilities.kt$X509Utilities$3650</ID>
+    <ID>MayBeConst:ArtemisTcpTransport.kt$ArtemisTcpTransport.Companion$internal val acceptorFactoryClassName = "org.apache.activemq.artemis.core.remoting.impl.netty.NettyAcceptorFactory"</ID>
+    <ID>MayBeConst:CordaPersistence.kt$DatabaseConfig.Defaults$val exportHibernateJMXStatistics = false</ID>
+    <ID>MayBeConst:CordaPersistence.kt$DatabaseConfig.Defaults$val mappedSchemaCacheSize = 100L</ID>
+    <ID>NestedBlockDepth:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>NestedBlockDepth:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onConnectionFinal(event: Event)</ID>
+    <ID>NestedBlockDepth:ConnectionStateMachine.kt$ConnectionStateMachine$override fun onDelivery(event: Event)</ID>
+    <ID>NestedBlockDepth:CordaPersistence.kt$CordaPersistence$private fun &lt;T&gt; inTopLevelTransaction(isolationLevel: TransactionIsolationLevel, recoverableFailureTolerance: Int, recoverAnyNestedSQLException: Boolean, statement: DatabaseTransaction.() -&gt; T): T</ID>
+    <ID>NestedBlockDepth:NetworkBootstrapper.kt$CopyCordapps$protected fun List&lt;Path&gt;.copy(nodeDirs: List&lt;Path&gt;)</ID>
+    <ID>NewLineAtEndOfFile:AMQPBridgeManager.kt$net.corda.nodeapi.internal.bridging.AMQPBridgeManager.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPChannelHandler.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPChannelHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPClient.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPClient.kt</ID>
+    <ID>NewLineAtEndOfFile:AMQPServer.kt$net.corda.nodeapi.internal.protonwrapper.netty.AMQPServer.kt</ID>
+    <ID>NewLineAtEndOfFile:AliasProvidingKeyMangerWrapper.kt$net.corda.nodeapi.internal.protonwrapper.netty.AliasProvidingKeyMangerWrapper.kt</ID>
+    <ID>NewLineAtEndOfFile:AllowAllRevocationChecker.kt$net.corda.nodeapi.internal.protonwrapper.netty.AllowAllRevocationChecker.kt</ID>
+    <ID>NewLineAtEndOfFile:ApplicationMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.ApplicationMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:ArtemisConstants.kt$net.corda.nodeapi.internal.ArtemisConstants.kt</ID>
+    <ID>NewLineAtEndOfFile:ArtemisTcpTransport.kt$net.corda.nodeapi.internal.ArtemisTcpTransport.kt</ID>
+    <ID>NewLineAtEndOfFile:AttachmentVersionNumberMigration.kt$net.corda.nodeapi.internal.persistence.AttachmentVersionNumberMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:BaseSessionFactoryFactory.kt$net.corda.nodeapi.internal.persistence.factory.BaseSessionFactoryFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeControlListener.kt$net.corda.nodeapi.internal.bridging.BridgeControlListener.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeControlMessages.kt$net.corda.nodeapi.internal.bridging.BridgeControlMessages.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeManager.kt$net.corda.nodeapi.internal.bridging.BridgeManager.kt</ID>
+    <ID>NewLineAtEndOfFile:BridgeMetricsService.kt$net.corda.nodeapi.internal.bridging.BridgeMetricsService.kt</ID>
+    <ID>NewLineAtEndOfFile:BrokerRpcSslOptions.kt$net.corda.nodeapi.BrokerRpcSslOptions.kt</ID>
+    <ID>NewLineAtEndOfFile:CertHoldingKeyManagerFactoryWrapper.kt$net.corda.nodeapi.internal.protonwrapper.netty.CertHoldingKeyManagerFactoryWrapper.kt</ID>
+    <ID>NewLineAtEndOfFile:CertificateStore.kt$net.corda.nodeapi.internal.config.CertificateStore.kt</ID>
+    <ID>NewLineAtEndOfFile:ClientSessionUtils.kt$net.corda.nodeapi.internal.ClientSessionUtils.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionChange.kt$net.corda.nodeapi.internal.protonwrapper.netty.ConnectionChange.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionStateMachine.kt$net.corda.nodeapi.internal.protonwrapper.engine.ConnectionStateMachine.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaClosureSerializer.kt$net.corda.nodeapi.internal.serialization.kryo.CordaClosureSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaSessionFactoryFactory.kt$net.corda.nodeapi.internal.persistence.factory.CordaSessionFactoryFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:CordaTransactionSupportImpl.kt$net.corda.nodeapi.internal.persistence.CordaTransactionSupportImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:CordappLoader.kt$net.corda.nodeapi.internal.cordapp.CordappLoader.kt</ID>
+    <ID>NewLineAtEndOfFile:CryptoService.kt$net.corda.nodeapi.internal.cryptoservice.CryptoService.kt</ID>
+    <ID>NewLineAtEndOfFile:DatabaseTransaction.kt$net.corda.nodeapi.internal.persistence.DatabaseTransaction.kt</ID>
+    <ID>NewLineAtEndOfFile:DefaultKryoCustomizer.kt$net.corda.nodeapi.internal.serialization.kryo.DefaultKryoCustomizer.kt</ID>
+    <ID>NewLineAtEndOfFile:EventProcessor.kt$net.corda.nodeapi.internal.protonwrapper.engine.EventProcessor.kt</ID>
+    <ID>NewLineAtEndOfFile:ExternalCrlSource.kt$net.corda.nodeapi.internal.protonwrapper.netty.ExternalCrlSource.kt</ID>
+    <ID>NewLineAtEndOfFile:ExternalSourceRevocationChecker.kt$net.corda.nodeapi.internal.protonwrapper.netty.revocation.ExternalSourceRevocationChecker.kt</ID>
+    <ID>NewLineAtEndOfFile:H2SessionFactoryFactory.kt$net.corda.nodeapi.internal.persistence.factory.H2SessionFactoryFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:HibernateStatistics.kt$net.corda.nodeapi.internal.persistence.HibernateStatistics.kt</ID>
+    <ID>NewLineAtEndOfFile:JVMAgentUtilities.kt$net.corda.nodeapi.internal.JVMAgentUtilities.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyOwningIdentity.kt$net.corda.nodeapi.internal.KeyOwningIdentity.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyStoreConfigHelpers.kt$net.corda.nodeapi.internal.KeyStoreConfigHelpers.kt</ID>
+    <ID>NewLineAtEndOfFile:LifecycleStatusHelper.kt$net.corda.nodeapi.internal.lifecycle.LifecycleStatusHelper.kt</ID>
+    <ID>NewLineAtEndOfFile:LiquibaseDatabaseFactory.kt$net.corda.nodeapi.internal.persistence.LiquibaseDatabaseFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:LiquibaseDatabaseFactoryImpl.kt$net.corda.nodeapi.internal.persistence.LiquibaseDatabaseFactoryImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:MessageStatus.kt$net.corda.nodeapi.internal.protonwrapper.messages.MessageStatus.kt</ID>
+    <ID>NewLineAtEndOfFile:ModeSelectingChannel.kt$net.corda.nodeapi.internal.protonwrapper.netty.ModeSelectingChannel.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyServerEventLogger.kt$net.corda.nodeapi.internal.protonwrapper.netty.NettyServerEventLogger.kt</ID>
+    <ID>NewLineAtEndOfFile:NettyWritable.kt$net.corda.nodeapi.internal.protonwrapper.engine.NettyWritable.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkBootstrapper.kt$net.corda.nodeapi.internal.network.NetworkBootstrapper.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkMap.kt$net.corda.nodeapi.internal.network.NetworkMap.kt</ID>
+    <ID>NewLineAtEndOfFile:NetworkParameterOverridesSpec.kt$net.corda.nodeapi.internal.network.NetworkParameterOverridesSpec.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeInitialContext.kt$net.corda.nodeapi.internal.lifecycle.NodeInitialContext.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeLifecycleEventsDistributor.kt$net.corda.nodeapi.internal.lifecycle.NodeLifecycleEventsDistributor.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeLifecycleObserver.kt$net.corda.nodeapi.internal.lifecycle.NodeLifecycleObserver.kt</ID>
+    <ID>NewLineAtEndOfFile:NodeServicesContext.kt$net.corda.nodeapi.internal.lifecycle.NodeServicesContext.kt</ID>
+    <ID>NewLineAtEndOfFile:ObservableContextInterface.kt$net.corda.nodeapi.internal.rpc.ObservableContextInterface.kt</ID>
+    <ID>NewLineAtEndOfFile:PostgresSessionFactoryFactory.kt$net.corda.nodeapi.internal.persistence.factory.PostgresSessionFactoryFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:PublicKeyToOwningIdentityCache.kt$net.corda.nodeapi.internal.PublicKeyToOwningIdentityCache.kt</ID>
+    <ID>NewLineAtEndOfFile:RPCApi.kt$net.corda.nodeapi.RPCApi.kt</ID>
+    <ID>NewLineAtEndOfFile:ReceivedMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.ReceivedMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:ReceivedMessageImpl.kt$net.corda.nodeapi.internal.protonwrapper.messages.impl.ReceivedMessageImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:RestrictedConnection.kt$net.corda.nodeapi.internal.persistence.RestrictedConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:RestrictedEntityManager.kt$net.corda.nodeapi.internal.persistence.RestrictedEntityManager.kt</ID>
+    <ID>NewLineAtEndOfFile:RevocationConfig.kt$net.corda.nodeapi.internal.protonwrapper.netty.RevocationConfig.kt</ID>
+    <ID>NewLineAtEndOfFile:RoundRobinConnectionPolicy.kt$net.corda.nodeapi.internal.RoundRobinConnectionPolicy.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcClientCordaFutureSerializer.kt$net.corda.nodeapi.internal.rpc.client.RpcClientCordaFutureSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcClientObservableDeSerializer.kt$net.corda.nodeapi.internal.rpc.client.RpcClientObservableDeSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcExceptions.kt$net.corda.nodeapi.exceptions.RpcExceptions.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcHelpers.kt$net.corda.nodeapi.internal.RpcHelpers.kt</ID>
+    <ID>NewLineAtEndOfFile:RpcServerObservableSerializer.kt$net.corda.nodeapi.internal.serialization.amqp.RpcServerObservableSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:SchemaMigration.kt$net.corda.nodeapi.internal.persistence.SchemaMigration.kt</ID>
+    <ID>NewLineAtEndOfFile:SendableMessage.kt$net.corda.nodeapi.internal.protonwrapper.messages.SendableMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:SendableMessageImpl.kt$net.corda.nodeapi.internal.protonwrapper.messages.impl.SendableMessageImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:SerializeAsTokenSerializer.kt$net.corda.nodeapi.internal.serialization.kryo.SerializeAsTokenSerializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ServiceLifecycleSupport.kt$net.corda.nodeapi.internal.lifecycle.ServiceLifecycleSupport.kt</ID>
+    <ID>NewLineAtEndOfFile:ServiceStateHelper.kt$net.corda.nodeapi.internal.lifecycle.ServiceStateHelper.kt</ID>
+    <ID>NewLineAtEndOfFile:SessionState.kt$net.corda.nodeapi.internal.protonwrapper.engine.SessionState.kt</ID>
+    <ID>NewLineAtEndOfFile:TrustManagerFactoryWrapper.kt$net.corda.nodeapi.internal.protonwrapper.netty.TrustManagerFactoryWrapper.kt</ID>
+    <ID>ReturnCount:AMQPChannelHandler.kt$AMQPChannelHandler$private fun handleSuccessfulHandshake(ctx: ChannelHandlerContext)</ID>
+    <ID>ReturnCount:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$override fun execute(database: Database?)</ID>
+    <ID>ReturnCount:BridgeControlListener.kt$BridgeControlListener$private fun processControlMessage(msg: ClientMessage)</ID>
+    <ID>ReturnCount:CordaClassResolver.kt$CordaClassResolver$private fun checkClass(type: Class&lt;*&gt;): Registration?</ID>
+    <ID>ReturnCount:IteratorSerializer.kt$IteratorSerializer$private fun fixIterator(iterator: Iterator&lt;*&gt;) : Iterator&lt;*&gt;</ID>
+    <ID>ReturnCount:SNIKeyManager.kt$SNIKeyManager$private fun chooseServerAlias(keyType: String?, issuers: Array&lt;out Principal&gt;?, matcher: SNIMatcher?): String?</ID>
+    <ID>ReturnCount:SSLHelper.kt$fun X509Certificate.distributionPoints() : Set&lt;String&gt;?</ID>
+    <ID>SpreadOperator:CertificateStore.kt$CertificateStore$(*options)</ID>
+    <ID>SpreadOperator:Kryo.kt$ImmutableClassSerializer$(*args)</ID>
+    <ID>SpreadOperator:NetworkParametersCopier.kt$NetworkParametersCopier$(nodeDir / fileName, *copyOptions)</ID>
+    <ID>SpreadOperator:X509Utilities.kt$X509Utilities$(*certificates)</ID>
+    <ID>ThrowsCount:NodeInfoFilesCopier.kt$NodeInfoFilesCopier$private fun atomicCopy(source: Path, destination: Path)</ID>
+    <ID>ThrowsCount:RPCApi.kt$RPCApi.ServerToClient.Companion$fun fromClientMessage(context: SerializationContext, message: ClientMessage): ServerToClient</ID>
+    <ID>ThrowsCount:SignedNodeInfo.kt$SignedNodeInfo$// TODO Add root cert param (or TrustAnchor) to make sure all the identities belong to the same root fun verified(): NodeInfo</ID>
+    <ID>TooGenericExceptionCaught:AMQPChannelHandler.kt$AMQPChannelHandler$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:AttachmentVersionNumberMigration.kt$AttachmentVersionNumberMigration$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BCCryptoService.kt$BCCryptoService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConfigUtilities.kt$e:Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionStateMachine.kt$ConnectionStateMachine$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:CordaClassResolver.kt$LoggingWhitelist.Companion$ioEx: Exception</ID>
+    <ID>TooGenericExceptionCaught:CordaPersistence.kt$CordaPersistence$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EventProcessor.kt$EventProcessor$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:HibernateConfiguration.kt$HibernateConfiguration$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Kryo.kt$ImmutableClassSerializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkBootstrapper.kt$NetworkBootstrapper$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkParameterOverridesSpec.kt$NetworkParameterOverridesSpec.PackageOwnershipSpec$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RPCApi.kt$RPCApi.ServerToClient.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SSLHelper.kt$ex: Exception</ID>
+    <ID>TooManyFunctions:ArtemisTcpTransport.kt$ArtemisTcpTransport$Companion</ID>
+    <ID>TooManyFunctions:BCCryptoService.kt$BCCryptoService : CryptoService</ID>
+    <ID>TooManyFunctions:ConfigUtilities.kt$net.corda.nodeapi.internal.config.ConfigUtilities.kt</ID>
+    <ID>TooManyFunctions:ConnectionStateMachine.kt$ConnectionStateMachine : BaseHandler</ID>
+    <ID>TooManyFunctions:HibernateStatistics.kt$DelegatingStatisticsService : StatisticsService</ID>
+    <ID>TooManyFunctions:NetworkBootstrapper.kt$NetworkBootstrapper : NetworkBootstrapperWithOverridableParameters</ID>
+    <ID>TooManyFunctions:RPCApi.kt$net.corda.nodeapi.RPCApi.kt</ID>
+    <ID>TooManyFunctions:SSLHelper.kt$net.corda.nodeapi.internal.protonwrapper.netty.SSLHelper.kt</ID>
+    <ID>TooManyFunctions:X509Utilities.kt$X509Utilities$X509Utilities</ID>
+    <ID>TopLevelPropertyNaming:CordaPersistence.kt$internal val _prohibitDatabaseAccess = ThreadLocal.withInitial { false }</ID>
+    <ID>UnusedImports:NetworkMap.kt$import net.corda.core.node.NodeInfo</ID>
+    <ID>UtilityClassWithPublicConstructor:ArtemisTcpTransport.kt$ArtemisTcpTransport</ID>
+    <ID>UtilityClassWithPublicConstructor:JVMAgentUtilities.kt$JVMAgentUtilities</ID>
+    <ID>WildcardImport:AMQPClient.kt$import io.netty.channel.*</ID>
+    <ID>WildcardImport:AMQPServerSerializationScheme.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:ArtemisMessagingClient.kt$import org.apache.activemq.artemis.api.core.client.*</ID>
+    <ID>WildcardImport:BCCryptoService.kt$import java.security.*</ID>
+    <ID>WildcardImport:BCCryptoService.kt$import net.corda.nodeapi.internal.cryptoservice.*</ID>
+    <ID>WildcardImport:ConfigUtilities.kt$import com.typesafe.config.*</ID>
+    <ID>WildcardImport:ConnectionStateMachine.kt$import org.apache.qpid.proton.amqp.messaging.*</ID>
+    <ID>WildcardImport:ConnectionStateMachine.kt$import org.apache.qpid.proton.engine.*</ID>
+    <ID>WildcardImport:ContractsScanning.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:CordaClassResolver.kt$import com.esotericsoftware.kryo.*</ID>
+    <ID>WildcardImport:CordaClassResolver.kt$import java.nio.file.StandardOpenOption.*</ID>
+    <ID>WildcardImport:EventProcessor.kt$import org.apache.qpid.proton.engine.*</ID>
+    <ID>WildcardImport:HibernateStatistics.kt$import org.hibernate.stat.*</ID>
+    <ID>WildcardImport:KeyStoreUtilities.kt$import java.security.*</ID>
+    <ID>WildcardImport:KeyStoreUtilities.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:Kryo.kt$import com.esotericsoftware.kryo.*</ID>
+    <ID>WildcardImport:Kryo.kt$import net.corda.core.transactions.*</ID>
+    <ID>WildcardImport:NetworkBootstrapper.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:NetworkBootstrapper.kt$import net.corda.nodeapi.internal.*</ID>
+    <ID>WildcardImport:NodeInfoFilesCopier.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:RpcClientObservableDeSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:RpcServerObservableSerializer.kt$import net.corda.serialization.internal.amqp.*</ID>
+    <ID>WildcardImport:SSLHelper.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:SSLHelper.kt$import javax.net.ssl.*</ID>
+    <ID>WildcardImport:WhitelistGenerator.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import java.security.cert.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import net.corda.core.internal.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import org.bouncycastle.asn1.*</ID>
+    <ID>WildcardImport:X509Utilities.kt$import org.bouncycastle.asn1.x509.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
