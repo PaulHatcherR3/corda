@@ -6,8 +6,6 @@ dependencies {
     api("net.corda.djvm:corda-djvm:${properties["djvmVersion"]}")
     implementation("org.apache.qpid:proton-j:${properties["protonjVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${properties["junitJupiterVersion"]}")
     testImplementation("org.junit.jupiter:junit-jupiter-params:${properties["junitJupiterVersion"]}")

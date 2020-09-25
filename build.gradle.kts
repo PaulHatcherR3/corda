@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 val libGroupId = "net.corda"
 
 plugins {
@@ -68,6 +70,17 @@ subprojects {
 
     dependencies {
         implementation(kotlin("stdlib"))
+        implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
+
+        testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
+        testImplementation("org.mockito:mockito-core:${properties["mockitoVersion"]}")
+        testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
+        testImplementation("org.junit.jupiter:junit-jupiter:${properties["junitJupiterVersion"]}")
+        
+        testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
+        testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
     }
 
     val baseVersion = properties["cordaVersion"]
@@ -83,6 +96,15 @@ subprojects {
     }
     tasks.withType<JavaCompile>().forEach { compileJava ->
         compileJava.options.compilerArgs.add("-parameters")
+    }
+
+    // Added to support junit5 tests
+    tasks.withType<Test>{
+        useJUnitPlatform()
+        testLogging {
+            info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+        }
+
     }
 
     tasks.withType<Jar>().forEach { task ->

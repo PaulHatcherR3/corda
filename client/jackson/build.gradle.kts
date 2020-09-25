@@ -1,6 +1,4 @@
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:${properties["jacksonVersion"]}")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${properties["jacksonVersion"]}")
@@ -12,13 +10,11 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":serialization"))
 
-    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     testImplementation("org.assertj:assertj-core:${properties["assertjVersion"]}")
     testImplementation("junit:junit:${properties["junitVersion"]}")
-    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
 
     testImplementation("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:${properties["junitVintageVersion"]}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
 
     testImplementation(project(":finance:workflows"))
     testImplementation(project(":node-api"))

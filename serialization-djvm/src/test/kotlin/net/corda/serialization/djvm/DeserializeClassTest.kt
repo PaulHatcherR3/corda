@@ -7,6 +7,7 @@ import net.corda.djvm.messages.Severity
 import net.corda.serialization.djvm.SandboxType.KOTLIN
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
@@ -14,6 +15,8 @@ import org.junit.jupiter.api.fail
 import java.io.NotSerializableException
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
+@Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeClassTest : TestBase(KOTLIN) {
     @Test

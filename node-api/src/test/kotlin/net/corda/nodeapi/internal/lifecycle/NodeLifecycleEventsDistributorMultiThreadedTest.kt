@@ -5,6 +5,7 @@ import net.corda.core.internal.stream
 import net.corda.core.utilities.Try
 import net.corda.core.utilities.contextLogger
 import org.junit.Test
+import org.junit.Ignore
 import net.corda.nodeapi.internal.lifecycle.NodeLifecycleObserver.Companion.reportSuccess
 import java.util.concurrent.atomic.AtomicLong
 import kotlin.test.assertTrue
@@ -19,8 +20,9 @@ internal class NodeLifecycleEventsDistributorMultiThreadedTest {
 
     private val eventsDeliveredCounter = AtomicLong()
 
+    @Ignore("Removing this test as this is a not a unit test and is generating approx. 4Gb of logs")
     @Test(timeout=300_000)
-	fun addAndDistributeConcurrently() {
+    fun addAndDistributeConcurrently() {
 
         NodeLifecycleEventsDistributor().use { instance ->
 

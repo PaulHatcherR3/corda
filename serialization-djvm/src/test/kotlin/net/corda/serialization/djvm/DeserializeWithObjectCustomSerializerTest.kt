@@ -6,11 +6,14 @@ import net.corda.core.serialization.serialize
 import net.corda.serialization.djvm.SandboxType.KOTLIN
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 import org.junit.jupiter.api.fail
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
+@Disabled
 class DeserializeWithObjectCustomSerializerTest: TestBase(KOTLIN) {
     companion object {
         const val MESSAGE = "Hello Sandbox!"

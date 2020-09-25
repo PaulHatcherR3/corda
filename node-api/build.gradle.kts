@@ -29,9 +29,6 @@ dependencies {
 
 
     // COMMON
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.hibernate:hibernate-core:${properties["hibernateVersion"]}")
     implementation("io.reactivex:rxjava:${properties["rxjavaVersion"]}")
@@ -47,7 +44,6 @@ dependencies {
     implementation(project(":common:logging"))
     implementation(project(":common:validation"))
 
-    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
     testImplementation("org.assertj:assertj-core:${properties["assertjVersion"]}")
     testImplementation("junit:junit:${properties["junitVersion"]}")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${properties["junitJupiterVersion"]}")

@@ -22,11 +22,14 @@ import org.apache.qpid.proton.amqp.UnsignedInteger
 import org.apache.qpid.proton.amqp.UnsignedLong
 import org.apache.qpid.proton.amqp.UnsignedShort
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import java.util.Date
 import java.util.EnumSet
 import java.util.UUID
 
+// TODO: DJVM is not supported in JDK11
+@Disabled
 class LocalTypeModelTest : TestBase(KOTLIN) {
     private val serializerFactory: SerializerFactory get() {
         val factory = SerializationFactory.defaultFactory as SerializationFactoryImpl

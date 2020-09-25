@@ -5,9 +5,7 @@ dependencies {
     implementation("com.esotericsoftware:kryo:${properties["kryoVersion"]}")
     implementation("org.hibernate:hibernate-core:${properties["hibernateVersion"]}")
     implementation("io.dropwizard.metrics:metrics-jmx:${properties["metricsVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("javax.persistence:javax.persistence-api:${properties["persistenceApiVersion"]}")
     implementation("org.apache.logging.log4j:log4j-slf4j-impl:${properties["log4jVersion"]}")
     implementation("org.apache.logging.log4j:log4j-web:${properties["log4jVersion"]}")
@@ -62,9 +60,7 @@ dependencies {
     // Sandbox for deterministic contract verification
     implementation("net.corda.djvm:corda-djvm:${properties["djvmVersion"]}")
 
-    testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
     testImplementation("com.google.jimfs:jimfs:${properties["jimfsVersion"]}")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
     testImplementation("org.assertj:assertj-core:${properties["assertjVersion"]}")
     testImplementation("junit:junit:${properties["junitVersion"]}")
 

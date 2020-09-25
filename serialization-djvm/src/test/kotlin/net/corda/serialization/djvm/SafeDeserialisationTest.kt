@@ -8,12 +8,15 @@ import net.corda.serialization.internal.amqp.CompositeType
 import net.corda.serialization.internal.amqp.DeserializationInput
 import net.corda.serialization.internal.amqp.TypeNotation
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.fail
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
+@Disabled
 @ExtendWith(LocalSerialization::class)
 class SafeDeserialisationTest : TestBase(KOTLIN) {
     companion object {

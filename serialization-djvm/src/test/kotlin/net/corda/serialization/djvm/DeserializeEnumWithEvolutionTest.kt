@@ -24,6 +24,7 @@ import net.corda.serialization.internal.amqp.TransformTypes
 import net.corda.serialization.internal.amqp.TypeNotation
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.api.fail
@@ -35,6 +36,8 @@ import java.util.EnumMap
 import java.util.function.Function
 import java.util.stream.Stream
 
+// TODO: DJVM is not supported in JDK11
+@Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeEnumWithEvolutionTest : TestBase(KOTLIN) {
     class EvolutionArgumentProvider : ArgumentsProvider {
