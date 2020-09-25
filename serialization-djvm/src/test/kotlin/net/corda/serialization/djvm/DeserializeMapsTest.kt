@@ -15,6 +15,7 @@ import java.util.SortedMap
 import java.util.TreeMap
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeMapsTest : TestBase(KOTLIN) {

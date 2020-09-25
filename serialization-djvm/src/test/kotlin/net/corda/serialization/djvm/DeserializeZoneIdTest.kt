@@ -16,6 +16,7 @@ import java.time.ZoneId
 import java.util.function.Function
 import java.util.stream.Stream
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeZoneIdTest : TestBase(KOTLIN) {

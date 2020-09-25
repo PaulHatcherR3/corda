@@ -14,6 +14,7 @@ import org.junit.jupiter.api.extension.RegisterExtension
 import org.junit.jupiter.api.fail
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 class DeserializeWithCustomSerializerTest: TestBase(KOTLIN) {
     companion object {

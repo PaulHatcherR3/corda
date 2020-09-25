@@ -28,6 +28,7 @@ import java.util.Date
 import java.util.EnumSet
 import java.util.UUID
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 class LocalTypeModelTest : TestBase(KOTLIN) {
     private val serializerFactory: SerializerFactory get() {

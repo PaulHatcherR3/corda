@@ -16,6 +16,7 @@ import java.util.NavigableSet
 import java.util.SortedSet
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeCollectionsTest : TestBase(KOTLIN) {

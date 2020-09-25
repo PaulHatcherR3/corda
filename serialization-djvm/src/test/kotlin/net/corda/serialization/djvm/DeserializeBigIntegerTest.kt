@@ -12,6 +12,7 @@ import org.junit.jupiter.api.fail
 import java.math.BigInteger
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeBigIntegerTest : TestBase(KOTLIN) {

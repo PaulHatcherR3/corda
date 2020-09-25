@@ -23,6 +23,7 @@ import java.util.function.Function
  * than [Enum.name]. We need to be able to deserialise these values now
  * that the bug has been fixed.
  */
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeRemoteCustomisedEnumTest : TestBase(KOTLIN) {

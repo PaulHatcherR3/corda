@@ -11,6 +11,7 @@ import org.junit.jupiter.api.fail
 import java.time.OffsetDateTime
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeOffsetDateTimeTest : TestBase(KOTLIN) {

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.fail
 import java.util.BitSet
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeBitSetTest : TestBase(KOTLIN) {

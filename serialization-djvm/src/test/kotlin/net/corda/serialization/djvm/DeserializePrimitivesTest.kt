@@ -11,6 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import java.util.Date
 import java.util.UUID
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializePrimitivesTest : TestBase(KOTLIN) {

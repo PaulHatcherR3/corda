@@ -76,8 +76,8 @@ subprojects {
         testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
         testImplementation("org.mockito:mockito-core:${properties["mockitoVersion"]}")
         testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
-        // TODO: move all test dependencies in one place so we are consistent about the test libraries?
         testImplementation("org.junit.jupiter:junit-jupiter:${properties["junitJupiterVersion"]}")
+        
         testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
         testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
@@ -98,6 +98,7 @@ subprojects {
         compileJava.options.compilerArgs.add("-parameters")
     }
 
+    // Added to support junit5 tests
     tasks.withType<Test>{
         useJUnitPlatform()
         testLogging {

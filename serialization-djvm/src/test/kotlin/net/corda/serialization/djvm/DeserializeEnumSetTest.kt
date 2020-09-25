@@ -13,6 +13,7 @@ import org.junit.jupiter.params.provider.EnumSource
 import java.util.EnumSet
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeEnumSetTest : TestBase(KOTLIN) {

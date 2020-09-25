@@ -12,6 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.fail
 import java.util.function.Function
 
+// TODO: DJVM is not supported in JDK11
 @Disabled
 @ExtendWith(LocalSerialization::class)
 class DeserializeGenericsTest : TestBase(KOTLIN) {
