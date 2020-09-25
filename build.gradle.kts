@@ -124,3 +124,10 @@ subprojects {
             "--add-exports",
             "java.base/sun.security.util=ALL-UNNAMED"))
 }
+
+detekt {
+    config = files("$projectDir/detekt-config.yml, " +
+            "$projectDir/detekt-baseline-config.yml")
+    baseline = file("$projectDir/detekt-baseline.xml")
+    buildUponDefaultConfig = true
+}
