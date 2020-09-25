@@ -95,6 +95,7 @@ subprojects {
             compileJava.options.compilerArgs.add("-parameters")
         }
 
+
         // Added to support junit5 tests
         withType<Test> {
             useJUnitPlatform()
@@ -108,12 +109,8 @@ subprojects {
             baseline = file("$rootProjectDir/detekt-baseline.xml")
             config = files("$rootProjectDir/detekt-config.yml, " +
                     "$rootProjectDir/detekt-baseline-config.yml")
-        }
-
-        // Added to support junit5 tests
-        withType<Detekt>().forEach {task ->
-            task.parallel = true
-            task.buildUponDefaultConfig = true
+            parallel = true
+            buildUponDefaultConfig = true
         }
     }
     tasks.withType<Jar>().forEach { task ->
