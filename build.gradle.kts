@@ -7,15 +7,13 @@ val rootProjectDir = rootDir
 
 plugins {
     kotlin("jvm") version "1.4.0"
-
     id("io.gitlab.arturbosch.detekt") version "1.12.0"
-    id("org.ajoberstar.grgit") version "4.0.2"
-
+    id("org.ajoberstar.grgit") version "4.0.2" // used for GIT interaction (e.g. extract commit hash)
     id("com.jfrog.artifactory") version "4.17.2"
-
     `maven-publish`
-
     `java-library`
+
+    id("com.dorongold.task-tree") version "1.5" // utility to visualise Gradle task DAG
 }
 
 allprojects {
@@ -75,10 +73,6 @@ subprojects {
         detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
     }
 
-    val baseVersion = properties["cordaVersion"]
-
-    version = "${baseVersion}-${properties["versionSuffix"]}"
-
     tasks {
         withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
             compileKotlin.kotlinOptions.allWarningsAsErrors = true
@@ -123,7 +117,12 @@ subprojects {
         }
     }
 
+    // TODO: make consistent with above
     tasks.withType<Jar>().forEach { task ->
+        // TODO: may need to move this to a more central place
+        val baseVersion = properties["cordaVersion"]
+        version = "${baseVersion}-${properties["versionSuffix"]}"
+
         task.manifest {
             attributes("Corda-Release-Version" to version)
             attributes("Corda-Platform-Version" to properties["platformVersion"])
@@ -134,7 +133,7 @@ subprojects {
         }
     }
 
-
+    // TODO: make consistent with above
     val javaTestCompiler = tasks.getByName("compileTestJava") as JavaCompile
     javaTestCompiler.options.compilerArgs.addAll(listOf("--add-exports",
             "java.base/sun.security.x509=ALL-UNNAMED",
