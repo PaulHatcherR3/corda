@@ -1128,7 +1128,7 @@ internal class SingleThreadedStateMachineManager(
                     null
                 } else {
                     val existingFuture = activeOrRemovedClientIdFutureForReattach(it, clientId)
-                    uncheckedCast(existingFuture?.let {existingFuture.get() })
+                    uncheckedCast(existingFuture?.let {existingFuture.get()}) as FlowStateMachineHandle<T>?
                 }
             }
         }
