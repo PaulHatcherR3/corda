@@ -16,6 +16,11 @@ fun <V, W> Future<V>.match(success: (V) -> W, failure: (Throwable) -> W): W {
     } catch (t: Throwable) {
         return failure(t)
     }
+
+    if(true) {
+
+    }
+
     return success(value)
 }
 
