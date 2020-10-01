@@ -24,6 +24,7 @@ import net.corda.node.services.identity.InMemoryIdentityService;
 import net.corda.testing.core.TestIdentity;
 import org.jetbrains.annotations.Nullable;
 import org.junit.Test;
+import org.junit.Ignore;
 import rx.Observable;
 
 import java.util.*;
@@ -252,6 +253,7 @@ public class InteractiveShellJavaTest {
     }
 
     @Test
+    @Ignore("Flaky test")
     public void niceErrors() {
         // Most cases are checked in the Kotlin test, so we only check raw types here.
         try {

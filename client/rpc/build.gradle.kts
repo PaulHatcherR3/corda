@@ -1,4 +1,6 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("io.reactivex:rxjava:${properties["rxjavaVersion"]}")
     implementation("com.github.ben-manes.caffeine:caffeine:${properties["caffeineVersion"]}")

@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import io.gitlab.arturbosch.detekt.DetektPlugin
 
@@ -7,7 +8,7 @@ val rootProjectDir = rootDir
 
 plugins {
     kotlin("jvm") version "1.4.0"
-    id("io.gitlab.arturbosch.detekt") version "1.12.0"
+    id("io.gitlab.arturbosch.detekt") version "1.14.0"
     id("org.ajoberstar.grgit") version "4.0.2" // used for GIT interaction (e.g. extract commit hash)
     id("com.jfrog.artifactory") version "4.17.2"
     `maven-publish`
@@ -52,43 +53,78 @@ allprojects {
     }
 }
 
+// TODO: note sure where the right place is for this.
+val platformVersion = properties["platformVersion"]
+val baseVersion = properties["cordaVersion"]
+val packageVersion = "${baseVersion}-${properties["versionSuffix"]}"
+
+println("Building:")
+println("platformVersion: $platformVersion")
+println("baseVersion: $baseVersion")
+println("packageVersion: ${packageVersion}")
+
 subprojects {
     apply(plugin = "kotlin")
     apply<DetektPlugin>()
 
+    // NOTE: question whether it is "ok" to force dependencies on all modules like this
+    //  thinking is that for the test dependencies it's ok as it'll keep things consistent.
+    //  we can add exclusions, or review this if necessary.
     dependencies {
-        implementation(kotlin("stdlib"))
-        implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
-
+        // Test libraries -> keep consistent across modules
         testImplementation("org.jetbrains.kotlin:kotlin-test:${properties["kotlinVersion"]}")
         testImplementation("org.mockito:mockito-core:${properties["mockitoVersion"]}")
         testImplementation("com.nhaarman:mockito-kotlin:${properties["mockitoKotlinVersion"]}")
         testImplementation("org.junit.jupiter:junit-jupiter:${properties["junitJupiterVersion"]}")
-        
-        testRuntimeOnly("org.junit.platform:junit-platform-launcher:${properties["junitPlatformVersion"]}")
+
+        // Test runtime libraries -> also keep consistent
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${properties["junitJupiterVersion"]}")
+        // TODO: remove vintage engine when existing tests labelled "legacy" and we don't have a dependency on 4 anymore
         testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${properties["junitVintageVersion"]}")
 
-        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.12.0")
+        detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.14.0")
     }
 
     tasks {
-        withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().forEach { compileKotlin ->
-            compileKotlin.kotlinOptions.allWarningsAsErrors = true
-            compileKotlin.kotlinOptions.verbose = true
-            compileKotlin.kotlinOptions.jvmTarget = "11"
-            compileKotlin.kotlinOptions.freeCompilerArgs += "-Xjvm-default=compatibility"
-            compileKotlin.kotlinOptions.freeCompilerArgs += "-java-parameters"
+        withType<KotlinCompile>().configureEach {
+            kotlinOptions {
+                allWarningsAsErrors = true
+                verbose = true
+                jvmTarget = "11"
+                freeCompilerArgs += "-Xjvm-default=compatibility"
+                freeCompilerArgs += "-java-parameters"
+            }
         }
 
-        withType<JavaCompile>().forEach { compileJava ->
-            compileJava.options.compilerArgs.add("-parameters")
+        withType<JavaCompile>().configureEach {
+            val compilerArgs = options.compilerArgs
+            compilerArgs.add("-parameters")
         }
 
+        // TODO: does this really need to apply to all modules or can this be moved to the modules that need it only?
+        named<JavaCompile>("compileTestJava") {
+            val compilerArgs = options.compilerArgs
+            compilerArgs.add("--add-exports")
+            compilerArgs.add("java.base/sun.security.x509=ALL-UNNAMED")
+            compilerArgs.add("--add-exports")
+            compilerArgs.add("java.base/sun.security.util=ALL-UNNAMED")
+        }
+
+        // TODO: as above, this may not apply to all modules, so maybe should be moved out
+        withType<Jar>().configureEach {
+            manifest {
+                attributes("Corda-Release-Version" to packageVersion)
+                attributes("Corda-Platform-Version" to platformVersion)
+                // TODO: review this when looking at packaging & publishing
+                // attributes("Corda-Revision" to revision)
+                attributes("Corda-Vendor" to "Corda Open Source")
+                attributes("Automatic-Module-Name" to "net.corda.${project.name.replace('-', '.')}")
+                attributes("Corda-Docs-Link" to "https://docs.corda.net/docs/corda-os/$baseVersion")
+            }
+        }
 
         // Added to support junit5 tests
-        withType<Test> {
+        withType<Test>().configureEach {
             useJUnitPlatform()
             testLogging {
                 info.events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
@@ -97,6 +133,7 @@ subprojects {
         }
 
         detekt {
+            buildUponDefaultConfig = true
             baseline = file("$projectDir/detekt-baseline.xml")
             config = files("$rootProjectDir/detekt-config.yml")
             parallel = true
@@ -106,37 +143,12 @@ subprojects {
                     destination = file("$projectDir/build/detekt-report.xml")
                 }
                 html {
-                    enabled = true
-                    destination = file("$projectDir/build/detekt-report.html")
+                    enabled = false
                 }
                 txt {
-                    enabled = true
-                    destination = file("$projectDir/build/detekt-report.txt")
+                    enabled = false
                 }
             }
         }
     }
-
-    // TODO: make consistent with above
-    tasks.withType<Jar>().forEach { task ->
-        // TODO: may need to move this to a more central place
-        val baseVersion = properties["cordaVersion"]
-        version = "${baseVersion}-${properties["versionSuffix"]}"
-
-        task.manifest {
-            attributes("Corda-Release-Version" to version)
-            attributes("Corda-Platform-Version" to properties["platformVersion"])
-            // attributes("Corda-Revision" to revision)
-            attributes("Corda-Vendor" to "Corda Open Source")
-            attributes("Automatic-Module-Name" to "net.corda.${task.project.name.replace('-', '.')}")
-            attributes("Corda-Docs-Link" to "https://docs.corda.net/docs/corda-os/$baseVersion")
-        }
-    }
-
-    // TODO: make consistent with above
-    val javaTestCompiler = tasks.getByName("compileTestJava") as JavaCompile
-    javaTestCompiler.options.compilerArgs.addAll(listOf("--add-exports",
-            "java.base/sun.security.x509=ALL-UNNAMED",
-            "--add-exports",
-            "java.base/sun.security.util=ALL-UNNAMED"))
 }

@@ -4,6 +4,8 @@ dependencies {
     implementation(project(":serialization-djvm:deserializers"))
 
     api("net.corda.djvm:corda-djvm:${properties["djvmVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("org.apache.qpid:proton-j:${properties["protonjVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
 

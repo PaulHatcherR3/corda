@@ -1,4 +1,6 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     // Kryo: object graph serialization.
     implementation("com.esotericsoftware:kryo:${properties["kryoVersion"]}")
     implementation("de.javakaffee:kryo-serializers:${properties["kryoSerializerVersion"]}")

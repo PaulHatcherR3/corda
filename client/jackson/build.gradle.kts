@@ -1,4 +1,5 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:${properties["jacksonVersion"]}")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${properties["jacksonVersion"]}")

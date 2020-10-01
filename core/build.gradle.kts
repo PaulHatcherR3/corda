@@ -1,4 +1,6 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     implementation("com.google.guava:guava:${properties["guavaVersion"]}")
     implementation("com.google.code.findbugs:jsr305:${properties["jsr305Version"]}")
     implementation("io.reactivex:rxjava:${properties["rxjavaVersion"]}")

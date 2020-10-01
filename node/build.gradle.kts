@@ -1,4 +1,6 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
     // Locked these versions together as it makes sense
     implementation("io.atomix.copycat:copycat-client:${properties["copycatVersion"]}")
     implementation("io.atomix.copycat:copycat-server:${properties["copycatVersion"]}")

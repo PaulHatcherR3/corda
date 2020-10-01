@@ -1,4 +1,6 @@
 dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${properties["kotlinVersion"]}")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${properties["kotlinVersion"]}")
     testImplementation("com.google.guava:guava:${properties["guavaVersion"]}")
     testImplementation("com.google.guava:guava-testlib:${properties["guavaVersion"]}")
     testImplementation("com.google.jimfs:jimfs:${properties["jimfsVersion"]}")
