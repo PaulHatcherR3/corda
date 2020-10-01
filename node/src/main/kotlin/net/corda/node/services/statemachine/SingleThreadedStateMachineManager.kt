@@ -1128,7 +1128,8 @@ internal class SingleThreadedStateMachineManager(
                     null
                 } else {
                     val existingFuture = activeOrRemovedClientIdFutureForReattach(it, clientId)
-                    uncheckedCast(existingFuture?.let {existingFuture.get()}) as FlowStateMachineHandle<T>?
+                    // Kotlin 1.4 does not infer the correct type using uncheckedCast so explicitly cast and take a warning.
+                    existingFuture?.get() as FlowStateMachineHandle<T>?
                 }
             }
         }
